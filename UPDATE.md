@@ -1,4 +1,4 @@
-# Portal IA · Carlos — rotina de atualização diária
+# RADARNEXO — rotina de atualização diária
 
 Objetivo: site pronto antes das 7h (America/Sao_Paulo), quando o Carlos chega.
 
@@ -8,9 +8,9 @@ Objetivo: site pronto antes das 7h (America/Sao_Paulo), quando o Carlos chega.
   `category` (`claude` | `snowflake` | `microsoft` | `modelos` | `ferramentas` | `seguranca` | `dados`),
   `tags` (2–3 strings curtas), `summary` (1–2 frases em pt-BR), `source_name` (domínio), `url` (link real aberto na pesquisa),
   `priority` (`true` para claude/snowflake), `added` (data em que o item entrou no portal).
-- `data/site.json`: `highlights` (ids dos 5 destaques do dia, o 1º vira o card grande), `iguatemi` (sugestões [título, texto]),
+- `data/site.json`: `highlights` (ids dos destaques: o 1º vira o card grande "Destaque" de Últimas Notícias, o 2º–4º vão em "Destaques da Semana"; o 5º não aparece na home), `iguatemi` (sugestões [título, texto]),
   `dates` (timeline [iso, rótulo, o quê, fornecedor]), `trainings` (candidatos [categoria, título, descrição]; sempre "aguardando aprovação").
-- `template.html`: layout (CSS/JS inline). `build.py`: valida o JSON e gera `index.html` autocontido (abre do disco).
+- `template.html`: layout RADARNEXO (CSS/JS e imagens base64 inline; rotas por hash #/noticias, #/post/<id>, #/busca/<termo>, #/iguatemi, #/agenda, #/treinamentos, #/sobre). Não editar dados no template. `build.py`: valida o JSON e gera `index.html` autocontido (abre do disco).
 
 ## Passo a passo (diário, ~6h)
 1. **Pesquisar** novidades publicadas desde o último `updated_at` em news.json (WebSearch/WebFetch), por categoria:
@@ -32,5 +32,5 @@ Objetivo: site pronto antes das 7h (America/Sao_Paulo), quando o Carlos chega.
    google-chrome --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=390,2400 \
      --virtual-time-budget=4000 --screenshot=/workspace/portal-ia/screenshot-mobile.png http://localhost:8765/index.html
    ```
-   Conferir visualmente (hero com 5 cards, chips, nada estourando o layout).
+   Conferir visualmente (hero RADARNEXO, Últimas Notícias + Destaques da Semana, faixa "Atualizado em", categorias com contagem, nada estourando o layout). Os 3 primeiros itens de iguatemi/trainings/dates aparecem na home; o resto nas páginas próprias. "Prioridades" = itens priority=true mais recentes fora dos destaques.
 8. **Publicar/avisar**: se houver hospedagem configurada, publicar `index.html`; avisar o Carlos com 3–4 manchetes do dia + link.

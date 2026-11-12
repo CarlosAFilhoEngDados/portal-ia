@@ -1,6 +1,6 @@
-# Portal IA
+# RadarNexo
 
-Portal estático de notícias de IA e dados, em português. A página reúne destaques do dia, filtros por categoria (Claude, Snowflake, Microsoft, modelos, ferramentas, segurança e dados), prazos, sugestões para o Iguatemi e treinamentos ainda aguardando aprovação. Tudo cabe em um único `index.html` autocontido, gerado a partir de `data/news.json`, `data/site.json` e `template.html`.
+RadarNexo é o portal estático de notícias de IA, dados e tecnologia, em português. A página reúne destaques do dia, filtros por categoria (Claude, Snowflake, Microsoft, modelos, ferramentas, segurança e dados), prazos, sugestões para o Iguatemi e treinamentos ainda aguardando aprovação. Tudo cabe em um único `index.html` autocontido, gerado a partir de `data/news.json`, `data/site.json` e `template.html`.
 
 Site: https://carlosafilhoengdados.github.io/portal-ia/
 
