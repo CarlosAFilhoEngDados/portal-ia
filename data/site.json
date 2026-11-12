@@ -1,0 +1,110 @@
+{
+  "highlights": [
+    "n010",
+    "n018",
+    "n027",
+    "n044",
+    "n038"
+  ],
+  "iguatemi": [
+    [
+      "Segurança primeiro",
+      "Alinhar com infraestrutura o patch do Outlook (CVE-2026-124194) no Microsoft 365 Apps, o VS Code 1.145.3 e o MCP Inspector 2.12.0 em Windows e WSL nas máquinas de quem desenvolve agentes."
+    ],
+    [
+      "Gateway no Snowflake",
+      "Avaliar o Cortex AI Gateway (GA) como ponto único para chamadas a modelos, com traces e cotas por usuário, antes de ampliar agentes no CoWork e no CoCo."
+    ],
+    [
+      "Métricas oficiais",
+      "Registrar as métricas de negócio oficiais em Semantic Views, para ficar pronto para a Business Ontology quando entrar em preview."
+    ],
+    [
+      "Agente Leitor de Matrículas",
+      "Testar o nó Extract do Copilot Studio (GA), que tira dados de documentos, e-mails e imagens dentro de workflows."
+    ],
+    [
+      "Migração no Agent Builder",
+      "Levantar os agentes .agent em SharePoint e OneDrive e planejar o upgrade antes de abril de 2027."
+    ],
+    [
+      "Custos sob controle",
+      "Ativar a gestão de Copilot Credits no admin center (preview) e definir limites por usuário ou ambiente antes de pilotos com agentes persistentes."
+    ],
+    [
+      "Governança de memória",
+      "Não colocar informação sensível em agentes com agent account enquanto a memória compartilhada estiver em preview sem fronteira de privacidade."
+    ]
+  ],
+  "dates": [
+    [
+      "2026-11-15",
+      "15 nov – 15 dez",
+      "Prompts agendados no Agent Builder",
+      "Microsoft"
+    ],
+    [
+      "2026-11-15",
+      "Meados nov – início dez",
+      "Agentes do SharePoint e OneDrive passam a ser criados no Agent Builder",
+      "Microsoft"
+    ],
+    [
+      "2026-11-17",
+      "17 – 20 nov",
+      "Microsoft Ignite (São Francisco e online)",
+      "Microsoft"
+    ],
+    [
+      "2026-11-19",
+      "19 nov",
+      "Claude Data ligado por padrão no plano Enterprise",
+      "Anthropic"
+    ],
+    [
+      "2026-11-30",
+      "30 nov",
+      "Fim do preço introdutório do Gemini 4 Argon e Carbon",
+      "Google"
+    ],
+    [
+      "2026-11-30",
+      "30 nov",
+      "Remoção do fast mode do Claude Opus 4.8",
+      "Anthropic"
+    ],
+    [
+      "2027-04-01",
+      "Abril 2027",
+      "Agentes .agent do SharePoint e OneDrive deixam de funcionar",
+      "Microsoft"
+    ]
+  ],
+  "trainings": [
+    [
+      "snowflake",
+      "Snowflake CoWork e Bots na prática",
+      "Automations, Profiles e Dashboards conversacionais; como os Bots herdam permissões."
+    ],
+    [
+      "snowflake",
+      "Cortex AI Gateway e Business Ontology",
+      "Governar modelos, custos e traces; preparar Semantic Views como contexto oficial."
+    ],
+    [
+      "claude",
+      "Claude Fable 5.2, Claude Data e conectores",
+      "Novos modelos, Claude Data ligado ao warehouse e conectores interativos."
+    ],
+    [
+      "claude",
+      "Claude Code com segurança",
+      "Sandbox, permissões e controles de gasto das versões 2.1.308 a 2.1.318."
+    ],
+    [
+      "microsoft",
+      "Copilot Studio: MCP, A2A e nó Extract",
+      "Agentes persistentes e extração de documentos, aplicável ao Leitor de Matrículas."
+    ]
+  ]
+}
