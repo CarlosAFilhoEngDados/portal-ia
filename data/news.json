@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T07:41:03-03:00",
+  "updated_at": "2026-11-13T12:04:40-03:00",
   "items": [
     {
       "id": "n001",
@@ -950,9 +950,9 @@
         "Exchange Online",
         "Indisponibilidade"
       ],
-      "summary": "Falha no Exchange Online a partir das 13h17 de 12/11 (Brasília) derrubou acesso às caixas e atrasou a entrega de e-mails, afetando também Teams, SharePoint, Copilot e Defender. Mais de 13 horas depois a recuperação ainda era gradual; a Microsoft diz que não houve ataque e estendeu para 48 h a fila de reenvio dos e-mails atrasados.",
-      "source_name": "cio.com",
-      "url": "https://www.cio.com/article/4248249/microsoft-struggles-to-get-m365-services-back-online-after-widespread-outage.html",
+      "summary": "Falha no Exchange Online a partir das 13h17 de 12/11 (Brasília) derrubou acesso às caixas e atrasou e-mails, afetando também Teams, Copilot, OneDrive e Outlook.com; governos, hospitais e escolas em vários países foram atingidos. Em 13/11, mais de 18 horas depois, a Microsoft relatava filas de e-mail perto do normal, mas acessos intermitentes; sem indício de ataque e sem causa raiz divulgada.",
+      "source_name": "theguardian.com",
+      "url": "https://www.theguardian.com/technology/live/2026/nov/13/microsoft-outage-down-today-live-update-outlook-teams-365-when-fixed-latest-status-cause-news",
       "priority": false,
       "impact": "alto",
       "affects": [
@@ -1117,6 +1117,150 @@
       "summary": "O deputado Aguinaldo Ribeiro diz que o projeto pode ser aprovado em 2026; está em discussão se a ANPD será o órgão executor. O texto aguarda parecer da Comissão Especial de IA na Câmara.",
       "source_name": "valor.globo.com",
       "url": "https://valor.globo.com/legislacao/noticia/2026/11/11/relator-quer-votar-regulacao-da-ia-este-ano.ghtml",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n073",
+      "title": "Semantic Views ganham relacionamentos muitos-para-muitos (preview)",
+      "date": "2026-11-13",
+      "category": "snowflake",
+      "tags": [
+        "Semantic Views",
+        "Preview",
+        "Modelagem"
+      ],
+      "summary": "Agora dá para modelar relações N:N nas semantic views, via tabela ponte ou direto entre colunas sem chave única; o Snowflake deduz o caminho e deduplica para não contar métricas em dobro. Ainda não funciona com métricas LOD nem multi-path com USING.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-13-semantic-views-many-to-many-preview",
+      "priority": true,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n074",
+      "title": "AI_TRANSCRIBE do Cortex fica mais preciso, sem mudar o SQL",
+      "date": "2026-11-13",
+      "category": "snowflake",
+      "tags": [
+        "Cortex AI",
+        "AI_TRANSCRIBE",
+        "Áudio"
+      ],
+      "summary": "A função de transcrição do Cortex AI foi atualizada com menos erros em inglês, francês e outros idiomas, e melhor desempenho em reuniões longas com vários falantes. A melhoria vale automaticamente para consultas e pipelines existentes.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-13-ai-transcribe-accuracy-improvements",
+      "priority": true,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n075",
+      "title": "Claude Code 2.1.323 traz o Code Mode experimental",
+      "date": "2026-11-12",
+      "category": "claude",
+      "tags": [
+        "Claude Code",
+        "Code Mode",
+        "Segurança"
+      ],
+      "summary": "No Code Mode (opt-in), o Claude escreve JavaScript para chamar suas ferramentas; organizações podem desligá-lo. A versão também adiciona checagem de compatibilidade de plugins e dezenas de correções em permissões do Bash, sandbox e login de MCP.",
+      "source_name": "github.com",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+      "priority": true,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n076",
+      "title": "M365 Copilot: tarefas agendadas saem do Power Platform e vão para a aba Tasks",
+      "date": "2026-11-13",
+      "category": "microsoft",
+      "tags": [
+        "M365 Copilot",
+        "Agendamento",
+        "Message Center"
+      ],
+      "summary": "Os prompts agendados passam a rodar na infraestrutura nativa do Copilot, dentro da fronteira de conformidade do Microsoft 365, mesmo com Power Automate desligado (limite de 10 ativos e 50 no total por usuário). Rollout mundial de 30/11 a 31/12; a versão via Power Platform é aposentada em 31/12 e agendamentos que não migrarem precisam ser recriados.",
+      "source_name": "m365admin.handsontek.net",
+      "url": "https://m365admin.handsontek.net/scheduled-prompts-microsoft-365-copilot-moving-native-copilot-scheduling-tasks-view/",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n077",
+      "title": "AWS mcp-gateway-registry: SSRF expõe serviços internos (CVE-2026-125926)",
+      "date": "2026-11-13",
+      "category": "seguranca",
+      "tags": [
+        "MCP",
+        "SSRF",
+        "AWS"
+      ],
+      "summary": "A API de registro de servidores não validava o endereço upstream, permitindo a um usuário autenticado apontar o gateway para serviços internos, incluindo o metadata da nuvem e suas credenciais. Corrigido na v1.35.0; a AWS pede revisar servidores registrados e, se preciso, rotacionar credenciais da role.",
+      "source_name": "gbhackers.com",
+      "url": "https://gbhackers.com/aws-warns-of-mcp-gateway-registry-vulnerability/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n078",
+      "title": "Zero-day no N-able N-central explorado horas após publicação do exploit",
+      "date": "2026-11-13",
+      "category": "mundo",
+      "tags": [
+        "N-central",
+        "Zero-day",
+        "MSP"
+      ],
+      "summary": "A cadeia 4EverAble2Shell dá execução remota como root sem autenticação em servidores com Legacy API ativa, mesmo no Hotfix 2; 21 servidores já foram invadidos para minerar cripto, 19 deles atualizados. Como o N-central gerencia endpoints de clientes de MSPs, a recomendação é tratar qualquer sinal como comprometimento total.",
+      "source_name": "securityweek.com",
+      "url": "https://www.securityweek.com/hackers-exploit-new-n-central-zero-day-hours-after-poc-publication/",
+      "priority": false,
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n079",
+      "title": "Check Point corrige zero-day explorado para obter root em firewalls (CVE-2026-123039)",
+      "date": "2026-11-13",
+      "category": "mundo",
+      "tags": [
+        "Check Point",
+        "Zero-day",
+        "Firewall"
+      ],
+      "summary": "Falha no daemon DynamicCLI do Gaia OS, explorada desde o fim de outubro contra algumas dezenas de clientes: os atacantes entraram pelo Mobile Access (PHP2Shell), viraram root, instalaram backdoors e chegaram a implantar wiper em hosts ESXi. Há hotfix de emergência e mitigação temporária.",
+      "source_name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
+      "priority": false,
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n080",
+      "title": "Jensen Huang renuncia ao cargo de CEO da NVIDIA",
+      "date": "2026-11-12",
+      "category": "mundo",
+      "tags": [
+        "NVIDIA",
+        "Liderança",
+        "Mercado de IA"
+      ],
+      "summary": "A NVIDIA anunciou a saída imediata de Huang da presidência, do cargo de CEO e do conselho; a CFO Colette Kress assume como CEO interina e Harvey C. Jones vira o primeiro chair do conselho. A empresa diz que o roadmap segue sem interrupção e mantém a divulgação de resultados em 17/11.",
+      "source_name": "nvidianews.nvidia.com",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
       "priority": false,
       "impact": "medio",
       "affects": [

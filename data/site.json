@@ -1,10 +1,10 @@
 {
  "highlights": [
+  "n073",
+  "n075",
   "n049",
-  "n051",
   "n053",
-  "n056",
-  "n060"
+  "n078"
  ],
  "dates": [
   [
@@ -26,6 +26,12 @@
    "Microsoft"
   ],
   [
+   "2026-11-17",
+   "17 nov",
+   "Resultados do 3º tri fiscal da NVIDIA, já sem Jensen Huang",
+   "NVIDIA"
+  ],
+  [
    "2026-11-19",
    "19 nov",
    "Claude Data ligado por padrão no plano Enterprise",
@@ -44,6 +50,12 @@
    "Anthropic"
   ],
   [
+   "2026-11-30",
+   "30 nov – 31 dez",
+   "Rollout das tarefas agendadas nativas no M365 Copilot",
+   "Microsoft"
+  ],
+  [
    "2026-12-01",
    "Dezembro",
    "Copilot Workspaces passa a usar chat agêntico (Frontier)",
@@ -53,6 +65,12 @@
    "2026-12-31",
    "Até 31 dez",
    "GA da configuração de conexões dentro da conversa no Copilot Studio",
+   "Microsoft"
+  ],
+  [
+   "2026-12-31",
+   "31 dez",
+   "Fim dos prompts agendados via Power Platform no M365 Copilot",
    "Microsoft"
   ],
   [
@@ -69,6 +87,21 @@
   ]
  ],
  "trainings": [
+  [
+   "snowflake",
+   "Semantic Views muitos-para-muitos",
+   "Modelar relações N:N com e sem tabela ponte e evitar contagem dupla nas métricas."
+  ],
+  [
+   "claude",
+   "Claude Code: Code Mode e permissões",
+   "Como o Code Mode chama ferramentas via JavaScript, quando ligar e como a organização controla."
+  ],
+  [
+   "microsoft",
+   "M365 Copilot: tarefas agendadas nativas",
+   "Migrar prompts agendados do Power Platform antes de 31/12 e usar a aba Tasks."
+  ],
   [
    "snowflake",
    "Semantic Views com materializations e CoCo",
