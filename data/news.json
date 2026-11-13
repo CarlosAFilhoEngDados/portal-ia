@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T05:51:28-03:00",
+  "updated_at": "2026-11-13T07:11:38-03:00",
   "items": [
     {
       "id": "n001",
@@ -552,7 +552,11 @@
       "source_name": "csoonline.com",
       "url": "https://www.csoonline.com/article/4247015/november-2026-patch-tuesday-63-critical-microsoft-fixes-plus-an-outlook-zero-day-that-allows-theft-of-hashed-credentials.html",
       "priority": false,
-      "added": "2026-11-12"
+      "added": "2026-11-12",
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ]
     },
     {
       "id": "n039",
@@ -934,6 +938,190 @@
       "source_name": "databricks.com",
       "url": "https://www.databricks.com/blog/lakehousert-scale-real-time-analytics-not-your-bill",
       "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n064",
+      "title": "Apagão no Microsoft 365: Outlook sem enviar nem receber e-mails",
+      "date": "2026-11-12",
+      "category": "mundo",
+      "tags": [
+        "Microsoft 365",
+        "Exchange Online",
+        "Indisponibilidade"
+      ],
+      "summary": "Falha no Exchange Online a partir das 13h17 de 12/11 (Brasília) derrubou acesso às caixas e atrasou a entrega de e-mails, afetando também Teams, SharePoint, Copilot e Defender. Mais de 13 horas depois a recuperação ainda era gradual; a Microsoft diz que não houve ataque e estendeu para 48 h a fila de reenvio dos e-mails atrasados.",
+      "source_name": "cio.com",
+      "url": "https://www.cio.com/article/4248249/microsoft-struggles-to-get-m365-services-back-online-after-widespread-outage.html",
+      "priority": false,
+      "impact": "alto",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n065",
+      "title": "Barracuda Email Security Gateway: bypass de autenticação explorado (CVE-2026-116606)",
+      "date": "2026-11-11",
+      "category": "mundo",
+      "tags": [
+        "Barracuda",
+        "CISA KEV",
+        "Acesso"
+      ],
+      "summary": "Falha CVSS 9.3 permite, sem login, restaurar um backup forjado pela interface de administração e, encadeada com a CVE-2026-111560, obter root no appliance. Está no catálogo KEV da CISA; corrigir para 9.4.0.030+ e não expor o Admin UI à internet.",
+      "source_name": "securityweek.com",
+      "url": "https://www.securityweek.com/recently-patched-barracuda-vulnerabilities-exploited-in-attacks/",
+      "priority": false,
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n066",
+      "title": "Invasão da MSP Process chega aos tenants Entra ID dos clientes",
+      "date": "2026-11-09",
+      "category": "mundo",
+      "tags": [
+        "Entra ID",
+        "MSP",
+        "Credenciais"
+      ],
+      "summary": "Atacantes roubaram client secrets de apps Entra, refresh tokens de admins e listas GDAP do fornecedor de software para MSPs e usaram permissões como User.ReadWrite.All direto nos tenants dos clientes, sem login nem MFA. Recomendação: apagar os secrets dos apps conectados e revisar os logs de auditoria do Entra.",
+      "source_name": "thestack.technology",
+      "url": "https://www.thestack.technology/msp-software-firm-hacked-with-customer-entra-environments-now-getting-pwned/",
+      "priority": false,
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n067",
+      "title": "Chainalysis: senhas (hash) e tokens ativos de todos os usuários foram expostos",
+      "date": "2026-11-06",
+      "category": "mundo",
+      "tags": [
+        "Vazamento",
+        "Tokens",
+        "Agentes de IA"
+      ],
+      "summary": "A empresa, que atende FBI, Microsoft e Coinbase, confirmou que nomes, usuários, hashes de senha e tokens ativos de todos os clientes foram expostos num ataque com técnicas agênticas e interceptação de tráfego; serviços saíram do ar e a troca de credenciais é obrigatória.",
+      "source_name": "arstechnica.com",
+      "url": "https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/",
+      "priority": false,
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n068",
+      "title": "MUJI: credential stuffing pode ter exposto 27 milhões de cadastros",
+      "date": "2026-11-09",
+      "category": "mundo",
+      "tags": [
+        "Varejo",
+        "Credential stuffing",
+        "Vazamento"
+      ],
+      "summary": "A Ryohin Keikaku adiou a reabertura da loja online da MUJI após logins indevidos com senhas reutilizadas: cerca de 27,26 milhões de registros e 1,09 milhão de dados parciais de cartão podem ter sido expostos. Todos terão de trocar a senha.",
+      "source_name": "japanir.jp",
+      "url": "https://japanir.jp/en/company/company-7453/ir/7453-20261109-01_wp_disclosure_update/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "pessoas",
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n069",
+      "title": "Yumelink confirma 47,86 milhões de registros vazados de clientes como JR Central",
+      "date": "2026-11-11",
+      "category": "mundo",
+      "tags": [
+        "E-mail marketing",
+        "Sessões",
+        "Vazamento"
+      ],
+      "summary": "O provedor japonês de disparo de e-mails Cuenote FC teve 49 sistemas invadidos: o atacante roubou sessões de usuários logados e exportou dados pelo console de administração, incluindo e-mails, IDs e credenciais de serviços dos clientes.",
+      "source_name": "osegi.com",
+      "url": "https://osegi.com/en/yumelink-data-breach-47-million-records-leaked",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "pessoas",
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n070",
+      "title": "Google explica queda de 6 horas da região de Londres que parou bancos no Reino Unido",
+      "date": "2026-11-11",
+      "category": "mundo",
+      "tags": [
+        "Google Cloud",
+        "Resiliência",
+        "Datacenter"
+      ],
+      "summary": "Relatório final do incidente de 20/10 em europe-west2: um controlador (PLC) lia a tensão do lado errado do disjuntor e não ligou os geradores. Mais de 35 serviços foram afetados, com impacto em Lloyds, HSBC, Revolut, Snowflake e Stripe.",
+      "source_name": "computerweekly.com",
+      "url": "https://www.computerweekly.com/news/366654638/Google-Cloud-pins-London-outage-on-PLC-misconfiguration",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n071",
+      "title": "Binance liga roubo de US$ 6,3 bilhões a notebook comprometido de DevOps",
+      "date": "2026-10-30",
+      "category": "mundo",
+      "tags": [
+        "Cripto",
+        "Acesso privilegiado",
+        "Coreia do Norte"
+      ],
+      "summary": "O maior roubo de cripto já registrado começou no notebook de um engenheiro de DevOps e passou por um container de serviço para enviar saques não autorizados; a TRM atribui o ataque ao grupo norte-coreano TraderTraitor. A Binance diz que cobrirá as perdas.",
+      "source_name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "pessoas",
+        "empresas"
+      ],
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n072",
+      "title": "Relator quer votar ainda este ano o marco da IA (PL 2338/23)",
+      "date": "2026-11-11",
+      "category": "mundo",
+      "tags": [
+        "Regulação",
+        "Brasil",
+        "ANPD"
+      ],
+      "summary": "O deputado Aguinaldo Ribeiro diz que o projeto pode ser aprovado em 2026; está em discussão se a ANPD será o órgão executor. O texto aguarda parecer da Comissão Especial de IA na Câmara.",
+      "source_name": "valor.globo.com",
+      "url": "https://valor.globo.com/legislacao/noticia/2026/11/11/relator-quer-votar-regulacao-da-ia-este-ano.ghtml",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
       "added": "2026-11-13"
     }
   ]

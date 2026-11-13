@@ -78,7 +78,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
 
 /* ---------- Quick nav ---------- */
 .quick{position:relative;z-index:5;margin-top:-76px}
-.quick ul{display:grid;grid-template-columns:repeat(6,1fr);background:rgba(9,20,30,.88);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:20px;padding:18px 0}
+.quick ul{display:grid;grid-template-columns:repeat(7,1fr);background:rgba(9,20,30,.88);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:20px;padding:18px 0}
 .quick li{position:relative}
 .quick li+li::before{content:"";position:absolute;left:0;top:14%;height:72%;width:1px;background:var(--line-strong)}
 .quick a{display:flex;flex-direction:column;align-items:center;gap:12px;padding:6px 8px;font-size:14.5px;font-weight:600;text-align:center}
@@ -329,7 +329,22 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
 @media (min-width:561px) and (max-width:860px){.grid{grid-template-columns:1fr 1fr}}
 
 /* ---- RADARNEXO · dados reais ---- */
-.cats{grid-template-columns:repeat(7,1fr)}
+:root{--alert:#ff6b6b;--warn:#f5c044}
+.imp{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:4px 10px;border-radius:999px;margin-bottom:8px;border:1px solid}
+.imp svg{font-size:13px}
+.imp.alto{color:var(--alert);border-color:rgba(255,107,107,.45);background:rgba(255,107,107,.08)}
+.imp.medio{color:var(--warn);border-color:rgba(245,192,68,.4);background:rgba(245,192,68,.07)}
+.alerts{margin-top:26px}
+.alerts .head h2{display:flex;align-items:center;gap:10px}
+.alert-dot{width:10px;height:10px;border-radius:50%;background:var(--alert);box-shadow:0 0 0 4px rgba(255,107,107,.18);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(255,107,107,0)}}
+.alert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.alert-card{padding:18px;display:flex;flex-direction:column;border-color:rgba(255,107,107,.28);background:linear-gradient(180deg,rgba(255,107,107,.06),transparent 60%),var(--card)}
+.alert-card:hover{border-color:rgba(255,107,107,.55)}
+.alert-card h3{font-size:15.5px;line-height:1.35;font-weight:700;margin-bottom:12px;flex:1}
+@media (max-width:1000px){.alert-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.alert-grid{grid-template-columns:1fr;gap:12px}.alerts{margin-top:18px}.alert-card h3{font-size:15px}}
+.cats{grid-template-columns:repeat(8,1fr)}
 .cat span{display:flex;flex-direction:column;gap:2px}
 .cat small{font-size:11.5px;color:var(--muted);font-weight:500}
 .chip small{margin-left:6px;opacity:.7;font-weight:600}
@@ -344,6 +359,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
 .nl-cta:hover{background:#43f0c6}
 .pill.pend{color:#f5c044;border-color:rgba(245,192,68,.45)}
 .pbody p,.feat-sum,.tcard p{overflow-wrap:anywhere}
+.pbody .imp{margin-bottom:0}
 .prose .btn{font-size:16px}
 @media (max-width:860px){.cats{grid-template-columns:repeat(4,1fr)}.nl-cta{margin:0;height:42px}.count{margin-left:0;width:100%}.hero-stats{font-size:12px;margin-top:14px}}
 @media (max-width:520px){.cats{grid-template-columns:repeat(3,1fr)}}
@@ -365,6 +381,8 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
   <symbol id="bars" viewBox="0 0 24 24"><rect x="3" y="14" width="4" height="7" rx="1"/><rect x="10" y="10" width="4" height="11" rx="1"/><rect x="17" y="6" width="4" height="15" rx="1"/><circle cx="19" cy="2.6" r=".9"/></symbol>
   <symbol id="cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M8 2.5v4M16 2.5v4M3 10h18M8 15h3"/></symbol>
   <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2"/></symbol>
+  <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+  <symbol id="alert" viewBox="0 0 24 24"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol>
   <symbol id="shield" viewBox="0 0 24 24"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10v-6z"/><path d="m9 12 2 2 4-4"/></symbol>
   <symbol id="ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
   <symbol id="star" viewBox="0 0 24 24"><path d="m12 2.5 2.95 6 6.55.95-4.75 4.6 1.12 6.5L12 17.5l-5.87 3.05 1.12-6.5L2.5 9.45l6.55-.95z"/></symbol>
@@ -403,7 +421,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
         <p>Novidades de IA, Dados e tecnologia com data e fonte verificadas, para quem quer ficar à frente no mercado.</p>
       </div>
       <div><h4>Conteúdo</h4>
-        <a href="#/noticias">Notícias</a><a href="#/iguatemi">Iguatemi</a><a href="#/agenda">Agenda</a><a href="#/treinamentos">Treinamentos</a></div>
+        <a href="#/noticias">Notícias</a><a href="#/mundo">Mundo Tech</a><a href="#/iguatemi">Iguatemi</a><a href="#/agenda">Agenda</a><a href="#/treinamentos">Treinamentos</a></div>
       <div><h4>Categorias</h4><div id="footCats"></div></div>
       <div><h4>Institucional</h4>
         <a href="#/sobre">Sobre</a><a href="#atualizacao" data-scroll="atualizacao">Última atualização</a></div>
@@ -428,9 +446,10 @@ const DATA = {
     {slug:"modelos",     nome:"Novas LLMs",        img:IMG.c0,   icon:"rocket"},
     {slug:"ferramentas", nome:"Ferramentas",       img:IMG.c3,   icon:"wrench"},
     {slug:"seguranca",   nome:"Segurança",         img:IMG.chip, icon:"shield"},
-    {slug:"dados",       nome:"Dados",             img:IMG.c2,   icon:"bars"}
+    {slug:"dados",       nome:"Dados",             img:IMG.c2,   icon:"bars"},
+    {slug:"mundo",       nome:"Mundo Tech",        img:IMG.c1,   icon:"globe"}
   ],
-  posts: RAW.news.items.map(i => ({slug:i.id, cat:i.category, titulo:i.title, resumo:i.summary, data:i.date, tags:i.tags||[], fonte:i.source_name, url:i.url, prioridade:!!i.priority})),
+  posts: RAW.news.items.map(i => ({slug:i.id, cat:i.category, titulo:i.title, resumo:i.summary, data:i.date, tags:i.tags||[], fonte:i.source_name, url:i.url, prioridade:!!i.priority, impacto:i.impact||"", afeta:i.affects||[]})),
   destaques: (RAW.site.highlights||[]),
   iguatemi: RAW.site.iguatemi||[],
   datas: RAW.site.dates||[],
@@ -453,11 +472,17 @@ const UPD = new Date(DATA.atualizado);
 const updTxt = new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",dateStyle:"long",timeStyle:"short"}).format(UPD);
 const ageDays = p => (UPD - new Date(p.data+"T12:00:00-03:00"))/864e5;
 const norm = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const IMP = {alto:"Alto impacto", medio:"Médio impacto"};
+const AFETA = {empresas:"Empresas", pessoas:"Pessoas"};
+const afetaTxt = p => p.afeta.map(a => AFETA[a] || a).join(" e ");
+const impBadge = p => p.impacto ? `<span class="imp ${p.impacto}">${ic("alert")}${IMP[p.impacto]}${p.afeta.length ? " · " + afetaTxt(p) : ""}</span>` : "";
+const altoImpacto = (dias=14) => posts(p => p.impacto==="alto" && ageDays(p) <= dias);
 const fonteLink = (p, label) => `<a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" class="more">${label || esc(p.fonte)} ${ic("ext")}</a>`;
 
 /* ---------- Menu ---------- */
 const MENU = [
   {label:"Notícias",     href:"#/noticias",     key:"noticias", sub:[["Todas as notícias","#/noticias"], ...DATA.categorias.map(c => [c.nome, "#/noticias/"+c.slug])]},
+  {label:"Mundo Tech",   href:"#/mundo",        key:"mundo"},
   {label:"Iguatemi",     href:"#/iguatemi",     key:"iguatemi"},
   {label:"Agenda",       href:"#/agenda",       key:"agenda"},
   {label:"Treinamentos", href:"#/treinamentos", key:"treinamentos"},
@@ -476,7 +501,7 @@ const postCard = p => `
   <a href="#/post/${p.slug}" class="card pcard">
     <div class="pimg" style="background-image:url('${imgOf(p)}')"><span class="badge">${cat(p.cat).nome}</span></div>
     <div class="pbody">
-      <span class="kind">${p.prioridade ? "★ Prioridade · " : ""}${esc(p.tags.slice(0,2).join(" · "))}</span>
+      ${impBadge(p)}<span class="kind">${p.prioridade ? "★ Prioridade · " : ""}${esc(p.tags.slice(0,2).join(" · "))}</span>
       <h3>${esc(p.titulo)}</h3>
       <p>${esc(p.resumo)}</p>
       <div class="meta">${ic("cal")}${fmt(p.data)} <span class="sep"></span>${ic("ext")}${esc(p.fonte)}</div>
@@ -513,6 +538,20 @@ const prioridades = (n=3) => `
 const categoriasGrid = () => `<div class="cats">${DATA.categorias.map(c => `<a href="#/noticias/${c.slug}" class="card cat"><img src="${c.img}" alt=""><span>${c.nome}<small>${DATA.posts.filter(p=>p.cat===c.slug).length} itens</small></span></a>`).join("")}</div>`;
 
 /* ---------- Páginas ---------- */
+function alertas(){
+  const al = altoImpacto().slice(0,4);
+  if(!al.length) return "";
+  return `
+  <section class="wrap alerts" aria-label="Alto impacto">
+    <div class="head"><h2><span class="alert-dot" aria-hidden="true"></span>Alto impacto</h2><a href="#/mundo/alto" class="more">Ver Mundo Tech ${ic("arrow")}</a></div>
+    <div class="alert-grid">${al.map(p => `
+      <a href="#/post/${p.slug}" class="card alert-card">
+        <span class="imp alto">${ic("alert")}Alto impacto${p.afeta.length ? " · " + afetaTxt(p) : ""}</span>
+        <h3>${esc(p.titulo)}</h3>
+        <div class="meta">${ic("cal")}${fmt(p.data)} <span class="sep"></span>${cat(p.cat).nome}</div>
+      </a>`).join("")}</div>
+  </section>`;
+}
 function home(){
   const hl = DATA.destaques.map(getPost).filter(Boolean);
   const feat = hl[0] || posts()[0];
@@ -536,10 +575,13 @@ function home(){
     <li><a href="#/noticias/claude">${ic("star")}Claude</a></li>
     <li><a href="#/noticias/snowflake">${ic("stack")}Snowflake</a></li>
     <li><a href="#/noticias/microsoft">${ic("nodes")}Microsoft Copilot</a></li>
-    <li><a href="#/noticias/modelos">${ic("rocket")}Novas LLMs</a></li>
+    <li class="only-desk"><a href="#/noticias/modelos">${ic("rocket")}Novas LLMs</a></li>
     <li class="only-desk"><a href="#/noticias/seguranca">${ic("shield")}Segurança</a></li>
+    <li><a href="#/mundo">${ic("globe")}Mundo Tech</a></li>
     <li><a href="#/noticias/dados">${ic("bars")}Dados</a></li>
   </ul></nav>
+
+  ${alertas()}
 
   <div class="wrap main">
     <section>
@@ -606,6 +648,17 @@ function noticias(c, per){
     + `<div class="chips chips-sm">${PERIODOS.map(([l,v]) => `<a href="#/noticias/${base}/${v}" class="chip ${v===d?"on":""}">${l}</a>`).join("")}<span class="count">${list.length} de ${DATA.posts.length} itens</span></div>`
     + grid(list, postCard, "Nenhuma notícia com esses filtros. Tente outra categoria ou período."));
 }
+function mundo(imp, af){
+  const i = ["alto","medio"].includes(imp) ? imp : "";
+  const a = ["empresas","pessoas"].includes(af) ? af : "";
+  const all = posts(p => p.cat==="mundo" || p.impacto);
+  const list = all.filter(p => (!i || p.impacto===i) && (!a || p.afeta.includes(a)));
+  const bi = i || "todos";
+  return shell(pageHead([["Mundo Tech"]], "Mundo Tech", "Tecnologia em geral com grande impacto em empresas e pessoas: quedas de serviços, vazamentos, falhas de acesso e credenciais, incidentes de nuvem e regulação.")
+    + chips([["Todos os impactos","#/mundo/todos/"+a,""],["Alto impacto","#/mundo/alto/"+a,"alto"],["Médio impacto","#/mundo/medio/"+a,"medio"]], i)
+    + `<div class="chips chips-sm">${[["Empresas e pessoas",""],["Empresas","empresas"],["Pessoas","pessoas"]].map(([l,v]) => `<a href="#/mundo/${bi}/${v}" class="chip ${v===a?"on":""}">${l}</a>`).join("")}<span class="count">${list.length} de ${all.length} itens</span></div>`
+    + grid(list, postCard, "Nenhum item com esses filtros."));
+}
 function iguatemi(){
   return shell(pageHead([["Iguatemi"]], "O que isso significa pra Iguatemi", "Sugestões práticas a partir das novidades, para o stack Snowflake, Microsoft 365 e Copilot Studio.")
     + `<section class="section">${grid(DATA.iguatemi, igCard)}</section>`);
@@ -626,6 +679,7 @@ function post(slug){
     <article class="article">
       ${pageHead([["Notícias","#/noticias"],[c.nome,"#/noticias/"+c.slug]], esc(p.titulo), esc(p.resumo))}
       <div class="meta" style="margin-top:18px"><span class="badge">${c.nome}</span>${ic("cal")}${fmt(p.data)} <span class="sep"></span>${ic("ext")}${esc(p.fonte)}${p.prioridade ? ` <span class="sep"></span>★ Prioridade` : ""}</div>
+      ${p.impacto ? `<div style="margin-top:12px">${impBadge(p)}</div>` : ""}
       <div class="article-img" style="background-image:url('${IMG.brain}')" role="img" aria-label="${c.nome}"></div>
       <div class="prose">
         <div class="chips">${p.tags.map(t => `<span class="chip">#${esc(t)}</span>`).join("")}</div>
@@ -638,7 +692,7 @@ function post(slug){
 function busca(q){
   q = decodeURIComponent(q || "").trim();
   const t = norm(q);
-  const ps = t ? posts(p => norm(p.titulo+" "+p.resumo+" "+p.tags.join(" ")+" "+p.fonte+" "+cat(p.cat).nome).includes(t)) : [];
+  const ps = t ? posts(p => norm(p.titulo+" "+p.resumo+" "+p.tags.join(" ")+" "+p.fonte+" "+cat(p.cat).nome+" "+(p.impacto ? IMP[p.impacto]+" "+afetaTxt(p) : "")).includes(t)) : [];
   return shell(pageHead([["Busca"]], `Resultados para “${esc(q)}”`, `${ps.length} resultado(s) encontrado(s).`)
     + `<section class="section">${grid(ps, postCard, "Nenhum conteúdo encontrado. Tente outro termo.")}</section>`);
 }
@@ -659,8 +713,8 @@ function naoEncontrado(){
 }
 
 /* ---------- Roteador (por hash: #/noticias, #/post/id …) ---------- */
-const ROTAS = {"":home, noticias, iguatemi, agenda, treinamentos, post, busca, sobre, categoria:(s)=>noticias(s)};
-const TITULOS = {"":"Notícias de IA, Dados e Tecnologia", noticias:"Notícias", iguatemi:"Iguatemi", agenda:"Agenda", treinamentos:"Treinamentos", busca:"Busca", sobre:"Sobre", categoria:"Notícias"};
+const ROTAS = {"":home, noticias, mundo, iguatemi, agenda, treinamentos, post, busca, sobre, categoria:(s)=>noticias(s)};
+const TITULOS = {"":"Notícias de IA, Dados e Tecnologia", noticias:"Notícias", mundo:"Mundo Tech", iguatemi:"Iguatemi", agenda:"Agenda", treinamentos:"Treinamentos", busca:"Busca", sobre:"Sobre", categoria:"Notícias"};
 function rota(){
   const h = location.hash;
   if(!h.startsWith("#/") && h.length > 1) return;

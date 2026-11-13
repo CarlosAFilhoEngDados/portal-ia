@@ -10,7 +10,9 @@ if "--touch" in sys.argv:
 site = json.loads((ROOT/"data/site.json").read_text(encoding="utf-8"))
 # validação mínima
 req = {"id","title","date","category","tags","summary","source_name","url","priority"}
-cats = {"claude","snowflake","microsoft","modelos","ferramentas","seguranca","dados"}
+cats = {"claude","snowflake","microsoft","modelos","ferramentas","seguranca","dados","mundo"}
+impacts = {"alto","medio"}
+affects_ok = {"empresas","pessoas"}
 ids=set()
 for it in news["items"]:
     miss = req - it.keys()
@@ -18,6 +20,11 @@ for it in news["items"]:
     assert it["category"] in cats, f"{it['id']}: categoria inválida"
     assert it["url"].startswith("http"), f"{it['id']}: url inválida"
     datetime.date.fromisoformat(it["date"])
+    # Mundo Tech: impacto (alto|medio) e quem é afetado (empresas/pessoas) são obrigatórios; nas outras categorias são opcionais
+    if it["category"] == "mundo" or "impact" in it:
+        assert it.get("impact") in impacts, f"{it['id']}: impact deve ser alto|medio"
+        af = it.get("affects")
+        assert isinstance(af, list) and af and set(af) <= affects_ok, f"{it['id']}: affects deve ser lista com empresas e/ou pessoas"
     assert it["id"] not in ids, f"id duplicado {it['id']}"; ids.add(it["id"])
 site["highlights"] = [h for h in site.get("highlights", []) if h in ids]
 payload = json.dumps({"news": news, "site": site}, ensure_ascii=False).replace("</", "<\\/")
