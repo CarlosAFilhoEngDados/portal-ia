@@ -6,48 +6,6 @@
   "n056",
   "n060"
  ],
- "iguatemi": [
-  [
-   "Segurança primeiro",
-   "Alinhar com infraestrutura o patch do Outlook (CVE-2026-124194), o VS Code 1.145.3 e o MCP Inspector 2.12.0, e levantar se algum gateway ou servidor MCP em uso (ContextForge, AWS API MCP Server, AgentScope) precisa de atualização."
-  ],
-  [
-   "Semantic Views mais rápidas",
-   "Testar materializations (GA) nas Semantic Views mais consultadas com a skill do CoCo, lembrando que Cortex Analyst, Agents e CoWork que geram SQL direto nas tabelas não se beneficiam."
-  ],
-  [
-   "Fable 5.2 no Copilot",
-   "Liberar o Claude Fable 5.2 para um grupo piloto no admin center do Microsoft 365 e comparar com os modelos atuais em tarefas reais do Copilot Cowork e do Copilot Studio."
-  ],
-  [
-   "Gateway no Snowflake",
-   "Avaliar o Cortex AI Gateway (GA) como ponto único para chamadas a modelos, com traces e cotas por usuário, antes de ampliar agentes no CoWork e no CoCo."
-  ],
-  [
-   "Agentes dentro do perímetro",
-   "Avaliar o Claude Managed Agents self-hosted para casos em que credenciais e histórico das sessões precisam ficar no nosso ambiente."
-  ],
-  [
-   "Métricas oficiais",
-   "Registrar as métricas de negócio oficiais em Semantic Views, para ficar pronto para a Business Ontology quando entrar em preview."
-  ],
-  [
-   "Agente Leitor de Matrículas",
-   "Testar o nó Extract do Copilot Studio (GA), que tira dados de documentos, e-mails e imagens dentro de workflows."
-  ],
-  [
-   "Migração no Agent Builder",
-   "Levantar os agentes .agent em SharePoint e OneDrive e planejar o upgrade antes de abril de 2027; avisar os usuários do Copilot Workspaces sobre o chat agêntico a partir de dezembro."
-  ],
-  [
-   "Custos sob controle",
-   "Ativar a gestão de Copilot Credits no admin center (preview) e definir limites por usuário ou ambiente antes de pilotos com agentes persistentes."
-  ],
-  [
-   "Governança de memória",
-   "Não colocar informação sensível em agentes com agent account enquanto a memória compartilhada estiver em preview sem fronteira de privacidade."
-  ]
- ],
  "dates": [
   [
    "2026-11-15",

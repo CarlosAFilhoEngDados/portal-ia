@@ -421,7 +421,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
         <p>Novidades de IA, Dados e tecnologia com data e fonte verificadas, para quem quer ficar à frente no mercado.</p>
       </div>
       <div><h4>Conteúdo</h4>
-        <a href="#/noticias">Notícias</a><a href="#/mundo">Mundo Tech</a><a href="#/iguatemi">Iguatemi</a><a href="#/agenda">Agenda</a><a href="#/treinamentos">Treinamentos</a></div>
+        <a href="#/noticias">Notícias</a><a href="#/mundo">Mundo Tech</a><a href="#/agenda">Agenda</a><a href="#/treinamentos">Treinamentos</a></div>
       <div><h4>Categorias</h4><div id="footCats"></div></div>
       <div><h4>Institucional</h4>
         <a href="#/sobre">Sobre</a><a href="#atualizacao" data-scroll="atualizacao">Última atualização</a></div>
@@ -451,7 +451,6 @@ const DATA = {
   ],
   posts: RAW.news.items.map(i => ({slug:i.id, cat:i.category, titulo:i.title, resumo:i.summary, data:i.date, tags:i.tags||[], fonte:i.source_name, url:i.url, prioridade:!!i.priority, impacto:i.impact||"", afeta:i.affects||[]})),
   destaques: (RAW.site.highlights||[]),
-  iguatemi: RAW.site.iguatemi||[],
   datas: RAW.site.dates||[],
   treinamentos: RAW.site.trainings||[],
   atualizado: RAW.news.updated_at
@@ -483,7 +482,6 @@ const fonteLink = (p, label) => `<a href="${esc(p.url)}" target="_blank" rel="no
 const MENU = [
   {label:"Notícias",     href:"#/noticias",     key:"noticias", sub:[["Todas as notícias","#/noticias"], ...DATA.categorias.map(c => [c.nome, "#/noticias/"+c.slug])]},
   {label:"Mundo Tech",   href:"#/mundo",        key:"mundo"},
-  {label:"Iguatemi",     href:"#/iguatemi",     key:"iguatemi"},
   {label:"Agenda",       href:"#/agenda",       key:"agenda"},
   {label:"Treinamentos", href:"#/treinamentos", key:"treinamentos"},
   {label:"Sobre",        href:"#/sobre",        key:"sobre"}
@@ -514,7 +512,6 @@ const tcard = (icon, titulo, desc, pills) => `
     <p>${esc(desc)}</p>
     <div class="trow">${pills}</div>
   </article>`;
-const igCard = ([t,d],i) => tcard("star", t, d, `<span class="pill">Sugestão ${i+1}</span>`);
 const dataCard = ([iso,quando,oque,quem]) => tcard("cal", quando, oque, `<span class="pill">${esc(quem)}</span>`);
 const treinoCard = ([c,t,d]) => tcard(cat(c) ? cat(c).icon : "book", t, d, `<span class="pill">${cat(c) ? cat(c).nome : esc(c)}</span><span class="pill pend">Aguardando sua aprovação</span>`);
 const chips = (items, current) => `<div class="chips">${items.map(([l,h,k]) => `<a href="${h}" class="chip ${k===current?"on":""}">${l}</a>`).join("")}</div>`;
@@ -621,10 +618,6 @@ function home(){
 
   <div class="wrap" style="margin-bottom:46px">
     <section class="section">
-      <div class="head"><h2>O que isso significa pra Iguatemi</h2><a href="#/iguatemi" class="more">Ver todas ${ic("arrow")}</a></div>
-      ${grid(DATA.iguatemi.slice(0,3), igCard)}
-    </section>
-    <section class="section">
       <div class="head"><h2>Treinamentos sugeridos</h2><a href="#/treinamentos" class="more">Ver todos ${ic("arrow")}</a></div>
       ${grid(DATA.treinamentos.slice(0,3), treinoCard)}
     </section>
@@ -658,10 +651,6 @@ function mundo(imp, af){
     + chips([["Todos os impactos","#/mundo/todos/"+a,""],["Alto impacto","#/mundo/alto/"+a,"alto"],["Médio impacto","#/mundo/medio/"+a,"medio"]], i)
     + `<div class="chips chips-sm">${[["Empresas e pessoas",""],["Empresas","empresas"],["Pessoas","pessoas"]].map(([l,v]) => `<a href="#/mundo/${bi}/${v}" class="chip ${v===a?"on":""}">${l}</a>`).join("")}<span class="count">${list.length} de ${all.length} itens</span></div>`
     + grid(list, postCard, "Nenhum item com esses filtros."));
-}
-function iguatemi(){
-  return shell(pageHead([["Iguatemi"]], "O que isso significa pra Iguatemi", "Sugestões práticas a partir das novidades, para o stack Snowflake, Microsoft 365 e Copilot Studio.")
-    + `<section class="section">${grid(DATA.iguatemi, igCard)}</section>`);
 }
 function agenda(){
   return shell(pageHead([["Agenda"]], "Próximas datas", "Prazos e eventos que afetam o ambiente.")
@@ -703,7 +692,7 @@ function sobre(){
       </div>
       <section class="section"><div class="grid">
         <article class="card tcard"><span class="ticon">${ic("search")}</span><h3>Curadoria</h3><p>Só entram novidades confirmadas na página da fonte, com data verificada.</p></article>
-        <article class="card tcard"><span class="ticon">${ic("wrench")}</span><h3>Prática</h3><p>Sugestões do que isso significa para a Iguatemi e temas de treinamento para avaliar.</p></article>
+        <article class="card tcard"><span class="ticon">${ic("wrench")}</span><h3>Prática</h3><p>Temas de treinamento sugeridos a partir das novidades, para avaliar.</p></article>
         <article class="card tcard"><span class="ticon">${ic("clock")}</span><h3>Atualização</h3><p>Última atualização em ${updTxt} (horário de Brasília).</p></article>
       </div></section>
       <section class="section"><div class="head"><h2>Categorias</h2></div>${categoriasGrid()}</section>`);
@@ -713,8 +702,8 @@ function naoEncontrado(){
 }
 
 /* ---------- Roteador (por hash: #/noticias, #/post/id …) ---------- */
-const ROTAS = {"":home, noticias, mundo, iguatemi, agenda, treinamentos, post, busca, sobre, categoria:(s)=>noticias(s)};
-const TITULOS = {"":"Notícias de IA, Dados e Tecnologia", noticias:"Notícias", mundo:"Mundo Tech", iguatemi:"Iguatemi", agenda:"Agenda", treinamentos:"Treinamentos", busca:"Busca", sobre:"Sobre", categoria:"Notícias"};
+const ROTAS = {"":home, noticias, mundo, agenda, treinamentos, post, busca, sobre, categoria:(s)=>noticias(s)};
+const TITULOS = {"":"Notícias de IA, Dados e Tecnologia", noticias:"Notícias", mundo:"Mundo Tech", agenda:"Agenda", treinamentos:"Treinamentos", busca:"Busca", sobre:"Sobre", categoria:"Notícias"};
 function rota(){
   const h = location.hash;
   if(!h.startsWith("#/") && h.length > 1) return;
