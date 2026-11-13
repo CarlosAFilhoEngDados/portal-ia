@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T15:49:38-03:00",
+  "updated_at": "2026-11-13T05:51:28-03:00",
   "items": [
     {
       "id": "n001",
@@ -77,22 +77,6 @@
       "summary": "Atualização open-weight com licença MIT que conclui tarefas mais rápido, mantendo o preço. A DeepSeek reporta 77% no DeepSWE v1.1.",
       "source_name": "siliconangle.com",
       "url": "https://siliconangle.com/2026/10/18/deepseek-releases-updated-v4-1-flash-model-it-says-completes-tasks-faster/",
-      "priority": false,
-      "added": "2026-11-12"
-    },
-    {
-      "id": "n006",
-      "title": "Mistral Large 4 entra em preview público",
-      "date": "2026-10-06",
-      "category": "modelos",
-      "tags": [
-        "Mistral",
-        "Europa",
-        "Open-weight"
-      ],
-      "summary": "Modelo multimodal com 1T de parâmetros (52B ativos), treinado em datacenters próprios na Europa. A Mistral prometeu liberar os pesos.",
-      "source_name": "mistral.ai",
-      "url": "https://mistral.ai/news/mistral-large-4/",
       "priority": false,
       "added": "2026-11-12"
     },
@@ -204,21 +188,6 @@
       "summary": "Ferramentas como Confluence, Notion, Adobe e HubSpot abrem ao lado da conversa, e o Claude faz alterações nelas mediante aprovação.",
       "source_name": "claude.com",
       "url": "https://claude.com/resources/articles/interactive-connectors-full-tool",
-      "priority": true,
-      "added": "2026-11-12"
-    },
-    {
-      "id": "n014",
-      "title": "Claude Haiku 5.5, o modelo pequeno mais capaz",
-      "date": "2026-10-07",
-      "category": "claude",
-      "tags": [
-        "Anthropic",
-        "Modelo pequeno"
-      ],
-      "summary": "Feito para alto volume (resumos, classificação, subagentes e navegação), com contexto de 1M. Na API como claude-haiku-5-5.",
-      "source_name": "anthropic.com",
-      "url": "https://www.anthropic.com/claude-haiku-5-5",
       "priority": true,
       "added": "2026-11-12"
     },
@@ -570,22 +539,6 @@
       "added": "2026-11-12"
     },
     {
-      "id": "n037",
-      "title": "OpenAI DevDay: Dots, Agents API com computer use e MCP Events",
-      "date": "2026-09-29",
-      "category": "ferramentas",
-      "tags": [
-        "OpenAI",
-        "Agentes",
-        "MCP"
-      ],
-      "summary": "Agentes sempre ativos (Dots), Agents API com uso de computador e multiagente, Bedrock Managed Agents na AWS e suporte à proposta MCP Events em automações.",
-      "source_name": "openai.com",
-      "url": "https://openai.com/index/devday-2026-recap/",
-      "priority": false,
-      "added": "2026-11-12"
-    },
-    {
       "id": "n038",
       "title": "Zero-day no Outlook explorado ativamente (CVE-2026-124194)",
       "date": "2026-11-10",
@@ -712,22 +665,6 @@
       "added": "2026-11-12"
     },
     {
-      "id": "n046",
-      "title": "Integração Azure Databricks com Copilot Studio em GA",
-      "date": "2026-10-07",
-      "category": "dados",
-      "tags": [
-        "Databricks",
-        "Copilot Studio",
-        "GA"
-      ],
-      "summary": "Dados do Azure Databricks podem ser fonte de conhecimento de agentes, e um Genie Agent pode entrar como ferramenta (este passo ainda exige o preview de Managed MCP Servers).",
-      "source_name": "aguidetocloud.com",
-      "url": "https://www.aguidetocloud.com/blog/microsoft-365-copilot-november-2026-updates/",
-      "priority": false,
-      "added": "2026-11-12"
-    },
-    {
       "id": "n047",
       "title": "pg_vectorsearch: busca vetorial mais escalável no PostgreSQL",
       "date": "2026-11-07",
@@ -742,6 +679,262 @@
       "url": "https://www.infoq.com/news/2026/11/postgresql-vector-search/",
       "priority": false,
       "added": "2026-11-12"
+    },
+    {
+      "id": "n048",
+      "title": "Claude for Manufacturing: plugin com 17 skills e 4 conectores",
+      "date": "2026-11-12",
+      "category": "claude",
+      "tags": [
+        "Anthropic",
+        "Plugin",
+        "Conectores"
+      ],
+      "summary": "Novo plugin do Claude para indústria rascunha cotações, relatórios de qualidade e pedidos a fornecedores, com conectores para Autodesk Fusion, Infor, Microsoft 365 e Oracle NetSuite. Disponível nos planos Team e Enterprise.",
+      "source_name": "claude.com",
+      "url": "https://claude.com/resources/articles/claude-for-manufacturing",
+      "priority": true,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n049",
+      "title": "Claude Managed Agents agora roda na sua própria infraestrutura",
+      "date": "2026-11-12",
+      "category": "claude",
+      "tags": [
+        "Anthropic",
+        "Agentes",
+        "Self-hosted"
+      ],
+      "summary": "A versão self-hosted roda todo o serviço Managed Agents na sua nuvem ou data center: agentes, credenciais e histórico de sessões ficam com você, e as chamadas ao modelo vão para o provedor escolhido (Anthropic por padrão). Acesso via time de contas da Anthropic.",
+      "source_name": "platform.claude.com",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "priority": true,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n050",
+      "title": "Anvil: red-teaming automatizado da Anthropic supera especialistas humanos",
+      "date": "2026-11-12",
+      "category": "claude",
+      "tags": [
+        "Anthropic",
+        "Segurança",
+        "Red team"
+      ],
+      "summary": "A Anthropic apresentou o Anvil, sistema que usa o Claude para achar jailbreaks nas próprias salvaguardas; em bio, cyber e anti-destilação ele superou os red-teamers humanos e hoje valida novas proteções antes do lançamento.",
+      "source_name": "safeguards.anthropic.com",
+      "url": "https://safeguards.anthropic.com/2026/automated-red-teaming/",
+      "priority": true,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n051",
+      "title": "Inkling 2 Small chega ao Snowflake Cortex Training",
+      "date": "2026-11-12",
+      "category": "snowflake",
+      "tags": [
+        "Cortex Training",
+        "Open-weight",
+        "Preview"
+      ],
+      "summary": "O modelo open-weight da Thinking Machines Lab (MoE, 594B parâmetros, 17B ativos, Apache 2.0) já pode ser avaliado, pós-treinado e servido no Cortex Training (preview público), perto dos dados e sob a governança do Snowflake.",
+      "source_name": "snowflake.com",
+      "url": "https://www.snowflake.com/en/blog/inkling-2-small-snowflake-cortex-training/",
+      "priority": true,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n052",
+      "title": "Materializations em Semantic Views entram em GA",
+      "date": "2026-11-11",
+      "category": "snowflake",
+      "tags": [
+        "Semantic Views",
+        "CoCo",
+        "GA"
+      ],
+      "summary": "Dá para pré-agregar dimensões e métricas mais consultadas das Semantic Views; a skill suggest-sv-materializations do CoCo recomenda o que materializar e duas funções de sistema testam se a consulta usa a materialização.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-11-semantic-view-materializations-ga",
+      "priority": true,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n053",
+      "title": "Claude Fable 5.2 chega ao Copilot Cowork e ao Copilot Studio",
+      "date": "2026-11-11",
+      "category": "microsoft",
+      "tags": [
+        "Copilot Studio",
+        "Cowork",
+        "Anthropic"
+      ],
+      "summary": "O Fable 5.2 está em rollout para usuários elegíveis do Copilot Cowork e do Copilot Studio, com o Work IQ dando contexto da organização. Admins controlam o acesso no Microsoft 365 admin center.",
+      "source_name": "techcommunity.microsoft.com",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-anthropic-claude-fable-5-2-in-microsoft-copilot/4571829",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n054",
+      "title": "Copilot Studio: conexões de terceiros configuradas dentro da conversa",
+      "date": "2026-11-11",
+      "category": "microsoft",
+      "tags": [
+        "Copilot Studio",
+        "Conectores",
+        "GA até 31/12"
+      ],
+      "summary": "Quando o agente precisar de uma conexão, o usuário configura só o necessário sem sair do chat (Copilot, Teams e Web Chat) e conexões válidas são reaproveitadas. GA prevista até 31/12/2026; canvas customizado precisa de ajuste.",
+      "source_name": "m365admin.handsontek.net",
+      "url": "https://m365admin.handsontek.net/copilot-studio-set-third-party-agent-connections-conversations/",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n055",
+      "title": "Copilot Workspaces troca a escolha de agentes por chat agêntico",
+      "date": "2026-11-12",
+      "category": "microsoft",
+      "tags": [
+        "M365 Copilot",
+        "MC1550540",
+        "Frontier"
+      ],
+      "summary": "Researcher, Analyst e Designer deixam de ser opções separadas no Copilot Workspaces (ex-Notebooks): o usuário descreve a tarefa e o Copilot aplica a skill certa. Rollout no Frontier a partir de dezembro de 2026, sem ação do admin.",
+      "source_name": "mwpro.co.uk",
+      "url": "https://mwpro.co.uk/blog/2026/11/12/mc1550540-microsoft-365-copilot-workspaces-replaces-standalone-agent-selection-with-agentic-chat/",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n056",
+      "title": "Google lança o Gemini 4 Hydrogen para todos",
+      "date": "2026-11-12",
+      "category": "modelos",
+      "tags": [
+        "Google",
+        "Gemini",
+        "Agentes"
+      ],
+      "summary": "Modelo rápido para código e fluxos agênticos que supera o Argon no Artificial Analysis Intelligence Index (51 vs. 50). Preço fixo de US$ 1,50 / US$ 7,50 por 1M tokens em toda a janela de 1M; disponível na API, Gemini for business e app Gemini.",
+      "source_name": "blog.google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n057",
+      "title": "Salesforce abre o SOV-Transcribe-1, modelo de fala open-weight",
+      "date": "2026-11-12",
+      "category": "modelos",
+      "tags": [
+        "Salesforce",
+        "Speech",
+        "Open-weight"
+      ],
+      "summary": "Modelo de transcrição com 4B parâmetros ativos (26B no total), Apache 2.0, líder entre open-weight no Artificial Analysis; reconhece e-mails e telefones ditados e aceita controle de estilo e vocabulário de domínio.",
+      "source_name": "huggingface.co",
+      "url": "https://huggingface.co/blog/salesforce-sovereign-intelligence/sov-transcribe-1",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n058",
+      "title": "OpenAI lança Daybreak Red Team e Defense Factory",
+      "date": "2026-11-12",
+      "category": "seguranca",
+      "tags": [
+        "OpenAI",
+        "Pentest",
+        "Agentes"
+      ],
+      "summary": "Dois produtos da plataforma Daybreak: Red Team (early access) testa aplicações web com agentes, e Defense Factory encontra, valida e corrige vulnerabilidades no código com o GPT-6 Cyber, entregando PRs para revisão humana.",
+      "source_name": "theregister.com",
+      "url": "https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n059",
+      "title": "Genie da Databricks em GA no Slack",
+      "date": "2026-11-12",
+      "category": "ferramentas",
+      "tags": [
+        "Databricks",
+        "Slack",
+        "Conectores"
+      ],
+      "summary": "Basta @Genie num canal ou DM para perguntar sobre dados, gerar gráficos e relatórios agendados e, via conectores, atualizar tickets no Jira com aprovação. Respostas usam a permissão de quem pergunta, mas são públicas no canal por padrão.",
+      "source_name": "thenextweb.com",
+      "url": "https://thenextweb.com/news/databricks-genie-slack-app-generally-available",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n060",
+      "title": "IBM ContextForge MCP Gateway: duas falhas de identidade e credencial",
+      "date": "2026-11-12",
+      "category": "seguranca",
+      "tags": [
+        "MCP",
+        "CVE-2026-110279",
+        "IBM"
+      ],
+      "summary": "CVE-2026-110279 (CVSS 8.1) deixa um usuário trocar a credencial do upstream via header X-Upstream-Authorization; CVE-2026-110278 (7.4) vaza identidade para servidores MCP não autorizados. Corrigido na v1.1.1.",
+      "source_name": "ibm.com",
+      "url": "https://www.ibm.com/support/pages/security-bulletin-ibm-contextforge-mcp-gateway-affected-improper-authentication-vulnerability",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n061",
+      "title": "AWS API MCP Server: bypass de política de segurança (CVE-2026-125271)",
+      "date": "2026-11-10",
+      "category": "seguranca",
+      "tags": [
+        "MCP",
+        "AWS",
+        "CVE-2026-125271"
+      ],
+      "summary": "Normalização errada dos nomes de operação fazia denyList e elicitList não pegarem operações com maiúsculas seguidas, permitindo chamadas AWS que deveriam ser bloqueadas. Corrigido na 1.5.1; não há workaround.",
+      "source_name": "aws.amazon.com",
+      "url": "https://aws.amazon.com/security/security-bulletins/2026-176-aws/",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n062",
+      "title": "AgentScope: RCE sem autenticação pela API de MCP (CVE-2026-123022)",
+      "date": "2026-11-11",
+      "category": "seguranca",
+      "tags": [
+        "MCP",
+        "RCE",
+        "Agentes"
+      ],
+      "summary": "O endpoint POST /workspace/mcp do AgentScope até 2.0.11 executa qualquer comando informado na configuração stdio, sem autenticação. Correção ainda em PR; mitigar ligando o serviço em 127.0.0.1 e bloqueando o endpoint.",
+      "source_name": "i10x.ai",
+      "url": "https://i10x.ai/news/cve-2026-123022-agentscope-mcp-workspace-unauthenticated-rce",
+      "priority": false,
+      "added": "2026-11-13"
+    },
+    {
+      "id": "n063",
+      "title": "Databricks Lakehouse//RT: tempo real para agentes sem multiplicar a conta",
+      "date": "2026-11-12",
+      "category": "dados",
+      "tags": [
+        "Databricks",
+        "Tempo real",
+        "Custos"
+      ],
+      "summary": "A Databricks detalha como o Lakehouse//RT atende o volume de consultas de agentes com alta concorrência e autoscaling por nó; clientes relatam custos 6x a 10x menores e há 30% de desconto até janeiro de 2027.",
+      "source_name": "databricks.com",
+      "url": "https://www.databricks.com/blog/lakehousert-scale-real-time-analytics-not-your-bill",
+      "priority": false,
+      "added": "2026-11-13"
     }
   ]
 }
