@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="O que muda quando o Claude escreve JavaScript para chamar as ferramentas, como ligar com segurança, como auditar o código e como a organização bloqueia."><link rel="icon" href="data:,"><title>Claude Code: Code Mode e permissões · Treinamento RADARNEXO</title><style>
+:root{color-scheme:dark;--bg:#040b12;--bg-2:#07121b;--card:#0a1620;--card-2:#0d1b27;--line:rgba(140,190,220,.14);--line-strong:rgba(140,190,220,.24);
+--text:#fff;--muted:#a9b8c6;--mint:#1fe6b4;--mint-ink:#03241c;--violet:#5a2be0;--blue:#1b6cff;--warn:#f5c044;--red:#ff6b6b;--radius:16px;--wrap:1180px;
+--font:"Manrope","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--mint)}a:hover{text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 30px}
+.pv{position:sticky;top:0;z-index:30;background:#f5c044;color:#2a1f00;font-weight:800;font-size:13px;text-align:center;padding:7px 12px;letter-spacing:.02em}
+.header{border-bottom:1px solid var(--line);background:rgba(4,11,18,.85);backdrop-filter:blur(10px)}
+.header .wrap{display:flex;align-items:center;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:27px;letter-spacing:-.02em;color:#fff;text-decoration:none}
+.logo svg{width:34px;height:34px}.logo b{color:var(--mint)}
+.back{margin-left:auto;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--mint);color:var(--mint);font-weight:700;font-size:14px;text-decoration:none}
+.hero{background:radial-gradient(60% 90% at 85% 40%,rgba(27,108,255,.26),transparent 70%),radial-gradient(40% 60% at 70% 80%,rgba(90,43,224,.22),transparent 70%),linear-gradient(180deg,#051019,#040b12);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:46px;padding-bottom:40px}
+.crumb{font-size:13px;color:var(--muted);font-weight:600}.crumb a{color:var(--muted)}
+.kick{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pill{font-size:12px;border:1px solid var(--line-strong);border-radius:999px;padding:3px 11px;color:var(--muted);font-weight:700}
+.pill.mint{color:var(--mint);border-color:rgba(31,230,180,.45)}.pill.warn{color:var(--warn);border-color:rgba(245,192,68,.5)}.pill.violet{color:#b9a4ff;border-color:rgba(140,110,255,.5)}
+h1{margin-top:14px;font-size:clamp(30px,4.4vw,50px);line-height:1.06;font-weight:800;letter-spacing:-.03em;max-width:16em}
+h1 em{font-style:normal;color:var(--mint)}
+.lead{margin-top:14px;color:#d6e2ec;font-size:18px;max-width:46em}
+.meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px;color:var(--muted);font-size:14px;font-weight:600}
+.meta b{color:#fff}
+.layout{display:grid;grid-template-columns:250px 1fr;gap:40px;padding-top:36px;padding-bottom:70px}
+.toc{position:sticky;top:52px;align-self:start;border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:linear-gradient(180deg,var(--card-2),var(--card))}
+.toc h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.toc a{display:block;color:#dbe7f0;text-decoration:none;font-size:14px;font-weight:600;padding:6px 0;border-top:1px solid var(--line)}
+.toc a:first-of-type{border-top:0}.toc a:hover{color:var(--mint)}
+.toc .n{color:var(--mint);font-weight:800;margin-right:6px}
+article{min-width:0}
+section{padding:6px 0 30px;border-bottom:1px solid var(--line);margin-bottom:30px;scroll-margin-top:50px}
+section:last-child{border-bottom:0}
+h2{font-size:26px;letter-spacing:-.02em;line-height:1.2;display:flex;gap:12px;align-items:baseline}
+h2 .n{color:var(--mint);font-size:15px;font-weight:800;border:1.5px solid rgba(31,230,180,.5);border-radius:999px;padding:1px 10px;flex:none}
+h3{font-size:18px;margin:24px 0 8px}
+p{margin-top:10px;color:#dbe5ee}li{color:#dbe5ee}
+ul.b,ol.b{margin:10px 0 0 22px}ul.b{list-style:disc}ol.b{list-style:decimal}ul.b li,ol.b li{margin-top:6px}
+code{font-family:var(--mono);font-size:.88em;background:rgba(31,230,180,.08);border:1px solid rgba(31,230,180,.18);border-radius:6px;padding:1px 6px;color:#c8fff0;word-break:break-word}
+.code{margin-top:14px;border:1px solid var(--line-strong);border-radius:12px;overflow:hidden;background:#020810}
+.code-h{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;background:#0b1823;border-bottom:1px solid var(--line);font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
+.copy{font:inherit;font-weight:800;color:var(--mint);background:none;border:1px solid rgba(31,230,180,.4);border-radius:999px;padding:2px 10px;cursor:pointer}
+.code pre{margin:0;padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:13.2px;line-height:1.55;color:#e6f1f8}
+.code pre code{background:none;border:0;padding:0;color:inherit;font-size:inherit;word-break:normal}
+.call{margin-top:16px;border-radius:12px;padding:14px 16px;border:1px solid var(--line-strong);background:rgba(255,255,255,.03);display:grid;gap:4px}
+.call strong{font-size:14px;letter-spacing:.02em}
+.call.warn{border-color:rgba(245,192,68,.45);background:rgba(245,192,68,.07)}.call.warn strong{color:var(--warn)}
+.call.tip{border-color:rgba(31,230,180,.4);background:rgba(31,230,180,.06)}.call.tip strong{color:var(--mint)}
+.call.risk{border-color:rgba(255,107,107,.45);background:rgba(255,107,107,.07)}.call.risk strong{color:var(--red)}
+.call.info{border-color:rgba(140,110,255,.45);background:rgba(90,43,224,.1)}.call.info strong{color:#b9a4ff}
+.call p{margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.box{border:1px solid var(--line);border-radius:14px;padding:16px;background:linear-gradient(180deg,var(--card-2),var(--card))}
+.box h4{font-size:15px;margin-bottom:4px}
+.tbl{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.steps{counter-reset:s;margin-top:8px}
+.step{position:relative;padding-left:46px;margin-top:22px}
+.step:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--mint);color:var(--mint-ink);font-weight:800;display:grid;place-items:center}
+.step h3{margin-top:2px}
+.pit{display:grid;gap:12px;margin-top:14px}
+.pit .box{border-left:3px solid var(--warn)}
+.ex{border:1px solid rgba(31,230,180,.35);border-radius:16px;padding:20px;background:linear-gradient(135deg,rgba(31,230,180,.08),rgba(90,43,224,.08))}
+.ex ol{margin:10px 0 0 22px;list-style:decimal}
+.chk{list-style:none!important;margin-left:0!important}.chk li{padding-left:28px;position:relative;margin-top:8px}
+.chk li:before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:5px;border:2px solid var(--mint)}
+details{margin-top:14px;border:1px solid var(--line-strong);border-radius:12px;padding:12px 16px;background:rgba(255,255,255,.02)}
+summary{cursor:pointer;font-weight:800;color:var(--mint)}
+.src li{margin-top:8px}.src a{word-break:break-word}
+.unv{border:1px dashed rgba(245,192,68,.55);border-radius:14px;padding:16px;background:rgba(245,192,68,.05)}
+.footer{border-top:1px solid var(--line);padding:30px 0;background:#030910;color:var(--muted);font-size:13px}
+@media (max-width:900px){.layout{grid-template-columns:1fr;gap:20px}.toc{position:static}.grid2{grid-template-columns:1fr}}
+@media (max-width:560px){.wrap{padding:0 18px}.logo{font-size:22px}.logo svg{width:28px;height:28px}.back span{display:none}.back{padding:0 12px}
+h2{font-size:22px}.lead{font-size:16px}.code pre{font-size:12.2px}.step{padding-left:42px}}
+</style></head>
+<body>
+
+<header class="header"><div class="wrap"><a class="logo" href="../index.html#/treinamentos"><svg viewBox="0 0 40 40" fill="none" stroke="#1fe6b4" stroke-width="3.6" stroke-linecap="round" aria-hidden="true"><path d="M20 4a16 16 0 1 0 16 16"/><path d="M20 12a8 8 0 1 0 8 8"/><path d="M20 20 33 7"/><circle cx="20" cy="20" r="2.2" fill="#1fe6b4" stroke="none"/></svg><span>RADAR<b>NEXO</b></span></a>
+<a class="back" href="../index.html#/treinamentos">← <span>Treinamentos</span></a></div></header>
+<div class="hero"><div class="wrap"><div class="crumb"><a href="../index.html#/treinamentos">Treinamentos</a> › Prática guiada</div>
+<div class="kick"><span class="pill mint">Claude</span><span class="pill warn">Experimental</span><span class="pill ">v2.1.323</span><span class="pill violet">Gratuito</span></div><h1>Claude Code: <em>Code Mode</em> e controles de permissão</h1><p class="lead">O que muda quando o Claude escreve JavaScript para chamar as ferramentas, como ligar com segurança, como auditar o código e como a organização bloqueia.</p><div class="meta"><span>Pré-requisito: <b>Claude Code instalado (build nativo)</b></span><span>Duração estimada: <b>50 min</b></span><span>Atualizado: <b>13/11/2026</b></span></div></div></div>
+<div class="wrap layout"><nav class="toc" aria-label="Neste treinamento"><h4>Neste treinamento</h4><a href="#contexto"><span class="n">01</span>Contexto</a><a href="#porque"><span class="n">02</span>Por que importa</a><a href="#requisitos"><span class="n">03</span>Requisitos e limites</a><a href="#passo"><span class="n">04</span>Passo a passo</a><a href="#armadilhas"><span class="n">05</span>Armadilhas</a><a href="#seguranca"><span class="n">06</span>Boas práticas e segurança</a><a href="#exercicio"><span class="n">07</span>Exercício prático (30 min)</a><a href="#fontes"><span class="n">08</span>Fontes oficiais</a></nav><article><section id="contexto"><h2><span class="n">01</span>Contexto</h2>
+<p>Normalmente o Claude Code pede uma ferramenta por vez (Bash, Read, Edit…), lê o resultado e decide o próximo passo. No <b>Code Mode</b>, lançado na <b>v2.1.323</b> (publicada em 12/11/2026, 19:12 BRT), o Claude <b>escreve um trecho de JavaScript</b> que faz várias chamadas de ferramenta de uma vez, e o Claude Code executa esse código na sua sessão.</p>
+<figure class="code"><div class="code-h"><span>JavaScript · exemplo da documentação</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-javascript">const files = await $`rg -l &quot;function retryPolicy&quot; src`.text();
+const target = files.trim().split(&quot;\n&quot;)[0];
+await edit(target, &quot;maxAttempts: 3&quot;, &quot;maxAttempts: 5&quot;);
+({ edited: target, tests: $`npm test -- retryPolicy`.nothrow() });</code></pre></figure>
+<p>Na conversa você vê as chamadas (por exemplo, o diff da edição), não o código. Para ler o código, pressione <code>Ctrl+O</code> e expanda a linha <b>Code</b> no visualizador de transcrição.</p>
+<aside class="call risk"><strong>Experimental e desligado por padrão</strong><div><p>Pode mudar ou ser removido em qualquer versão. Trate como laboratório, não como padrão do time.</p></div></aside>
+</section><section id="porque"><h2><span class="n">02</span>Por que importa</h2>
+<ul class="b">
+ <li><b>Menos ida e volta</b> em tarefas com muitas chamadas relacionadas: a mesma mudança em vários arquivos, buscas cujo resultado precisa ser filtrado e comandos independentes rodando em paralelo.</li>
+ <li><b>Muda o modelo de controle</b>: no auto mode, o classificador revisa o <i>código</i> e não cada chamada. Quem administra o Claude Code precisa saber disso antes que alguém ligue.</li>
+ <li><b>A mesma versão endureceu permissões</b>: a 2.1.323 traz dezenas de correções em regras Bash, sandbox e login de MCP. Atualizar é recomendado mesmo sem usar o Code Mode.</li>
+</ul>
+</section><section id="requisitos"><h2><span class="n">03</span>Requisitos e limites</h2>
+<table class="tbl"><thead><tr><th>Item</th><th>O que a documentação exige</th></tr></thead><tbody>
+<tr><td>Versão</td><td>Claude Code <b>v2.1.323+</b>, build nativo (no Windows, com Git for Windows)</td></tr>
+<tr><td>Conta</td><td>Assinatura Claude ou conta Console. <b>Não</b> funciona via gateway, Amazon Bedrock, Claude Platform on AWS, Agent Platform do Google Cloud ou Microsoft Foundry</td></tr>
+<tr><td>Organização</td><td>Sem configuração HIPAA e sem zero data retention</td></tr>
+<tr><td>Modelo</td><td>Claude Opus 5.5, Sonnet 5.5, Haiku 5.5 ou Fable 5.2</td></tr>
+<tr><td>Superfície</td><td>Só sessão interativa <code>claude</code> no terminal. Não funciona com <code>-p</code>, Agent SDK, painel do VS Code, app Desktop nem sessões na nuvem</td></tr>
+<tr><td>Incompatível com</td><td><code>apiKeyHelper</code>, agent teams, export OpenTelemetry, <code>DISABLE_TELEMETRY</code>, Remote Control, Claude in Chrome, computer use</td></tr>
+<tr><td>Tempo</td><td>Código em espera para após <b>10 min</b> (inclui o tempo em prompts de permissão). Em background, até <b>2 h</b> (requer sessão iniciada em auto ou <code>bypassPermissions</code>)</td></tr>
+<tr><td>Retomar</td><td>Só no terminal e com Code Mode ligado. Sem a variável, o Claude Code se recusa a retomar a sessão</td></tr>
+</tbody></table>
+</section><section id="passo"><h2><span class="n">04</span>Passo a passo</h2>
+<div class="steps">
+<div class="step"><h3>Confira a versão</h3>
+<figure class="code"><div class="code-h"><span>Terminal</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-bash">claude --version
+# se for menor que 2.1.323:
+claude update</code></pre></figure>
+<p>No canal <code>stable</code>, a 2.1.323 pode demorar a chegar. Espere ou mude para <code>latest</code>.</p></div>
+
+<div class="step"><h3>Ligue o Code Mode para uma sessão</h3>
+<figure class="code"><div class="code-h"><span>macOS / Linux / WSL</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-bash">CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude</code></pre></figure>
+<figure class="code"><div class="code-h"><span>Windows PowerShell</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-powershell">$env:CLAUDE_CODE_EXPERIMENTAL_CODE_MODE = &quot;1&quot;
+claude</code></pre></figure>
+<p>Para todas as sessões novas, coloque em <code>~/.claude/settings.json</code>:</p>
+<figure class="code"><div class="code-h"><span>~/.claude/settings.json</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-json">{
+  &quot;env&quot;: {
+    &quot;CLAUDE_CODE_EXPERIMENTAL_CODE_MODE&quot;: &quot;1&quot;
+  }
+}</code></pre></figure>
+<aside class="call tip"><strong>Proteção embutida</strong><div><p>O Claude Code <b>ignora</b> essa variável nos settings de projeto, então um repositório clonado não liga o Code Mode por você.</p></div></aside></div>
+
+<div class="step"><h3>Confirme e verifique</h3>
+<p>Na primeira vez, escolha <b>Yes, turn on Code Mode</b>. Depois do restart, a sessão mostra:</p>
+<figure class="code"><div class="code-h"><span>Terminal</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-text">Code Mode (experimental) is on · this session can be resumed only with Code Mode on</code></pre></figure>
+<p>Se aparecer <code>Code Mode (experimental) isn't available</code>, o motivo vem na mesma linha e também em <code>/status</code>.</p></div>
+
+<div class="step"><h3>Dê uma tarefa com muitas chamadas e leia o código</h3>
+<figure class="code"><div class="code-h"><span>Prompt sugerido pela doc</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-text">Read every Markdown file in this project and list the links that point to local files that don&#x27;t exist.</code></pre></figure>
+<p>Pressione <code>Ctrl+O</code>, expanda a linha <b>Code</b> e leia o JavaScript. Pressione <code>Ctrl+O</code> de novo para voltar.</p></div>
+
+<div class="step"><h3>Entenda como as permissões se aplicam</h3>
+<ul class="b">
+ <li><b>Cada chamada</b> feita pelo código passa pelas suas regras <code>deny</code> e <code>ask</code> e pelos hooks <code>PreToolUse</code>. Não precisa mudar regra nem matcher de <code>Bash</code>.</li>
+ <li><b>Auto mode</b>: o classificador revisa <b>cada trecho de código</b> antes de rodar, não cada chamada, e <b>não vê valores calculados em execução</b> (ex.: um caminho tirado de uma busca). Para o que você precisa controlar, mantenha regras ou hooks.</li>
+ <li><b>Demais modos</b> (Manual, acceptEdits etc.): o código começa sem revisão e você é perguntado em cada chamada que já pediria permissão nesse modo.</li>
+ <li>Lembre a precedência: <b>deny → ask → allow</b>. A primeira regra que casa decide, e um allow não abre exceção num deny.</li>
+</ul></div>
+
+<div class="step"><h3>Audite o código com um hook <code>REPL</code></h3>
+<p>A ferramenta que executa o código do Claude se chama <code>REPL</code>, e o JavaScript chega em <code>tool_input.code</code>. Este hook só registra o código e não bloqueia nada:</p>
+<figure class="code"><div class="code-h"><span>.claude/settings.json</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-json">{
+  &quot;hooks&quot;: {
+    &quot;PreToolUse&quot;: [
+      {
+        &quot;matcher&quot;: &quot;REPL&quot;,
+        &quot;hooks&quot;: [
+          {
+            &quot;type&quot;: &quot;command&quot;,
+            &quot;command&quot;: &quot;${CLAUDE_PROJECT_DIR}/.claude/hooks/log-code-mode.sh&quot;,
+            &quot;args&quot;: [],
+            &quot;timeout&quot;: 10
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre></figure>
+<figure class="code"><div class="code-h"><span>.claude/hooks/log-code-mode.sh</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-bash">#!/bin/bash
+# .claude/hooks/log-code-mode.sh: registra o JavaScript que o Claude vai executar
+# Requer jq no PATH. Saída 0 sem JSON = sem decisão (o fluxo normal de permissão segue).
+INPUT=$(cat)
+mkdir -p &quot;$HOME/.claude/audit&quot;
+{
+  echo &quot;---- $(date -Iseconds)&quot;
+  echo &quot;$INPUT&quot; | jq -r &#x27;.tool_input.code&#x27;
+} &gt;&gt; &quot;$HOME/.claude/audit/code-mode.log&quot;
+exit 0</code></pre></figure>
+<figure class="code"><div class="code-h"><span>Terminal</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-bash">chmod +x .claude/hooks/log-code-mode.sh</code></pre></figure>
+<aside class="call warn"><strong>Hook lento = chamada recusada</strong><div><p>Se um hook <code>PreToolUse</code> falha ou estoura o tempo numa chamada vinda do código, a chamada é <b>recusada</b> (<code>the hook failed</code> / <code>the hook did not finish</code>). Mantenha o hook rápido ou use <code>"onFailure": "continue"</code> quando fizer sentido.</p></div></aside></div>
+
+<div class="step"><h3>Desligue ou bloqueie para a organização</h3>
+<p><b>Para você:</b> remova a variável do shell e do <code>~/.claude/settings.json</code>, ou coloque <code>"0"</code>. Um <code>0</code> em qualquer lugar vence um <code>1</code> no outro.</p>
+<p><b>Para a organização:</b> coloque <code>"0"</code> nas managed settings. Abaixo, um exemplo que também bloqueia leituras sensíveis e o modo bypass (chaves documentadas):</p>
+<figure class="code"><div class="code-h"><span>managed-settings.json</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-json">{
+  &quot;env&quot;: {
+    &quot;CLAUDE_CODE_EXPERIMENTAL_CODE_MODE&quot;: &quot;0&quot;
+  },
+  &quot;permissions&quot;: {
+    &quot;deny&quot;: [
+      &quot;Read(./.env)&quot;,
+      &quot;Read(./secrets/**)&quot;
+    ],
+    &quot;disableBypassPermissionsMode&quot;: &quot;disable&quot;
+  }
+}</code></pre></figure>
+<table class="tbl"><thead><tr><th>Sistema</th><th>Caminho do arquivo</th></tr></thead><tbody>
+<tr><td>macOS</td><td><code>/Library/Application Support/ClaudeCode/managed-settings.json</code></td></tr>
+<tr><td>Linux / WSL</td><td><code>/etc/claude-code/managed-settings.json</code></td></tr>
+<tr><td>Windows</td><td><code>C:\Program Files\ClaudeCode\managed-settings.json</code></td></tr>
+</tbody></table>
+<p>Confirme com <code>/status</code>: a linha <i>Setting sources</i> mostra <code>Enterprise managed settings (file)</code>. Quem já está numa sessão com Code Mode continua até sair. <b>Não</b> dá para <i>ligar</i> o Code Mode para os usuários via managed settings.</p></div>
+</div>
+</section><section id="armadilhas"><h2><span class="n">05</span>Armadilhas</h2>
+<div class="pit">
+ <div class="box"><h4>Regras Bash casam texto, não intenção</h4><p>O próprio aviso da doc: o Claude pode rodar um comando negado numa forma que a regra não pega, com ou sem Code Mode. Por exemplo, <code>Bash(git push *)</code> não pega <code>git -C . push</code>. Para limites reais, use o <b>sandbox</b>.</p></div>
+ <div class="box"><h4>Auto mode não vê valores de execução</h4><p>O classificador aprova o código olhando o texto. Se o caminho ou o comando sai de uma busca, ele não sabe o valor final.</p></div>
+ <div class="box"><h4>Sessão "presa" ao Code Mode</h4><p>Para <code>claude --continue</code> ou <code>--resume</code>, mantenha a variável em <code>1</code>. Sessões iniciadas sem Code Mode retomam sem ele.</p></div>
+ <div class="box"><h4>"Funciona na minha máquina"</h4><p>Gateway, <code>ANTHROPIC_BASE_URL</code> customizada, Bedrock, <code>apiKeyHelper</code>, OpenTelemetry ligado ou <code>DISABLE_TELEMETRY</code> impedem o Code Mode de iniciar. Veja a tabela de motivos na doc.</p></div>
+ <div class="box"><h4>Prompt com contagem regressiva</h4><p>No auto mode, se um código novo começa enquanto o anterior roda, o anterior perde a revisão do classificador e você recebe um prompt com contagem regressiva. Sem resposta, a chamada é recusada.</p></div>
+</div>
+</section><section id="seguranca"><h2><span class="n">06</span>Boas práticas e segurança</h2>
+<ul class="b">
+ <li><b>Atualize para 2.1.323+</b> mesmo sem usar Code Mode. Correções de permissão desta versão:</li>
+</ul>
+<ul class="b" style="margin-left:44px"><li>Regras allow com curinga colado, como <code>Bash(ls*)</code>, podiam pular o prompt. Uma regra que nomeia variável, como <code>Bash(NODE_ENV*)</code>, agora pergunta.</li><li>Regras deny e ask agora pegam comandos rodados via <code>sudo</code>, <code>env</code> e wrappers parecidos.</li><li>O sandbox do Bash podia se desligar durante a sessão (corrigido).</li><li>Write/Edit podiam escrever em caminho coberto por uma regra deny de <code>Read</code> (corrigido).</li><li><code>--permission-mode auto</code> sem auto mode disponível agora inicia em Manual, que pergunta antes.</li><li>"Don't ask again" para um allow que parece conter segredo, ou que iria para um <code>settings.local.json</code> rastreado pelo git, vale só para a sessão.</li><li><code>claude -p</code> e o Agent SDK agora param na inicialização se os settings que ligam o sandbox forem inválidos, em vez de rodar sem sandbox.</li><li>Aviso na inicialização para regras allow Bash com <code>*</code> no valor de uma variável, ex.: <code>Bash(PORT=* npm run dev)</code>.</li></ul>
+<ul class="b">
+ <li><b>Camadas</b>: regras deny/ask + hook <code>PreToolUse</code> (inclusive <code>REPL</code>) + <b>sandbox</b> para limitar arquivos e rede dos comandos de shell.</li>
+ <li><b>Política de time</b>: comece com Code Mode bloqueado nas managed settings e libere para um grupo piloto em máquinas sem a política.</li>
+ <li><b>Nunca use <code>bypassPermissions</code></b> fora de container ou VM isolada. Ele pula prompts até para caminhos protegidos como <code>.git</code> e <code>.claude</code>.</li>
+ <li><b>Segredos</b>: negue leitura de <code>.env</code> e pastas de segredo com <code>Read(...)</code>. Lembre que permissões são aplicadas pelo Claude Code, não pelo modelo. Instruções no <code>CLAUDE.md</code> não bastam.</li>
+</ul>
+<figure class="code"><div class="code-h"><span>settings · sandbox (exemplo da doc)</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-json">{
+  &quot;sandbox&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;allowUnsandboxedCommands&quot;: false
+  }
+}</code></pre></figure>
+</section><section id="exercicio"><h2><span class="n">07</span>Exercício prático (30 min)</h2>
+<div class="ex">
+<p><b>Objetivo:</b> ligar o Code Mode num projeto de teste, auditar o código gerado e provar que uma regra deny continua valendo.</p>
+<ol>
+ <li>Num repositório de teste, adicione ao <code>.claude/settings.json</code> uma regra <code>"deny": ["Bash(git push *)"]</code> e o hook <code>REPL</code> do passo 6.</li>
+ <li>Inicie com <code>CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1 claude</code> e confirme a linha "Code Mode (experimental) is on".</li>
+ <li>Peça: "liste os links quebrados nos arquivos Markdown e corrija os que apontam para arquivos renomeados".</li>
+ <li>Abra <code>Ctrl+O</code> e compare o JavaScript da tela com o que foi gravado em <code>~/.claude/audit/code-mode.log</code>.</li>
+ <li>Peça para fazer push. Verifique que a chamada foi recusada pela regra deny.</li>
+ <li>Saia, rode <code>claude --resume</code> <b>sem</b> a variável e observe a recusa. Depois retome com a variável.</li>
+</ol>
+<ul class="chk">
+ <li>Sei ligar e desligar o Code Mode e sei onde a organização o bloqueia.</li>
+ <li>Sei onde ver o código (<code>Ctrl+O</code>) e como auditá-lo (hook <code>REPL</code>).</li>
+ <li>Sei explicar o que muda no auto mode e por que o sandbox ainda é necessário.</li>
+</ul>
+<details><summary>Gabarito</summary>
+<p><b>5)</b> Cada chamada feita pelo código passa pelas regras <code>deny</code>/<code>ask</code>, então <code>git push origin main</code> é recusado. Uma variação como <code>git -C . push</code> <b>não</b> casa com a regra. É por isso que a doc recomenda o sandbox. <b>6)</b> Com Code Mode desligado, o Claude Code se recusa a retomar uma sessão iniciada com ele.</p>
+</details>
+</div>
+</section><section id="fontes"><h2><span class="n">08</span>Fontes oficiais</h2>
+<ul class="b src">
+ <li><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.323" target="_blank" rel="noopener">Release v2.1.323: changelog completo (GitHub, anthropics/claude-code)</a></li>
+ <li><a href="https://code.claude.com/docs/en/code-mode" target="_blank" rel="noopener">Run tool calls from code with Code Mode</a></li>
+ <li><a href="https://code.claude.com/docs/en/permissions" target="_blank" rel="noopener">Configure permissions</a> · <a href="https://code.claude.com/docs/en/permission-modes" target="_blank" rel="noopener">Permission modes</a></li>
+ <li><a href="https://code.claude.com/docs/en/managed-settings" target="_blank" rel="noopener">Deploy managed settings</a></li>
+ <li><a href="https://code.claude.com/docs/en/hooks" target="_blank" rel="noopener">Hooks reference</a> · <a href="https://code.claude.com/docs/en/sandboxing" target="_blank" rel="noopener">Sandboxing</a></li>
+</ul>
+<h3>O que não deu para confirmar</h3>
+<div class="unv"><ul class="b">
+ <li>Quais funções existem no ambiente JavaScript além de <code>$</code>, <code>.text()</code>, <code>.nothrow()</code> e <code>edit()</code> (as únicas que aparecem no exemplo oficial). Não liste outras para o time.</li>
+ <li>Ganho de velocidade ou de custo em tokens: a Anthropic não publicou números.</li>
+ <li>Quando (ou se) o Code Mode sai do experimental.</li>
+ <li>O hook de auditoria e a sequência do exercício seguem a sintaxe documentada, mas não foram executados num Claude Code real nesta preparação. Teste num repositório descartável.</li>
+</ul></div>
+</section></article></div>
+<footer class="footer"><div class="wrap">RADARNEXO · Treinamento gratuito · Fatos conferidos nas fontes oficiais em 13/11/2026. Recursos em preview/experimentais podem mudar a qualquer momento.</div></footer>
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{const t=b.closest('.code').querySelector('code').innerText;
+(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar',1500)}).catch(()=>{b.textContent='Selecione e copie'})}));
+</script></body></html>

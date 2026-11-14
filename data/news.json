@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T12:04:40-03:00",
+  "updated_at": "2026-11-14T09:47:37-03:00",
   "items": [
     {
       "id": "n001",
@@ -950,7 +950,7 @@
         "Exchange Online",
         "Indisponibilidade"
       ],
-      "summary": "Falha no Exchange Online a partir das 13h17 de 12/11 (Brasília) derrubou acesso às caixas e atrasou e-mails, afetando também Teams, Copilot, OneDrive e Outlook.com; governos, hospitais e escolas em vários países foram atingidos. Em 13/11, mais de 18 horas depois, a Microsoft relatava filas de e-mail perto do normal, mas acessos intermitentes; sem indício de ataque e sem causa raiz divulgada.",
+      "summary": "Falha no Exchange Online a partir das 13h17 de 12/11 (Brasília) derrubou acesso às caixas e atrasou e-mails, afetando também Teams, Copilot, OneDrive e Outlook.com em vários países. Depois de mais de 24 horas, a Microsoft disse em 14/11 que restaurou o serviço para os clientes e regiões restantes; sem indício de interferência externa.",
       "source_name": "theguardian.com",
       "url": "https://www.theguardian.com/technology/live/2026/nov/13/microsoft-outage-down-today-live-update-outlook-teams-365-when-fixed-latest-status-cause-news",
       "priority": false,
@@ -1238,7 +1238,7 @@
         "Zero-day",
         "Firewall"
       ],
-      "summary": "Falha no daemon DynamicCLI do Gaia OS, explorada desde o fim de outubro contra algumas dezenas de clientes: os atacantes entraram pelo Mobile Access (PHP2Shell), viraram root, instalaram backdoors e chegaram a implantar wiper em hosts ESXi. Há hotfix de emergência e mitigação temporária.",
+      "summary": "Falha no daemon DynamicCLI do Gaia OS, explorada desde o fim de outubro contra algumas dezenas de clientes: os atacantes entraram pelo Mobile Access (PHP2Shell), viraram root, instalaram backdoors e chegaram a implantar wiper em hosts ESXi. Há hotfix de emergência e mitigação temporária. A CISA incluiu a falha no catálogo KEV em 13/11, com prazo de correção até 16/11 para órgãos federais dos EUA.",
       "source_name": "bleepingcomputer.com",
       "url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
       "priority": false,
@@ -1267,6 +1267,204 @@
         "empresas"
       ],
       "added": "2026-11-13"
+    },
+    {
+      "id": "n081",
+      "title": "Claude Code 2.1.325 corrige falha de segurança e envio indevido de conversa ao Bedrock",
+      "date": "2026-11-13",
+      "category": "claude",
+      "tags": [
+        "Claude Code",
+        "Segurança",
+        "Release"
+      ],
+      "summary": "A versão corrige uma falha de segurança na decodificação de respostas zstd e um caso em que a contagem de tokens no Amazon Bedrock enviava a conversa ao Bedrock mesmo com allowedProviders bloqueando. Também impede sessões em background de usar (e cobrar) uma API key do shell no lugar do login claude.ai.",
+      "source_name": "github.com",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+      "priority": true,
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n082",
+      "title": "Snowflake é Líder no primeiro Magic Quadrant da Gartner para Data Lakehouse",
+      "date": "2026-11-13",
+      "category": "snowflake",
+      "tags": [
+        "Gartner",
+        "Lakehouse",
+        "Horizon Catalog"
+      ],
+      "summary": "No relatório inaugural de plataformas de data lakehouse, a Gartner pôs a Snowflake como Líder; no Critical Capabilities ela ficou em 1º (4,29/5) em modernização de data warehouse e em 2º (4,23/5) em plataforma unificada de analytics, segundo a empresa.",
+      "source_name": "snowflake.com",
+      "url": "https://www.snowflake.com/en/blog/gartner-magic-quadrant-data-lakehouse-platforms/",
+      "priority": true,
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n083",
+      "title": "Claude entra na EU Data Boundary do Microsoft 365 Copilot; padrão muda em 9/12",
+      "date": "2026-11-13",
+      "category": "microsoft",
+      "tags": [
+        "M365 Copilot",
+        "Claude",
+        "Governança"
+      ],
+      "summary": "Pelos avisos MC1546438 e MC1546435, o Claude passa a ser processado dentro da EU Data Boundary para tenants elegíveis da UE/EFTA no início de dezembro; em 9/12 ele fica ativado para todos onde não houver escolha feita (Reino Unido continua fora da fronteira). Vale revisar a configuração de provedores de IA no admin center.",
+      "source_name": "empowering.cloud",
+      "url": "https://empowering.cloud/claude-eu-data-boundary-copilot-code-and-frontier-expansion-m365-changes/",
+      "priority": false,
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n084",
+      "title": "Gemini 4 Hydrogen chega em GA ao GitHub Copilot",
+      "date": "2026-11-13",
+      "category": "ferramentas",
+      "tags": [
+        "GitHub Copilot",
+        "Gemini",
+        "Modelos"
+      ],
+      "summary": "O modelo rápido do Google fica disponível nos planos Pro, Pro+, Max, Business e Enterprise (VS Code, CLI, coding agent, JetBrains e outros), cobrado pelo preço de tabela no faturamento por uso. Em Business/Enterprise ele vem habilitado por padrão, salvo se o admin desligar.",
+      "source_name": "github.blog",
+      "url": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot/",
+      "priority": false,
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n085",
+      "title": "OpenAI lança o ChatGPT Wallet para agentes pagarem compras",
+      "date": "2026-11-13",
+      "category": "ferramentas",
+      "tags": [
+        "OpenAI",
+        "Agentes",
+        "Pagamentos"
+      ],
+      "summary": "Feito com American Express, Mastercard e Visa, o Wallet usa token de pagamento (o agente não vê o cartão) e exige verificação biométrica a cada compra. Começa nos dots para assinantes ChatGPT Pro nos EUA; a OpenAI publicou um playbook para lojas aceitarem agentes (Web Bot Auth, WebMCP).",
+      "source_name": "openai.com",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet/",
+      "priority": false,
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n086",
+      "title": "Tesouro Nacional tira sistemas do ar após ataque que expôs 4 mil chaves Pix",
+      "date": "2026-11-13",
+      "category": "mundo",
+      "tags": [
+        "Governo",
+        "Vazamento",
+        "Pix"
+      ],
+      "summary": "Invasão identificada em 4/11 expôs nomes, CPFs e e-mails de cerca de 30 mil usuários do e-Serviços e cerca de 4 mil chaves Pix de beneficiários de pagamentos federais. Consultas e bases do Tesouro e do Tesouro Transparente seguem suspensas, com normalização prevista até a manhã de 16/11; dívida pública não foi afetada. Risco de golpes com os dados.",
+      "source_name": "folha.uol.com.br",
+      "url": "https://www1.folha.uol.com.br/mercado/2026/11/tesouro-nacional-derruba-sistemas-apos-ataque-que-roubou-dados-de-beneficiarios-do-governo.shtml",
+      "priority": false,
+      "impact": "alto",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ],
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n087",
+      "title": "Caixa Seguridade: ataque copia dados de 7,6 milhões de clientes",
+      "date": "2026-11-12",
+      "category": "mundo",
+      "tags": [
+        "Vazamento",
+        "LGPD",
+        "Seguros"
+      ],
+      "summary": "A Caixa Vida e Previdência identificou um ataque em 6/11 que copiou CPF, endereço, telefone, e-mail e data de nascimento dos 7,6 milhões de clientes ativos (e de ex-clientes). A empresa diz não haver indício de dados financeiros ou senhas expostos; ANPD notificada em 11/11. Atenção a golpes usando esses dados.",
+      "source_name": "agenciabrasil.ebc.com.br",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/caixa-seguridade-informa-ataque-cibernetico-e-vazamento-de-dados",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "pessoas"
+      ],
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n088",
+      "title": "EUA param todos os voos por 5 horas após pane na comunicação do controle aéreo",
+      "date": "2026-11-13",
+      "category": "mundo",
+      "tags": [
+        "FAA",
+        "Indisponibilidade",
+        "Infraestrutura"
+      ],
+      "summary": "Switches e roteadores analógicos sobrecarregados causaram falhas de comunicação e radar em centros de controle, levando à maior paralisação nacional desde 2001; perto de 10 mil voos foram cancelados (Flightradar24) e a normalização deve levar dias. O governo diz não haver indício de ataque cibernético.",
+      "source_name": "reuters.com",
+      "url": "https://www.reuters.com/3fec1b0a85a0/world/us/faa-issues-national-ground-stop-due-extraordinary-circumstance-reasons-safety-2026-11-13/",
+      "priority": false,
+      "impact": "alto",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ],
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n089",
+      "title": "Porto de Santos volta ao ar após ataque com pedido de resgate",
+      "date": "2026-11-13",
+      "category": "mundo",
+      "tags": [
+        "Ransomware",
+        "Infraestrutura",
+        "Brasil"
+      ],
+      "summary": "O site da Autoridade Portuária de Santos voltou na noite de 12/11, quase uma semana após o ataque de 6/11; a APS confirmou pedido de resgate, leu 100% dos backups e diz que os sistemas administrativos estão em fase final de retorno. As operações seguiram sem paralisação, com procedimentos manuais; a PF investiga.",
+      "source_name": "g1.globo.com",
+      "url": "https://g1.globo.com/sp/santos-regiao/porto-mar/noticia/2026/11/13/site-do-porto-de-santos-volta-ao-ar-quase-uma-semana-apos-ataque-hacker.ghtml",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n090",
+      "title": "Atualização maliciosa atinge software de drones militares da Quantum Systems",
+      "date": "2026-11-13",
+      "category": "mundo",
+      "tags": [
+        "Supply chain",
+        "Defesa",
+        "Atualização"
+      ],
+      "summary": "A alemã Quantum Systems confirmou um ataque detectado no fim de outubro; segundo Der Spiegel e Financial Times, um arquivo de atualização malicioso do QBase (planejamento de missões) saiu do próprio servidor de updates. O Exército alemão teria suspendido os drones da empresa por precaução.",
+      "source_name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-14"
+    },
+    {
+      "id": "n091",
+      "title": "Perplexity lança o Decider v1.3, modelos open-weight de decisão com Locate",
+      "date": "2026-11-13",
+      "category": "modelos",
+      "tags": [
+        "Perplexity",
+        "Open-weight",
+        "Extração"
+      ],
+      "summary": "pplx-decider-v1.3 e a versão Flash devolvem probabilidades (sim/não, múltipla escolha, notas) em vez de texto, e o novo Locate extrai trechos exatos com offsets, útil para NER e detecção de PII. Pesos em Apache 2.0 no Hugging Face; API a US$ 0,02 e 0,01 por milhão de tokens de entrada.",
+      "source_name": "marktechpost.com",
+      "url": "https://www.marktechpost.com/2026/11/13/perplexity-decider-v1-3-open-weight-decision-models-locate/",
+      "priority": false,
+      "added": "2026-11-14"
     }
   ]
 }

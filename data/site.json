@@ -1,146 +1,175 @@
 {
- "highlights": [
-  "n073",
-  "n075",
-  "n049",
-  "n053",
-  "n078"
- ],
- "dates": [
-  [
-   "2026-11-15",
-   "15 nov – 15 dez",
-   "Prompts agendados no Agent Builder",
-   "Microsoft"
+  "highlights": [
+    "n081",
+    "n073",
+    "n086",
+    "n082",
+    "n088"
   ],
-  [
-   "2026-11-15",
-   "Meados nov – início dez",
-   "Agentes do SharePoint e OneDrive passam a ser criados no Agent Builder",
-   "Microsoft"
+  "dates": [
+    [
+      "2026-11-15",
+      "15 nov – 15 dez",
+      "Prompts agendados no Agent Builder",
+      "Microsoft"
+    ],
+    [
+      "2026-11-15",
+      "Meados nov – início dez",
+      "Agentes do SharePoint e OneDrive passam a ser criados no Agent Builder",
+      "Microsoft"
+    ],
+    [
+      "2026-11-16",
+      "16 nov",
+      "Prazo da CISA para corrigir a falha da Check Point (CVE-2026-123039) e previsão de volta dos sistemas do Tesouro Nacional",
+      "CISA / Tesouro"
+    ],
+    [
+      "2026-11-17",
+      "17 – 20 nov",
+      "Microsoft Ignite (São Francisco e online)",
+      "Microsoft"
+    ],
+    [
+      "2026-11-17",
+      "17 nov",
+      "Resultados do 3º tri fiscal da NVIDIA, já sem Jensen Huang",
+      "NVIDIA"
+    ],
+    [
+      "2026-11-19",
+      "19 nov",
+      "Claude Data ligado por padrão no plano Enterprise",
+      "Anthropic"
+    ],
+    [
+      "2026-11-30",
+      "30 nov",
+      "Fim do preço introdutório do Gemini 4 Argon e Carbon",
+      "Google"
+    ],
+    [
+      "2026-11-30",
+      "30 nov",
+      "Remoção do fast mode do Claude Opus 4.8",
+      "Anthropic"
+    ],
+    [
+      "2026-11-30",
+      "30 nov – 31 dez",
+      "Rollout das tarefas agendadas nativas no M365 Copilot",
+      "Microsoft"
+    ],
+    [
+      "2026-12-01",
+      "Dezembro",
+      "Copilot Workspaces passa a usar chat agêntico (Frontier)",
+      "Microsoft"
+    ],
+    [
+      "2026-12-09",
+      "9 dez",
+      "Claude passa a vir ativado por padrão no M365 Copilot em tenants da UE/EFTA/Reino Unido sem escolha feita",
+      "Microsoft"
+    ],
+    [
+      "2026-12-31",
+      "Até 31 dez",
+      "GA da configuração de conexões dentro da conversa no Copilot Studio",
+      "Microsoft"
+    ],
+    [
+      "2026-12-31",
+      "31 dez",
+      "Fim dos prompts agendados via Power Platform no M365 Copilot",
+      "Microsoft"
+    ],
+    [
+      "2027-02-10",
+      "10 fev 2027",
+      "Fim da gratuidade de docs e whiteboards criados no Claude Meetings",
+      "Anthropic"
+    ],
+    [
+      "2027-04-01",
+      "Abril 2027",
+      "Agentes .agent do SharePoint e OneDrive deixam de funcionar",
+      "Microsoft"
+    ]
   ],
-  [
-   "2026-11-17",
-   "17 – 20 nov",
-   "Microsoft Ignite (São Francisco e online)",
-   "Microsoft"
-  ],
-  [
-   "2026-11-17",
-   "17 nov",
-   "Resultados do 3º tri fiscal da NVIDIA, já sem Jensen Huang",
-   "NVIDIA"
-  ],
-  [
-   "2026-11-19",
-   "19 nov",
-   "Claude Data ligado por padrão no plano Enterprise",
-   "Anthropic"
-  ],
-  [
-   "2026-11-30",
-   "30 nov",
-   "Fim do preço introdutório do Gemini 4 Argon e Carbon",
-   "Google"
-  ],
-  [
-   "2026-11-30",
-   "30 nov",
-   "Remoção do fast mode do Claude Opus 4.8",
-   "Anthropic"
-  ],
-  [
-   "2026-11-30",
-   "30 nov – 31 dez",
-   "Rollout das tarefas agendadas nativas no M365 Copilot",
-   "Microsoft"
-  ],
-  [
-   "2026-12-01",
-   "Dezembro",
-   "Copilot Workspaces passa a usar chat agêntico (Frontier)",
-   "Microsoft"
-  ],
-  [
-   "2026-12-31",
-   "Até 31 dez",
-   "GA da configuração de conexões dentro da conversa no Copilot Studio",
-   "Microsoft"
-  ],
-  [
-   "2026-12-31",
-   "31 dez",
-   "Fim dos prompts agendados via Power Platform no M365 Copilot",
-   "Microsoft"
-  ],
-  [
-   "2027-02-10",
-   "10 fev 2027",
-   "Fim da gratuidade de docs e whiteboards criados no Claude Meetings",
-   "Anthropic"
-  ],
-  [
-   "2027-04-01",
-   "Abril 2027",
-   "Agentes .agent do SharePoint e OneDrive deixam de funcionar",
-   "Microsoft"
+  "trainings": [
+    [
+      "snowflake",
+      "Semantic Views muitos-para-muitos",
+      "Modelar relações N:N com e sem tabela ponte e evitar contagem dupla nas métricas.",
+      "treinamentos/snowflake-semantic-views-nn.html"
+    ],
+    [
+      "claude",
+      "Claude Code: Code Mode e permissões",
+      "Como o Code Mode chama ferramentas via JavaScript, como auditar o código e como a organização controla.",
+      "treinamentos/claude-code-code-mode.html"
+    ],
+    [
+      "claude",
+      "Claude Code em empresa: managed settings e provedores",
+      "allowedProviders, sessões em background e as correções de segurança das versões 2.1.323–2.1.325."
+    ],
+    [
+      "snowflake",
+      "Horizon Catalog: um só perímetro de governança no lakehouse",
+      "Políticas de masking e row access sobre Iceberg, catálogos externos e dados compartilhados."
+    ],
+    [
+      "microsoft",
+      "Claude no M365 Copilot: EU Data Boundary e provedores de IA",
+      "O que muda em 9/12, onde configurar e como decidir quem usa os modelos da Anthropic."
+    ],
+    [
+      "microsoft",
+      "M365 Copilot: tarefas agendadas nativas",
+      "Migrar prompts agendados do Power Platform antes de 31/12 e usar a aba Tasks."
+    ],
+    [
+      "snowflake",
+      "Semantic Views com materializations e CoCo",
+      "Pré-agregar métricas, usar a skill suggest-sv-materializations e checar o rewrite antes de criar."
+    ],
+    [
+      "claude",
+      "Claude Managed Agents self-hosted",
+      "Arquitetura, credenciais e histórico no próprio ambiente; quando faz sentido versus a versão hospedada."
+    ],
+    [
+      "microsoft",
+      "Copilot Studio: Fable 5.2 e conexões na conversa",
+      "Escolha de modelo no Copilot Studio e o novo fluxo de conexão de terceiros sem sair do chat."
+    ],
+    [
+      "snowflake",
+      "Snowflake CoWork e Bots na prática",
+      "Automations, Profiles e Dashboards conversacionais; como os Bots herdam permissões."
+    ],
+    [
+      "snowflake",
+      "Cortex AI Gateway e Business Ontology",
+      "Governar modelos, custos e traces; preparar Semantic Views como contexto oficial."
+    ],
+    [
+      "claude",
+      "Claude Fable 5.2, Claude Data e conectores",
+      "Novos modelos, Claude Data ligado ao warehouse e conectores interativos."
+    ],
+    [
+      "claude",
+      "Claude Code com segurança",
+      "Sandbox, permissões e controles de gasto das versões 2.1.308 a 2.1.318."
+    ],
+    [
+      "microsoft",
+      "Copilot Studio: MCP, A2A e nó Extract",
+      "Agentes persistentes e extração de documentos, aplicável ao Leitor de Matrículas."
+    ]
   ]
- ],
- "trainings": [
-  [
-   "snowflake",
-   "Semantic Views muitos-para-muitos",
-   "Modelar relações N:N com e sem tabela ponte e evitar contagem dupla nas métricas."
-  ],
-  [
-   "claude",
-   "Claude Code: Code Mode e permissões",
-   "Como o Code Mode chama ferramentas via JavaScript, quando ligar e como a organização controla."
-  ],
-  [
-   "microsoft",
-   "M365 Copilot: tarefas agendadas nativas",
-   "Migrar prompts agendados do Power Platform antes de 31/12 e usar a aba Tasks."
-  ],
-  [
-   "snowflake",
-   "Semantic Views com materializations e CoCo",
-   "Pré-agregar métricas, usar a skill suggest-sv-materializations e checar o rewrite antes de criar."
-  ],
-  [
-   "claude",
-   "Claude Managed Agents self-hosted",
-   "Arquitetura, credenciais e histórico no próprio ambiente; quando faz sentido versus a versão hospedada."
-  ],
-  [
-   "microsoft",
-   "Copilot Studio: Fable 5.2 e conexões na conversa",
-   "Escolha de modelo no Copilot Studio e o novo fluxo de conexão de terceiros sem sair do chat."
-  ],
-  [
-   "snowflake",
-   "Snowflake CoWork e Bots na prática",
-   "Automations, Profiles e Dashboards conversacionais; como os Bots herdam permissões."
-  ],
-  [
-   "snowflake",
-   "Cortex AI Gateway e Business Ontology",
-   "Governar modelos, custos e traces; preparar Semantic Views como contexto oficial."
-  ],
-  [
-   "claude",
-   "Claude Fable 5.2, Claude Data e conectores",
-   "Novos modelos, Claude Data ligado ao warehouse e conectores interativos."
-  ],
-  [
-   "claude",
-   "Claude Code com segurança",
-   "Sandbox, permissões e controles de gasto das versões 2.1.308 a 2.1.318."
-  ],
-  [
-   "microsoft",
-   "Copilot Studio: MCP, A2A e nó Extract",
-   "Agentes persistentes e extração de documentos, aplicável ao Leitor de Matrículas."
-  ]
- ]
 }

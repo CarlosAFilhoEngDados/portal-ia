@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Modele relações N:N com e sem tabela ponte, entenda como o Snowflake deduplica as métricas e evite os totais que enganam."><link rel="icon" href="data:,"><title>Semantic Views muitos-para-muitos · Treinamento RADARNEXO</title><style>
+:root{color-scheme:dark;--bg:#040b12;--bg-2:#07121b;--card:#0a1620;--card-2:#0d1b27;--line:rgba(140,190,220,.14);--line-strong:rgba(140,190,220,.24);
+--text:#fff;--muted:#a9b8c6;--mint:#1fe6b4;--mint-ink:#03241c;--violet:#5a2be0;--blue:#1b6cff;--warn:#f5c044;--red:#ff6b6b;--radius:16px;--wrap:1180px;
+--font:"Manrope","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--mint)}a:hover{text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 30px}
+.pv{position:sticky;top:0;z-index:30;background:#f5c044;color:#2a1f00;font-weight:800;font-size:13px;text-align:center;padding:7px 12px;letter-spacing:.02em}
+.header{border-bottom:1px solid var(--line);background:rgba(4,11,18,.85);backdrop-filter:blur(10px)}
+.header .wrap{display:flex;align-items:center;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:27px;letter-spacing:-.02em;color:#fff;text-decoration:none}
+.logo svg{width:34px;height:34px}.logo b{color:var(--mint)}
+.back{margin-left:auto;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--mint);color:var(--mint);font-weight:700;font-size:14px;text-decoration:none}
+.hero{background:radial-gradient(60% 90% at 85% 40%,rgba(27,108,255,.26),transparent 70%),radial-gradient(40% 60% at 70% 80%,rgba(90,43,224,.22),transparent 70%),linear-gradient(180deg,#051019,#040b12);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:46px;padding-bottom:40px}
+.crumb{font-size:13px;color:var(--muted);font-weight:600}.crumb a{color:var(--muted)}
+.kick{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pill{font-size:12px;border:1px solid var(--line-strong);border-radius:999px;padding:3px 11px;color:var(--muted);font-weight:700}
+.pill.mint{color:var(--mint);border-color:rgba(31,230,180,.45)}.pill.warn{color:var(--warn);border-color:rgba(245,192,68,.5)}.pill.violet{color:#b9a4ff;border-color:rgba(140,110,255,.5)}
+h1{margin-top:14px;font-size:clamp(30px,4.4vw,50px);line-height:1.06;font-weight:800;letter-spacing:-.03em;max-width:16em}
+h1 em{font-style:normal;color:var(--mint)}
+.lead{margin-top:14px;color:#d6e2ec;font-size:18px;max-width:46em}
+.meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px;color:var(--muted);font-size:14px;font-weight:600}
+.meta b{color:#fff}
+.layout{display:grid;grid-template-columns:250px 1fr;gap:40px;padding-top:36px;padding-bottom:70px}
+.toc{position:sticky;top:52px;align-self:start;border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:linear-gradient(180deg,var(--card-2),var(--card))}
+.toc h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.toc a{display:block;color:#dbe7f0;text-decoration:none;font-size:14px;font-weight:600;padding:6px 0;border-top:1px solid var(--line)}
+.toc a:first-of-type{border-top:0}.toc a:hover{color:var(--mint)}
+.toc .n{color:var(--mint);font-weight:800;margin-right:6px}
+article{min-width:0}
+section{padding:6px 0 30px;border-bottom:1px solid var(--line);margin-bottom:30px;scroll-margin-top:50px}
+section:last-child{border-bottom:0}
+h2{font-size:26px;letter-spacing:-.02em;line-height:1.2;display:flex;gap:12px;align-items:baseline}
+h2 .n{color:var(--mint);font-size:15px;font-weight:800;border:1.5px solid rgba(31,230,180,.5);border-radius:999px;padding:1px 10px;flex:none}
+h3{font-size:18px;margin:24px 0 8px}
+p{margin-top:10px;color:#dbe5ee}li{color:#dbe5ee}
+ul.b,ol.b{margin:10px 0 0 22px}ul.b{list-style:disc}ol.b{list-style:decimal}ul.b li,ol.b li{margin-top:6px}
+code{font-family:var(--mono);font-size:.88em;background:rgba(31,230,180,.08);border:1px solid rgba(31,230,180,.18);border-radius:6px;padding:1px 6px;color:#c8fff0;word-break:break-word}
+.code{margin-top:14px;border:1px solid var(--line-strong);border-radius:12px;overflow:hidden;background:#020810}
+.code-h{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;background:#0b1823;border-bottom:1px solid var(--line);font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
+.copy{font:inherit;font-weight:800;color:var(--mint);background:none;border:1px solid rgba(31,230,180,.4);border-radius:999px;padding:2px 10px;cursor:pointer}
+.code pre{margin:0;padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:13.2px;line-height:1.55;color:#e6f1f8}
+.code pre code{background:none;border:0;padding:0;color:inherit;font-size:inherit;word-break:normal}
+.call{margin-top:16px;border-radius:12px;padding:14px 16px;border:1px solid var(--line-strong);background:rgba(255,255,255,.03);display:grid;gap:4px}
+.call strong{font-size:14px;letter-spacing:.02em}
+.call.warn{border-color:rgba(245,192,68,.45);background:rgba(245,192,68,.07)}.call.warn strong{color:var(--warn)}
+.call.tip{border-color:rgba(31,230,180,.4);background:rgba(31,230,180,.06)}.call.tip strong{color:var(--mint)}
+.call.risk{border-color:rgba(255,107,107,.45);background:rgba(255,107,107,.07)}.call.risk strong{color:var(--red)}
+.call.info{border-color:rgba(140,110,255,.45);background:rgba(90,43,224,.1)}.call.info strong{color:#b9a4ff}
+.call p{margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.box{border:1px solid var(--line);border-radius:14px;padding:16px;background:linear-gradient(180deg,var(--card-2),var(--card))}
+.box h4{font-size:15px;margin-bottom:4px}
+.tbl{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px;display:block;overflow-x:auto}
+.tbl th,.tbl td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.steps{counter-reset:s;margin-top:8px}
+.step{position:relative;padding-left:46px;margin-top:22px}
+.step:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--mint);color:var(--mint-ink);font-weight:800;display:grid;place-items:center}
+.step h3{margin-top:2px}
+.pit{display:grid;gap:12px;margin-top:14px}
+.pit .box{border-left:3px solid var(--warn)}
+.ex{border:1px solid rgba(31,230,180,.35);border-radius:16px;padding:20px;background:linear-gradient(135deg,rgba(31,230,180,.08),rgba(90,43,224,.08))}
+.ex ol{margin:10px 0 0 22px;list-style:decimal}
+.chk{list-style:none!important;margin-left:0!important}.chk li{padding-left:28px;position:relative;margin-top:8px}
+.chk li:before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:5px;border:2px solid var(--mint)}
+details{margin-top:14px;border:1px solid var(--line-strong);border-radius:12px;padding:12px 16px;background:rgba(255,255,255,.02)}
+summary{cursor:pointer;font-weight:800;color:var(--mint)}
+.src li{margin-top:8px}.src a{word-break:break-word}
+.unv{border:1px dashed rgba(245,192,68,.55);border-radius:14px;padding:16px;background:rgba(245,192,68,.05)}
+.footer{border-top:1px solid var(--line);padding:30px 0;background:#030910;color:var(--muted);font-size:13px}
+@media (max-width:900px){.layout{grid-template-columns:1fr;gap:20px}.toc{position:static}.grid2{grid-template-columns:1fr}}
+@media (max-width:560px){.wrap{padding:0 18px}.logo{font-size:22px}.logo svg{width:28px;height:28px}.back span{display:none}.back{padding:0 12px}
+h2{font-size:22px}.lead{font-size:16px}.code pre{font-size:12.2px}.step{padding-left:42px}}
+</style></head>
+<body>
+
+<header class="header"><div class="wrap"><a class="logo" href="../index.html#/treinamentos"><svg viewBox="0 0 40 40" fill="none" stroke="#1fe6b4" stroke-width="3.6" stroke-linecap="round" aria-hidden="true"><path d="M20 4a16 16 0 1 0 16 16"/><path d="M20 12a8 8 0 1 0 8 8"/><path d="M20 20 33 7"/><circle cx="20" cy="20" r="2.2" fill="#1fe6b4" stroke="none"/></svg><span>RADAR<b>NEXO</b></span></a>
+<a class="back" href="../index.html#/treinamentos">← <span>Treinamentos</span></a></div></header>
+<div class="hero"><div class="wrap"><div class="crumb"><a href="../index.html#/treinamentos">Treinamentos</a> › Prática guiada</div>
+<div class="kick"><span class="pill mint">Snowflake</span><span class="pill warn">Preview</span><span class="pill violet">Gratuito</span><span class="pill ">Intermediário</span></div><h1>Semantic Views <em>muitos-para-muitos</em> sem contagem dupla</h1><p class="lead">Modele relações N:N com e sem tabela ponte, entenda como o Snowflake deduplica as métricas e evite os totais que enganam.</p><div class="meta"><span>Pré-requisito: <b>SQL e noções de semantic views</b></span><span>Duração estimada: <b>45 min</b></span><span>Atualizado: <b>13/11/2026</b></span></div></div></div>
+<div class="wrap layout"><nav class="toc" aria-label="Neste treinamento"><h4>Neste treinamento</h4><a href="#contexto"><span class="n">01</span>Contexto</a><a href="#porque"><span class="n">02</span>Por que importa</a><a href="#passo"><span class="n">03</span>Passo a passo</a><a href="#armadilhas"><span class="n">04</span>Armadilhas</a><a href="#seguranca"><span class="n">05</span>Boas práticas e segurança</a><a href="#exercicio"><span class="n">06</span>Exercício prático (20–30 min)</a><a href="#fontes"><span class="n">07</span>Fontes oficiais</a></nav><article><section id="contexto"><h2><span class="n">01</span>Contexto</h2>
+<p>Até aqui, os relacionamentos de uma semantic view eram pensados como <b>muitos-para-um</b>: a tabela da esquerda aponta para a chave primária (ou <code>UNIQUE</code>) da tabela da direita. Em <b>13/11/2026</b> a Snowflake abriu em <b>preview</b> os relacionamentos <b>muitos-para-muitos (N:N)</b>, de duas formas:</p>
+<div class="grid2">
+ <div class="box"><h4>Com tabela ponte</h4><p>Uma tabela de junção (ex.: <code>book_authors</code>) com dois relacionamentos muitos-para-um, um para cada entidade. O Snowflake deduz o caminho N:N pelo grafo de relacionamentos.</p></div>
+ <div class="box"><h4>Direto, sem ponte</h4><p>Um relacionamento que referencia colunas que <b>não</b> são PRIMARY KEY nem UNIQUE na outra tabela (ex.: <code>orders(promo_code) REFERENCES promotions(promo_code)</code>). Não existe palavra-chave especial.</p></div>
+</div>
+<p>Nos dois casos o Snowflake <b>deduplica automaticamente</b> as linhas que se multiplicam no join (fan-out), para que a métrica não seja contada em dobro.</p>
+<aside class="call warn"><strong>Preview Feature: Open</strong><div><p>Disponível para todas as contas, mas em preview: sintaxe e comportamento podem mudar antes do GA. Não use como única fonte de números oficiais sem conferir.</p></div></aside>
+</section><section id="porque"><h2><span class="n">02</span>Por que importa</h2>
+<ul class="b">
+ <li><b>Modelos reais são N:N</b>: produto↔campanha, paciente↔convênio, aluno↔turma, conta↔titular, imóvel↔proprietário. Antes, você criava views achatadas ou métricas com <code>COUNT(DISTINCT)</code> à mão.</li>
+ <li><b>Contagem dupla é o erro silencioso mais caro</b> em BI: o número "parece certo" e vai para a diretoria. A deduplicação no motor semântico tira essa responsabilidade de cada consulta.</li>
+ <li><b>Uma definição para todos os consumidores</b>: a mesma semantic view atende SQL (<code>SEMANTIC_VIEW(...)</code>) e quem consome a camada semântica, com a regra de N:N declarada uma vez.</li>
+</ul>
+</section><section id="passo"><h2><span class="n">03</span>Passo a passo</h2>
+<div class="steps">
+<div class="step"><h3>Prepare os dados de laboratório</h3>
+<p>Use os mesmos dados do exemplo oficial: a promoção <code>P</code> tem 3 linhas (duas delas no canal Web), o pedido 4 usa um código inexistente e o pedido 5 aponta para um cliente inexistente.</p>
+<figure class="code"><div class="code-h"><span>SQL · setup</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-sql">-- Ambiente de laboratório (ajuste nomes/role ao seu padrão)
+CREATE DATABASE IF NOT EXISTS rn_lab;
+CREATE SCHEMA IF NOT EXISTS rn_lab.nn;
+USE SCHEMA rn_lab.nn;
+
+-- Dados do exemplo oficial da documentação
+CREATE OR REPLACE TABLE orders (
+  order_id INT, customer_id INT, promo_code VARCHAR, amount NUMBER(10,2)
+);
+INSERT INTO orders VALUES
+  (1, 1, &#x27;P&#x27;, 100), (2, 2, &#x27;P&#x27;, 200), (3, 1, &#x27;Q&#x27;, 50),
+  (4, 2, &#x27;NONE&#x27;, 999), (5, 99, &#x27;Q&#x27;, 75);
+
+CREATE OR REPLACE TABLE promotions (
+  promo_code VARCHAR, channel VARCHAR, region VARCHAR
+);
+INSERT INTO promotions VALUES
+  (&#x27;P&#x27;, &#x27;Web&#x27;, &#x27;East&#x27;), (&#x27;P&#x27;, &#x27;Web&#x27;, &#x27;East&#x27;),
+  (&#x27;P&#x27;, &#x27;Email&#x27;, &#x27;East&#x27;), (&#x27;Q&#x27;, &#x27;Web&#x27;, &#x27;West&#x27;);
+
+CREATE OR REPLACE TABLE customers (
+  customer_id INT, segment VARCHAR
+);
+INSERT INTO customers VALUES (1, &#x27;Enterprise&#x27;), (2, &#x27;SMB&#x27;);</code></pre></figure>
+<p>Para criar a semantic view sua role precisa de <code>CREATE SEMANTIC VIEW</code> no schema, <code>USAGE</code> no database e no schema e <code>SELECT</code> nas tabelas.</p></div>
+
+<div class="step"><h3>Declare o N:N direto</h3>
+<p>O relacionamento <code>orders_to_promotions</code> é N:N porque <code>promotions</code> não tem PRIMARY KEY e o mesmo <code>promo_code</code> se repete. Ele convive com o N:1 comum <code>orders_to_customers</code>.</p>
+<figure class="code"><div class="code-h"><span>SQL · CREATE SEMANTIC VIEW</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-sql">CREATE OR REPLACE SEMANTIC VIEW orders_promotions_sv
+TABLES (
+  orders AS rn_lab.nn.orders
+    PRIMARY KEY (order_id),
+  promotions AS rn_lab.nn.promotions,          -- sem PRIMARY KEY de propósito
+  customers AS rn_lab.nn.customers
+    PRIMARY KEY (customer_id)
+)
+RELATIONSHIPS (
+  orders_to_promotions AS orders(promo_code) REFERENCES promotions(promo_code),  -- N:N direto
+  orders_to_customers  AS orders(customer_id) REFERENCES customers               -- N:1 comum
+)
+FACTS (
+  orders.order_amount AS amount
+)
+DIMENSIONS (
+  orders.promo_code AS promo_code,
+  promotions.channel AS channel,
+  promotions.region AS region,
+  customers.segment AS segment
+)
+METRICS (
+  orders.total_amount AS SUM(amount),
+  orders.order_count AS COUNT(order_id)
+);</code></pre></figure></div>
+
+<div class="step"><h3>Consulte e compare com o join manual</h3>
+<figure class="code"><div class="code-h"><span>SQL · consulta semântica</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-sql">SELECT * FROM SEMANTIC_VIEW(
+  orders_promotions_sv
+  DIMENSIONS promotions.channel
+  METRICS orders.total_amount, orders.order_count
+);
+-- Resultado documentado:
+-- CHANNEL | TOTAL_AMOUNT | ORDER_COUNT
+-- Email   |       300.00 |           2
+-- Web     |       425.00 |           4
+-- NULL    |       999.00 |           1</code></pre></figure>
+<figure class="code"><div class="code-h"><span>SQL · join manual (contagem dupla)</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-sql">-- Para comparar: o join &quot;na mão&quot; multiplica as linhas de P (duas linhas Web)
+SELECT p.channel, SUM(o.amount) AS total_amount
+FROM rn_lab.nn.orders o
+LEFT JOIN rn_lab.nn.promotions p ON o.promo_code = p.promo_code
+GROUP BY p.channel;
+-- Web aparece com 725 (100 e 200 contados duas vezes), e não 425.</code></pre></figure>
+<p>Os pedidos 1 e 2 casam com duas linhas Web, mas entram <b>uma vez</b> em Web. A deduplicação vale para todas as agregações, incluindo <code>COUNT</code>, <code>AVG</code>, <code>MEDIAN</code> e <code>COUNT(DISTINCT)</code>. O pedido 4, sem promoção, volta com canal <code>NULL</code>.</p></div>
+
+<div class="step"><h3>Filtre pelo outro lado da relação</h3>
+<figure class="code"><div class="code-h"><span>SQL · filtro via N:N</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-sql">-- Filtro do outro lado do N:N (a dimensão nem precisa estar no SELECT)
+SELECT * FROM SEMANTIC_VIEW(
+  orders_promotions_sv
+  DIMENSIONS customers.segment
+  METRICS orders.total_amount, orders.order_count
+  WHERE promotions.region = &#x27;East&#x27;
+);
+-- Enterprise | 100.00 | 1   (o pedido 1 casa com 3 linhas East, conta 1 vez)
+-- SMB        | 200.00 | 1</code></pre></figure></div>
+
+<div class="step"><h3>Quando houver tabela ponte</h3>
+<p>Defina dois relacionamentos muitos-para-um, <b>partindo da ponte</b> para cada entidade. Não há relacionamento direto entre <code>books</code> e <code>authors</code>: o Snowflake infere o caminho.</p>
+<figure class="code"><div class="code-h"><span>SQL · ponte (doc oficial)</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-sql">-- Padrão com tabela ponte (exemplo da documentação)
+CREATE SEMANTIC VIEW library_sv
+TABLES (
+  authors AS my_db.my_schema.authors
+    PRIMARY KEY (author_id),
+  books AS my_db.my_schema.books
+    PRIMARY KEY (book_id),
+  book_authors AS my_db.my_schema.book_authors
+    PRIMARY KEY (book_id, author_id)
+)
+RELATIONSHIPS (
+  book_authors(author_id) REFERENCES authors(author_id),
+  book_authors(book_id) REFERENCES books(book_id)
+)
+DIMENSIONS (
+  books.category AS category,
+  authors.author_name AS author_name
+)
+METRICS (
+  books.total_pages AS SUM(page_count),
+  authors.total_revenue AS SUM(author_revenue)
+);</code></pre></figure>
+<p>Ao agrupar <code>books.total_pages</code> por <code>authors.author_name</code>, cada livro conta <b>uma vez para cada autor</b> ligado a ele, e não uma vez por linha duplicada do join.</p></div>
+
+<div class="step"><h3>Prefere YAML? Valide antes de criar</h3>
+<p>N:N também pode ser declarado na chave <code>relationships</code> do YAML. Para o N:N direto basta que <code>right_column</code> não seja a <code>primary_key</code> nem uma <code>unique_keys</code> da tabela da direita. Passe <code>TRUE</code> no 3º argumento para só validar.</p>
+<figure class="code"><div class="code-h"><span>SQL + YAML · validação</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-sql">CALL SYSTEM$CREATE_SEMANTIC_VIEW_FROM_YAML(
+  &#x27;rn_lab.nn&#x27;,
+  $$
+name: orders_promotions_yaml
+tables:
+  - name: orders
+    base_table: {database: RN_LAB, schema: NN, table: ORDERS}
+    primary_key:
+      columns: [order_id]
+    dimensions:
+      - name: promo_code
+        expr: promo_code
+        data_type: VARCHAR
+    metrics:
+      - name: total_amount
+        expr: SUM(amount)
+  - name: promotions
+    base_table: {database: RN_LAB, schema: NN, table: PROMOTIONS}
+    dimensions:
+      - name: channel
+        expr: channel
+        data_type: VARCHAR
+relationships:
+  - name: orders_to_promotions
+    left_table: orders
+    right_table: promotions
+    relationship_columns:
+      - left_column: promo_code
+        right_column: promo_code
+  $$,
+  TRUE);   -- TRUE = só valida, não cria nada</code></pre></figure>
+<aside class="call info"><strong>Montado a partir da especificação</strong><div><p>Este YAML combina trechos oficiais (estrutura de <code>tables</code>, <code>base_table</code> e <code>relationships</code>). Rode com <code>TRUE</code> primeiro: se algum campo divergir no seu ambiente, a procedure aponta o erro sem criar nada.</p></div></aside></div>
+</div>
+</section><section id="armadilhas"><h2><span class="n">04</span>Armadilhas</h2>
+<div class="pit">
+ <div class="box"><h4>Somar as linhas por dimensão N:N dá mais que o total</h4><p>No exemplo, os totais por canal somam <b>1.724</b>, mas o total real dos pedidos é <b>1.424</b>, porque os pedidos 1 e 2 estão em Web <i>e</i> em Email. Para o total geral, consulte a métrica <b>sem</b> a dimensão N:N. Nunca some a coluna do relatório.</p></div>
+ <div class="box"><h4>Esquecer a PRIMARY KEY vira N:N sem aviso</h4><p>Se você referenciar colunas que não são PK nem UNIQUE, o relacionamento passa a ser N:N. Uma dimensão que <i>deveria</i> ser 1:N mas ficou sem PK muda a semântica da consulta. Declare as PKs de todas as tabelas de entidade.</p></div>
+ <div class="box"><h4>Consultas só com FACTS não deduplicam</h4><p>Sem métricas, a consulta devolve uma linha por combinação, e somar um fact nesse resultado conta em dobro. Para totais, use uma <b>métrica</b>.</p></div>
+ <div class="box"><h4>Sem métricas, todo join é INNER</h4><p>Em consultas só com dimensões ou facts, linhas sem correspondência (pedido 4 sem promoção, pedido 5 sem cliente) <b>somem</b>. Com métricas, elas ficam com <code>NULL</code>.</p></div>
+ <div class="box"><h4>NULL não casa com NULL</h4><p>Linhas com NULL nas colunas do relacionamento não se ligam a linhas com NULL na tabela referenciada.</p></div>
+ <div class="box"><h4>Recursos que não combinam com N:N</h4><p>Consultas que atravessam N:N (com ponte ou direto) <b>não podem</b> usar métricas LOD (<code>FIXED/INCLUDE/EXCLUDE</code>) nem métricas multi-path com <code>USING (relacionamento)</code>.</p></div>
+</div>
+</section><section id="seguranca"><h2><span class="n">05</span>Boas práticas e segurança</h2>
+<ul class="b">
+ <li><b>Teste com dados conhecidos</b> antes de apontar para produção: monte um caso pequeno com o resultado "na mão", como o exemplo acima, e compare.</li>
+ <li><b>Documente a regra de negócio</b> no <code>COMMENT</code> da métrica, por exemplo "um pedido conta uma vez por canal; não somar canais".</li>
+ <li><b>Revise o modelo publicado</b> com <code>DESCRIBE SEMANTIC VIEW</code> ou <code>SELECT GET_DDL('SEMANTIC_VIEW', 'orders_promotions_sv', TRUE);</code>.</li>
+ <li><b>Menor privilégio</b>: quem só consulta precisa de <code>SELECT</code> na semantic view, não nas tabelas base.</li>
+</ul>
+<figure class="code"><div class="code-h"><span>SQL · grant</span><button type="button" class="copy" aria-label="Copiar código">Copiar</button></div><pre><code class="lang-sql">GRANT SELECT ON SEMANTIC VIEW rn_lab.nn.orders_promotions_sv TO ROLE analista_bi;</code></pre></figure>
+<ul class="b">
+ <li><b>Preview ≠ contrato</b>: marque dashboards que dependem de N:N e reveja-os quando a Snowflake anunciar o GA.</li>
+</ul>
+</section><section id="exercicio"><h2><span class="n">06</span>Exercício prático (20–30 min)</h2>
+<div class="ex">
+<p><b>Objetivo:</b> provar para você mesmo que a semantic view não conta em dobro e entender quando o "total" engana.</p>
+<ol>
+ <li>Rode o setup e crie <code>orders_promotions_sv</code> (passos 1 e 2).</li>
+ <li>Consulte <code>total_amount</code> por <code>promotions.channel</code> e depois rode o join manual. Anote a diferença em Web.</li>
+ <li>Consulte <code>total_amount</code> <b>sem dimensões</b>. Compare com a soma das linhas por canal.</li>
+ <li>Consulte <code>FACTS orders.order_amount, promotions.channel</code> (sem métricas) e conte quantas vezes o pedido 1 aparece.</li>
+ <li>Desafio: adicione <code>PRIMARY KEY (promo_code)</code> em <code>promotions</code> e tente recriar a view. Os dados têm <code>P</code> repetido. Reflita: o modelo estaria dizendo a verdade?</li>
+</ol>
+<ul class="chk">
+ <li>Expliquei por que Web dá 425 e não 725.</li>
+ <li>Sei por que a soma por canal (1.724) é maior que o total (1.424).</li>
+ <li>Sei quando a consulta deduplica (métricas) e quando não (só facts).</li>
+</ul>
+<details><summary>Gabarito</summary>
+<p><b>2)</b> Web = 425 na semantic view (100 + 200 + 50 + 75, cada pedido uma vez) e 725 no join manual. <b>3)</b> O total sem dimensão é 1.424. Os pedidos 1 e 2 aparecem em Web e em Email, por isso a soma por canal é 1.724. <b>4)</b> O pedido 1 aparece 3 vezes (Web, Web, Email). Facts não deduplicam. <b>5)</b> A doc não diz se o Snowflake valida a unicidade dos dados ao criar a view. O ponto é conceitual: declarar PK em coluna repetida faria a view tratar a relação como N:1 e esconderia o fan-out. Não declare PK que os dados não respeitam.</p>
+</details>
+</div>
+</section><section id="fontes"><h2><span class="n">07</span>Fontes oficiais</h2>
+<ul class="b src">
+ <li><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-11-13-semantic-views-many-to-many-preview" target="_blank" rel="noopener">Release note, 13/11/2026: Many-to-many relationships in semantic views (Preview)</a></li>
+ <li><a href="https://docs.snowflake.com/en/user-guide/views-semantic/sql#modeling-many-to-many-relationships" target="_blank" rel="noopener">Modeling many-to-many relationships (CREATE SEMANTIC VIEW)</a></li>
+ <li><a href="https://docs.snowflake.com/en/user-guide/views-semantic/querying#many-to-many-relationship-queries" target="_blank" rel="noopener">Many-to-many relationship queries (resultados, filtros, limitações)</a></li>
+ <li><a href="https://docs.snowflake.com/en/user-guide/views-semantic/semantic-view-yaml-spec" target="_blank" rel="noopener">Especificação YAML de semantic views</a></li>
+</ul>
+<h3>O que não deu para confirmar</h3>
+<div class="unv"><ul class="b">
+ <li>Se Cortex Analyst / Cortex Agents já usam relacionamentos N:N ao gerar SQL. A documentação lida não diz isso explicitamente (para LOD, ela diz que ainda não usam).</li>
+ <li>Previsão de GA e impacto em custo/performance da deduplicação: nada publicado.</li>
+ <li>Se o Snowflake valida a unicidade real dos dados ao declarar PRIMARY KEY numa semantic view (desafio 5).</li>
+ <li>O YAML do passo 6 foi montado a partir de trechos oficiais e não foi executado numa conta Snowflake nesta preparação. Valide com <code>TRUE</code>.</li>
+</ul></div>
+</section></article></div>
+<footer class="footer"><div class="wrap">RADARNEXO · Treinamento gratuito · Fatos conferidos nas fontes oficiais em 13/11/2026. Recursos em preview/experimentais podem mudar a qualquer momento.</div></footer>
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{const t=b.closest('.code').querySelector('code').innerText;
+(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar',1500)}).catch(()=>{b.textContent='Selecione e copie'})}));
+</script></body></html>
