@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T05:05:39-03:00",
+  "updated_at": "2026-11-16T12:09:52-03:00",
   "items": [
     {
       "id": "n001",
@@ -1628,6 +1628,183 @@
       "summary": "Depois de 3,5 anos, as bibliotecas passam a usar versionamento semântico: mudanças incompatíveis de API ou ABI agora sobem a versão principal. A 1.0 remove funções descontinuadas, traz cache KV em FP8 e fecha falhas de SSRF, CORS e DNS rebinding no llama-server.",
       "source_name": "huggingface.co",
       "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "priority": false,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n103",
+      "title": "Apps desktop do Claude ganham HTML-in-Canvas para sites e artifacts interativos",
+      "date": "2026-11-15",
+      "category": "claude",
+      "tags": [
+        "Claude Desktop",
+        "Artifacts",
+        "Canvas"
+      ],
+      "summary": "Felix Rieseberg, da Anthropic, anunciou em 15/11 que ativou o HTML-in-Canvas nos apps desktop do Claude: o Claude pode gerar páginas em que efeitos gráficos de canvas distorcem ou animam o conteúdo, enquanto o texto e os controles HTML continuam selecionáveis e copiáveis. Ele mesmo chama de mudança pequena, mas abre espaço para protótipos visuais mais ricos.",
+      "source_name": "x.com",
+      "url": "https://x.com/felixrieseberg/status/2122036839238492493",
+      "priority": true,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n104",
+      "title": "Snowflake: atraso para retomar warehouses em AWS Europa (Irlanda) deixa consultas na fila",
+      "date": "2026-11-16",
+      "category": "snowflake",
+      "tags": [
+        "Status",
+        "Virtual Warehouses",
+        "AWS eu-west-1"
+      ],
+      "summary": "Incidente INC20000351 aberto desde 5h07 de 16/11 (Brasília): clientes hospedados em AWS Europa (Irlanda) têm atrasos intermitentes ao retomar virtual warehouses, com consultas enfileiradas ou lentas. Na última atualização (11h06, Brasília) a causa estava identificada e a recuperação em andamento, sem ETA e sem contorno.",
+      "source_name": "status.snowflake.com",
+      "url": "https://status.snowflake.com/",
+      "priority": true,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n105",
+      "title": "Amazon flagra agentes de IA caçando chaves de API em LiteLLM, Dify e outros apps expostos",
+      "date": "2026-11-16",
+      "category": "seguranca",
+      "tags": [
+        "Agentes ofensivos",
+        "Chaves de API",
+        "LLM gateways"
+      ],
+      "summary": "Servidores-isca da Amazon (MadPot) capturaram registros de agentes baseados no ARTEX, ferramenta open source de pentest, que procuravam gateways e builders de IA expostos (LiteLLM, One API, Dify, Langflow, RAGFlow, Open WebUI, Ollama) para extrair e validar chaves de provedores de IA, usando senhas padrão, instalações inacabadas e falhas conhecidas. A Cloudflare relatou invasões com tokens de CI/CD sem expiração. Recomendação: trocar credenciais padrão, girar segredos e vigiar gastos anormais com IA.",
+      "source_name": "thehackernews.com",
+      "url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n106",
+      "title": "Microsoft descarta ataque no apagão do 365 e alerta para phishing que usa o incidente como isca",
+      "date": "2026-11-16",
+      "category": "mundo",
+      "tags": [
+        "Microsoft 365",
+        "Phishing",
+        "Exchange Online"
+      ],
+      "summary": "A Microsoft atribuiu a queda de 12/11 a uma ampliação de capacidade de rede seguida de outra mudança, sem relação com ataque ou IA. Ao mesmo tempo, detectou e-mails falsos de \"Service Health\" citando o incidente real EX1550543 e ameaçando apagar mensagens retidas em 24 h se o usuário não clicasse no link. Orientação: confirmar incidentes só no centro de administração do Microsoft 365 e revisar políticas de Safe Links.",
+      "source_name": "securityweek.com",
+      "url": "https://www.securityweek.com/microsoft-rules-out-cyberattack-in-outage-warns-of-phishing-campaign/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n107",
+      "title": "Ataque à Maileva, do grupo La Poste, expõe nome e endereço de 22 milhões de pessoas na França",
+      "date": "2026-11-16",
+      "category": "mundo",
+      "tags": [
+        "Vazamento",
+        "Fornecedor",
+        "França"
+      ],
+      "summary": "A invasão, em meados de setembro, atingiu a plataforma que envia contracheques, cartas registradas e faturas para mais de 70 mil organizações; os afetados são destinatários dessas correspondências. Saíram nome, sobrenome e endereço postal, sem dados bancários. A Procuradoria de Paris confirmou em 15/11 que a unidade de cibercrime investiga; especialistas alertam para golpes que imitam cartas legítimas.",
+      "source_name": "rfi.fr",
+      "url": "https://www.rfi.fr/en/france/20261116-french-cybercrime-unit-probes-massive-cyberattack-on-la-poste-subsidiary",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "pessoas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n108",
+      "title": "Copilot Cowork ganha plugin Workforce Intelligence para gestores (Frontier, a partir de 16/11)",
+      "date": "2026-11-13",
+      "category": "microsoft",
+      "tags": [
+        "Copilot Cowork",
+        "Plugins",
+        "Frontier"
+      ],
+      "summary": "Em preview para tenants no programa Frontier, o plugin deixa líderes perguntarem em linguagem natural sobre estrutura da organização, headcount, camadas de gestão, localidades e competências, e montar resumos ou dashboards. Exige Workforce Insights configurado; não amplia acesso a dados e, segundo a Microsoft, não deve ser usado para avaliar desempenho ou decidir contratações.",
+      "source_name": "mc.changecockpit.cloud",
+      "url": "https://mc.changecockpit.cloud/change/MC1552389",
+      "priority": false,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n109",
+      "title": "Entra ID passa a pedir CAPTCHA antes de enviar código de MFA por SMS ou voz em logins de risco",
+      "date": "2026-11-13",
+      "category": "microsoft",
+      "tags": [
+        "Entra ID",
+        "MFA",
+        "Identidade"
+      ],
+      "summary": "Desde meados de novembro, algumas tentativas de MFA por SMS ou ligação com risco alto exigem uma verificação anti-bot antes do envio do código, para conter fraude automatizada de telefonia. Firewalls ou proxies restritivos podem impedir que a verificação carregue; a Microsoft recomenda avisar o help desk e seguir migrando para passkeys. O cronograma de aposentadoria do SMS/voz não muda.",
+      "source_name": "mc.changecockpit.cloud",
+      "url": "https://mc.changecockpit.cloud/change/MC1551151",
+      "priority": false,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n110",
+      "title": "OpenAI libera agentes de computer use para saúde no ChatGPT for Healthcare e na API",
+      "date": "2026-11-16",
+      "category": "ferramentas",
+      "tags": [
+        "OpenAI",
+        "Computer use",
+        "Saúde"
+      ],
+      "summary": "Os agentes clicam, digitam e navegam entre prontuário eletrônico e portais de operadoras para preparar autorizações, encaminhamentos e altas, com aprovações, controle de acesso e logs de auditoria. No benchmark HealthAdminBench, o GPT-6 Astra fez 94,3% e o GPT-6 Luna 91,8% custando 98% menos; CVS Health, Cigna, Abridge e Ambience já usam ou testam.",
+      "source_name": "openai.com",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams/",
+      "priority": false,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n111",
+      "title": "Agnes AI libera o Agnes 2.5 Pro Theta, MoE multimodal de 188 bi de parâmetros sob Apache 2.0",
+      "date": "2026-11-15",
+      "category": "modelos",
+      "tags": [
+        "Open-weight",
+        "Multimodal",
+        "MoE"
+      ],
+      "summary": "O checkpoint no Hugging Face tem cerca de 187,8 bi de parâmetros, contexto configurado de 262 mil tokens e entende texto, imagem e vídeo. Pelo model card da própria empresa, marca 92,9 no GPQA Diamond, 90,5 no LiveCodeBench v6 e 64,1 no SWE-bench Pro.",
+      "source_name": "huggingface.co",
+      "url": "https://huggingface.co/Agnes-AI/Agnes-2.5-Pro-Theta",
+      "priority": false,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n112",
+      "title": "GitHub Copilot vai retirar Claude Fable 5, Haiku 4.5, Gemini 4 Argon e outros modelos em 14/12",
+      "date": "2026-11-13",
+      "category": "ferramentas",
+      "tags": [
+        "GitHub Copilot",
+        "Modelos",
+        "Deprecação"
+      ],
+      "summary": "Saem de todas as experiências do Copilot em 14/12: Claude Fable 5 (trocar por Fable 5.2), Claude Haiku 4.5 (por Haiku 5.5, exceto planos individuais anuais), Gemini 3.8 Flash, Gemini 4 Argon, Grok 4.6 e Kimi K3. Em Business e Enterprise, as alternativas são ligadas automaticamente, salvo se o admin desativou o padrão global.",
+      "source_name": "github.blog",
+      "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
       "priority": false,
       "added": "2026-11-16"
     }

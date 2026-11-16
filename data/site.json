@@ -1,8 +1,8 @@
 {
   "highlights": [
     "n092",
+    "n104",
     "n073",
-    "n094",
     "n079",
     "n081"
   ],
@@ -66,6 +66,12 @@
       "9 dez",
       "Claude passa a vir ativado por padrão no M365 Copilot em tenants da UE/EFTA/Reino Unido sem escolha feita",
       "Microsoft"
+    ],
+    [
+      "2026-12-14",
+      "14 dez",
+      "GitHub Copilot retira Claude Fable 5, Haiku 4.5, Gemini 4 Argon, Grok 4.6 e Kimi K3",
+      "GitHub"
     ],
     [
       "2026-12-15",
