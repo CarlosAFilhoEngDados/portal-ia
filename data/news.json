@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T09:47:37-03:00",
+  "updated_at": "2026-11-16T05:05:39-03:00",
   "items": [
     {
       "id": "n001",
@@ -46,21 +46,6 @@
       "summary": "Modelo rápido e econômico para o dia a dia, forte em uso de computador e raciocínio visual. Disponível no ChatGPT Work, no Codex e na API como gpt-6.1-terra.",
       "source_name": "openai.com",
       "url": "https://openai.com/index/introducing-gpt-6-1-terra",
-      "priority": false,
-      "added": "2026-11-12"
-    },
-    {
-      "id": "n004",
-      "title": "Meta libera os pesos do Muse Spark Open",
-      "date": "2026-10-15",
-      "category": "modelos",
-      "tags": [
-        "Meta",
-        "Open-weight"
-      ],
-      "summary": "Modelo open-weight multimodal com 816B parâmetros (42B ativos) e contexto de 1M, pesos no Hugging Face sob a Muse Model License.",
-      "source_name": "research.meta.ai",
-      "url": "https://research.meta.ai/blog/muse-spark-open",
       "priority": false,
       "added": "2026-11-12"
     },
@@ -394,22 +379,6 @@
       "summary": "O MCP server permite criar e testar agentes pelo GitHub Copilot, Claude Code ou Codex. Também chegaram A2A entre agentes, Work IQ em GA e o nó Extract (GA) para documentos, e-mails e imagens.",
       "source_name": "microsoft.com",
       "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/new-and-improved-agents-that-are-persistent-agents-for-customer-conversations-and-improved-maker-experience-in-microsoft-copilot-studio/",
-      "priority": false,
-      "added": "2026-11-12"
-    },
-    {
-      "id": "n028",
-      "title": "Agent Builder passa a ser o padrão para agentes do SharePoint e OneDrive",
-      "date": "2026-10-16",
-      "category": "microsoft",
-      "tags": [
-        "Agent Builder",
-        "SharePoint",
-        "Migração"
-      ],
-      "summary": "A partir de meados de novembro, novos agentes são criados no Agent Builder. Agentes no formato .agent param de funcionar entre abril e meados de abril de 2027.",
-      "source_name": "mc.changecockpit.cloud",
-      "url": "https://mc.changecockpit.cloud/change/MC1511052",
       "priority": false,
       "added": "2026-11-12"
     },
@@ -1465,6 +1434,202 @@
       "url": "https://www.marktechpost.com/2026/11/13/perplexity-decider-v1-3-open-weight-decision-models-locate/",
       "priority": false,
       "added": "2026-11-14"
+    },
+    {
+      "id": "n092",
+      "title": "Claude Code Projects: coordenador proativo, /btw, /fork e threads compartilháveis",
+      "date": "2026-11-13",
+      "category": "claude",
+      "tags": [
+        "Claude Code",
+        "Projects",
+        "Agentes"
+      ],
+      "summary": "Nos Projects do Claude Code, o coordenador que divide o trabalho em threads paralelas na nuvem agora responde no chat do projeto e informa o status das threads sem ser chamado. Chegam /btw e /fork para abrir threads paralelas, lembretes e links somente leitura; segue em beta nos planos Pro e Max, com Team e Enterprise depois.",
+      "source_name": "aifrontierpost.com",
+      "url": "https://aifrontierpost.com/articles/claude-code-projects-proactive-coordinator/",
+      "priority": true,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n093",
+      "title": "CoCo converte workbooks do Tableau em apps Streamlit no Snowflake (preview)",
+      "date": "2026-11-12",
+      "category": "snowflake",
+      "tags": [
+        "CoCo",
+        "Streamlit",
+        "Tableau"
+      ],
+      "summary": "A skill tableau-to-streamlit-in-snowflake do Cortex Code transforma um workbook do Tableau em um app Streamlit com várias páginas, uma por dashboard. Worksheets viram gráficos nativos, cálculos viram SQL do Snowflake e filtros, parâmetros e ações viram widgets.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-12-tableau-to-streamlit-preview",
+      "priority": true,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n094",
+      "title": "Hybrid Tables ficam até 8x mais rápidas, sem mudar nada",
+      "date": "2026-11-10",
+      "category": "snowflake",
+      "tags": [
+        "Hybrid Tables",
+        "Performance",
+        "Agentes"
+      ],
+      "summary": "O novo motor das Hybrid Tables entrou em GA e já vem ligado: até 8x mais throughput em leituras pontuais, latência p50 3x e p99 2x menor e cargas em lote até 10x mais rápidas. A Snowflake diz que a cobrança ficou mais simples, com custo em média 15% menor, e sugere as tabelas para guardar estado de workflows e de agentes.",
+      "source_name": "snowflake.com",
+      "url": "https://www.snowflake.com/en/blog/hybrid-tables-faster-automatically/",
+      "priority": true,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n095",
+      "title": "Copilot Studio mostra os créditos gastos em cada execução de workflow",
+      "date": "2026-11-14",
+      "category": "microsoft",
+      "tags": [
+        "Copilot Studio",
+        "Créditos",
+        "Governança"
+      ],
+      "summary": "Em GA desde 11/11 (MC1552503): cada execução mostra a estimativa de Copilot Credits por run e por etapa, a aba Monitor soma o consumo entre execuções e um aviso aparece quando o limite se aproxima. Com os créditos esgotados, as execuções de teste ficam bloqueadas.",
+      "source_name": "msmessagecenter.com",
+      "url": "https://msmessagecenter.com/MC1552503/",
+      "priority": false,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n096",
+      "title": "Cursor: chave vazada pela Fireworks AI levou à extensão adulterada do Claude Code",
+      "date": "2026-11-15",
+      "category": "seguranca",
+      "tags": [
+        "Cursor",
+        "Supply chain",
+        "Credenciais"
+      ],
+      "summary": "Segundo o Cursor, um atacante usou uma chave de acesso exposta no incidente da Fireworks AI para copiar traces de agentes que ainda tinham credenciais. Com elas, entrou em ferramentas SaaS e colocou no cache do marketplace versões adulteradas da extensão do Claude Code (2.1.312/2.1.313), que ficaram no ar por cerca de 11 horas em 29/10 e podem ter chegado a até 5 mil usuários. A Uber e a Notion também foram afetadas pelo incidente da Fireworks.",
+      "source_name": "thehackernews.com",
+      "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n097",
+      "title": "AWS: falha no IAM Identity Center trava logins em us-east-1 por cerca de 2 horas",
+      "date": "2026-11-15",
+      "category": "mundo",
+      "tags": [
+        "AWS",
+        "Identidade",
+        "Indisponibilidade"
+      ],
+      "summary": "Em 15/11, entre 8h05 e 11h10 (Brasília), houve erros de cadastro, autenticação e conectividade em us-east-1: quem entrava no Console ou em serviços como Kiro e Connect pelo IAM Identity Center foi afetado, sem alternativa de contorno. Alguns Network Load Balancers de uma zona ficaram instáveis até 11h21. Resolvido no mesmo dia.",
+      "source_name": "pingoru.io",
+      "url": "https://pingoru.io/providers/amazon-web-services/incidents/12487330",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n098",
+      "title": "TJMG confirma vazamento de arquivos após ataque cibernético",
+      "date": "2026-11-15",
+      "category": "mundo",
+      "tags": [
+        "Judiciário",
+        "Vazamento",
+        "LGPD"
+      ],
+      "summary": "O Tribunal de Justiça de Minas Gerais confirmou o vazamento de arquivos. Bloqueou e trocou as senhas de contas e credenciais em risco e comunicou a ANPD e a polícia. Os sistemas judiciais e administrativos não foram comprometidos, e o tribunal não informou quantos arquivos nem quantas pessoas foram afetados; os atingidos estão sendo avisados um a um.",
+      "source_name": "g1.globo.com",
+      "url": "https://g1.globo.com/mg/minas-gerais/noticia/2026/11/15/tjmg-apura-vazamento-de-arquivos-apos-ataque-cibernetico.ghtml",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "pessoas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n099",
+      "title": "Apify: credencial comprometida expõe tokens do Google e GitHub e códigos 2FA de clientes",
+      "date": "2026-11-13",
+      "category": "mundo",
+      "tags": [
+        "Apify",
+        "Credenciais",
+        "OAuth"
+      ],
+      "summary": "Um invasor usou uma credencial comprometida para obter outras e entrou em contas de clientes da plataforma de scraping e automação (91 mil clientes) entre 9 e 10/11. Segundo a notificação, foram expostos hashes de senha, códigos de recuperação 2FA e tokens de login com Google e GitHub. A Apify trocou segredos internos e revogou conexões OAuth; quem usa repositórios privados do GitHub precisa reconectar a integração.",
+      "source_name": "securityweek.com",
+      "url": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n100",
+      "title": "Líderes da UE fazem em Dublin o primeiro debate de cúpula dedicado à IA",
+      "date": "2026-11-13",
+      "category": "mundo",
+      "tags": [
+        "União Europeia",
+        "Regulação",
+        "Soberania"
+      ],
+      "summary": "Na reunião informal de 13/11, com Arthur Mensch (Mistral) e Geoffrey Hinton, os chefes de governo discutiram competitividade, dependência de fornecedores de fora da Europa e riscos da IA, sem aprovar conclusões. Costa apontou o próximo orçamento da UE como decisivo, e von der Leyen citou cerca de € 30 bi para sete gigafábricas de IA. O tema volta à pauta em 5/2/2027.",
+      "source_name": "thinking.lu",
+      "url": "https://thinking.lu/en/news/eu-leaders-dublin-ai-summit-frieden",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n101",
+      "title": "Meituan libera os pesos do LongCat-2.5, modelo de 1,6 trilhão de parâmetros para agentes",
+      "date": "2026-11-15",
+      "category": "modelos",
+      "tags": [
+        "Open-weight",
+        "Agentes",
+        "China"
+      ],
+      "summary": "Modelo MoE com cerca de 48 bi de parâmetros ativos, contexto de 1 milhão de tokens e entrada de texto, imagem e vídeo, treinado só em chips chineses e liberado sob licença MIT. A API aceita os formatos OpenAI e Anthropic e funciona com Claude Code e Codex; nos benchmarks da própria Meituan, fica perto do Claude Opus 5 em tarefas de terminal.",
+      "source_name": "the-decoder.com",
+      "url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/",
+      "priority": false,
+      "added": "2026-11-16"
+    },
+    {
+      "id": "n102",
+      "title": "llama.cpp e ggml chegam à versão 1.0 com API estável",
+      "date": "2026-11-13",
+      "category": "ferramentas",
+      "tags": [
+        "llama.cpp",
+        "IA local",
+        "Open source"
+      ],
+      "summary": "Depois de 3,5 anos, as bibliotecas passam a usar versionamento semântico: mudanças incompatíveis de API ou ABI agora sobem a versão principal. A 1.0 remove funções descontinuadas, traz cache KV em FP8 e fecha falhas de SSRF, CORS e DNS rebinding no llama-server.",
+      "source_name": "huggingface.co",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "priority": false,
+      "added": "2026-11-16"
     }
   ]
 }

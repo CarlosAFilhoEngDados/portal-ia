@@ -1,24 +1,12 @@
 {
   "highlights": [
-    "n081",
+    "n092",
     "n073",
-    "n086",
-    "n082",
-    "n088"
+    "n094",
+    "n079",
+    "n081"
   ],
   "dates": [
-    [
-      "2026-11-15",
-      "15 nov – 15 dez",
-      "Prompts agendados no Agent Builder",
-      "Microsoft"
-    ],
-    [
-      "2026-11-15",
-      "Meados nov – início dez",
-      "Agentes do SharePoint e OneDrive passam a ser criados no Agent Builder",
-      "Microsoft"
-    ],
     [
       "2026-11-16",
       "16 nov",
@@ -63,6 +51,12 @@
     ],
     [
       "2026-12-01",
+      "Até início dez",
+      "Agentes do SharePoint e OneDrive passam a ser criados no Agent Builder",
+      "Microsoft"
+    ],
+    [
+      "2026-12-01",
       "Dezembro",
       "Copilot Workspaces passa a usar chat agêntico (Frontier)",
       "Microsoft"
@@ -71,6 +65,12 @@
       "2026-12-09",
       "9 dez",
       "Claude passa a vir ativado por padrão no M365 Copilot em tenants da UE/EFTA/Reino Unido sem escolha feita",
+      "Microsoft"
+    ],
+    [
+      "2026-12-15",
+      "Até 15 dez",
+      "Prompts agendados no Agent Builder",
       "Microsoft"
     ],
     [
@@ -84,6 +84,12 @@
       "31 dez",
       "Fim dos prompts agendados via Power Platform no M365 Copilot",
       "Microsoft"
+    ],
+    [
+      "2027-02-05",
+      "5 fev 2027",
+      "Líderes da UE voltam a discutir IA (reunião em Alden Biesen)",
+      "UE"
     ],
     [
       "2027-02-10",
@@ -170,6 +176,11 @@
       "microsoft",
       "Copilot Studio: MCP, A2A e nó Extract",
       "Agentes persistentes e extração de documentos, aplicável ao Leitor de Matrículas."
+    ],
+    [
+      "claude",
+      "Claude Code Projects: coordenador e threads paralelas",
+      "Como briefar o coordenador, usar /btw e /fork, memória compartilhada e controle de consumo dos limites."
     ]
   ]
 }
