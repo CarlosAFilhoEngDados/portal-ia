@@ -2,9 +2,9 @@
   "highlights": [
     "n113",
     "n116",
-    "n114",
-    "n125",
-    "n092"
+    "n135",
+    "n148",
+    "n114"
   ],
   "dates": [
     [
@@ -30,6 +30,12 @@
       "19 nov",
       "Claude Data ligado por padrão no plano Enterprise",
       "Anthropic"
+    ],
+    [
+      "2026-11-19",
+      "19 nov",
+      "Lançamento oficial do Olala mini no OVHcloud AI Summit",
+      "OVH"
     ],
     [
       "2026-11-20",
@@ -80,6 +86,12 @@
       "Microsoft"
     ],
     [
+      "2026-12-10",
+      "10 dez",
+      "What's New in Snowflake: demos ao vivo dos últimos lançamentos",
+      "Snowflake"
+    ],
+    [
       "2026-12-11",
       "11 dez",
       "Hands-on lab de Open Data Sharing via Iceberg REST Catalog",
@@ -96,6 +108,18 @@
       "Até 15 dez",
       "Prompts agendados no Agent Builder",
       "Microsoft"
+    ],
+    [
+      "2026-12-15",
+      "Meados – fim dez",
+      "GA do Learning Agent personalizado no M365 Copilot",
+      "Microsoft"
+    ],
+    [
+      "2026-12-17",
+      "17 dez",
+      "Gemini Gems somem das contas pessoais (substituídos por Skills)",
+      "Google"
     ],
     [
       "2026-12-31",

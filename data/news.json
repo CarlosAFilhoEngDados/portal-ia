@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T05:09:32-03:00",
+  "updated_at": "2026-11-17T12:01:24-03:00",
   "items": [
     {
       "id": "n001",
@@ -2166,6 +2166,292 @@
       "affects": [
         "pessoas"
       ]
+    },
+    {
+      "id": "n133",
+      "title": "Claude Meetings não dá conta da demanda: Enterprise volta, Team segue com Auto-join pausado",
+      "date": "2026-11-17",
+      "category": "claude",
+      "tags": [
+        "Claude Meetings",
+        "Status",
+        "Beta"
+      ],
+      "summary": "O beta do Claude Meetings teve demanda acima do esperado e o Claude não conseguiu entrar em muitas chamadas desde 16/11. Na coleta (17/11), o recurso voltou para todos os clientes Enterprise, com entrada mais lenta; para o plano Team, adicionar o Claude a novas chamadas e o Auto-join continuam pausados, sem previsão.",
+      "source_name": "status.claude.com",
+      "url": "https://status.claude.com/",
+      "priority": true,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n134",
+      "title": "Claude Code no desktop roda o simulador do iPhone Duo e testa telas dobráveis sozinho (beta)",
+      "date": "2026-11-17",
+      "category": "claude",
+      "tags": [
+        "Claude Code",
+        "iOS",
+        "Beta"
+      ],
+      "summary": "Em beta pública desde 17/11, o Claude Code no desktop abre o simulador iOS do iPhone Duo ao lado do chat e dobra e desdobra o aparelho simulado para conferir cada estado do layout, sem alternância manual.",
+      "source_name": "ashutoshai.com",
+      "url": "https://ashutoshai.com/ai-compass/2026/11/16/anthropic-claude-code-iphone-duo-simulator/",
+      "priority": true,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n135",
+      "title": "Servidor Git de referência do MCP executava comandos a partir do .git/config do repositório",
+      "date": "2026-11-11",
+      "category": "seguranca",
+      "tags": [
+        "MCP",
+        "RCE",
+        "Git"
+      ],
+      "summary": "O mcp-server-git (servidor oficial do projeto MCP) rodava programas definidos na configuração do próprio repositório, como core.fsmonitor, mesmo em ferramentas só de leitura (CVSS 7.0). A versão 2026.11.11 neutraliza hooks, filtros e drivers; até atualizar, apontar o servidor só para repositórios confiáveis.",
+      "source_name": "github.com",
+      "url": "https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-6hqx-gqrx-c5r2",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n136",
+      "title": "AWS Pricing MCP Server: ferramenta marcada como somente leitura gravava arquivos fora da pasta (CVE-2026-126816)",
+      "date": "2026-11-16",
+      "category": "seguranca",
+      "tags": [
+        "MCP",
+        "AWS",
+        "Path traversal"
+      ],
+      "summary": "O gerador de relatórios de custo do aws-pricing-mcp-server aceitava caminhos absolutos e ../ e, por estar anotado como read-only, podia ser aprovado automaticamente pelos clientes MCP. Corrigido na 1.0.31; o pacote antigo cost-analysis-mcp-server não terá correção e deve ser trocado.",
+      "source_name": "aws.amazon.com",
+      "url": "https://aws.amazon.com/security/security-bulletins/2026-184-aws/",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n137",
+      "title": "OpenAI leva os modelos de ciberdefesa Daybreak à OTAN; ENISA achou e corrigiu 4 falhas com eles",
+      "date": "2026-11-17",
+      "category": "seguranca",
+      "tags": [
+        "OpenAI",
+        "Daybreak",
+        "Governo"
+      ],
+      "summary": "A OTAN chegou a usar até 300 bilhões de tokens por mês dos modelos de ciberdefesa da OpenAI. A ENISA, agências da França, Alemanha e Polônia e a Ucrânia também usam o Daybreak; num relatório da ENISA com o CERT-EU, 95% de 88 possíveis falhas apontadas pelos modelos foram confirmadas pelos mantenedores.",
+      "source_name": "openai.com",
+      "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai/",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n138",
+      "title": "Work IQ passa a entender pessoas e organograma: Copilot responde headcount, spans e skills",
+      "date": "2026-11-16",
+      "category": "microsoft",
+      "tags": [
+        "Work IQ",
+        "Copilot",
+        "Ignite"
+      ],
+      "summary": "Antes do Ignite, a Microsoft anunciou contexto de pessoas e organização no Work IQ: o Copilot calcula headcount, proporção gestor/IC e distribuição de skills a partir dos dados de RH, respeitando permissões. O raciocínio analítico chega em GA; o contexto com a terminologia da empresa e o Workforce Insights Agent ficam no Frontier, com rollout até dezembro.",
+      "source_name": "techcommunity.microsoft.com",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/copilot-that-understands-your-organization-introducing-people-and-org-context-in/4573356",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n139",
+      "title": "Learning Agent do M365 Copilot vai personalizar o aprendizado com chats, e-mails e reuniões",
+      "date": "2026-11-16",
+      "category": "microsoft",
+      "tags": [
+        "M365 Copilot",
+        "Learning Agent",
+        "Message Center"
+      ],
+      "summary": "Pelo MC1556094, o Learning Agent ganha página inicial, prompts e recomendações baseados no trabalho de cada usuário, lendo chats do Teams, e-mails e transcrições. Preview pública de meados ao fim de novembro e GA em dezembro; depende da personalização avançada ligada pelo admin e do histórico de chat ligado pelo usuário.",
+      "source_name": "mc.merill.net",
+      "url": "https://mc.merill.net/message/MC1556094",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n140",
+      "title": "GitHub Copilot libera Claude Fable 5.2 e Gemini 4 Carbon; Fable 5.2 vem desligado no Business e Enterprise",
+      "date": "2026-11-16",
+      "category": "ferramentas",
+      "tags": [
+        "GitHub Copilot",
+        "Claude Fable 5.2",
+        "Gemini"
+      ],
+      "summary": "Os dois modelos chegam aos planos Pro+, Max, Business e Enterprise. O Claude Fable 5.2 exige retenção de dados por padrão e, no Business e Enterprise, só aparece depois que o admin liga a política. O app do Copilot também passa a trabalhar com repositórios do GitHub Enterprise Server (GA).",
+      "source_name": "github.blog",
+      "url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9/",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n141",
+      "title": "OVH apresenta o Olala mini, seu primeiro LLM: 7 bi de parâmetros, roda em GPU de 8 GB e sai em Apache 2.0",
+      "date": "2026-11-17",
+      "category": "modelos",
+      "tags": [
+        "OVHcloud",
+        "Open source",
+        "Europa"
+      ],
+      "summary": "O Olala mini 7A1B usa 1 bilhão de parâmetros ativos em 256 especialistas por camada e atenção híbrida (Differential-TPA + Mamba-3), com 32 mil tokens de contexto. Foi treinado em supercomputadores públicos europeus, já roda no Qwant e terá lançamento oficial no OVHcloud AI Summit em 19/11.",
+      "source_name": "corporate.ovhcloud.com",
+      "url": "https://corporate.ovhcloud.com/en/newsroom/news/ovh-olala-mini/",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n142",
+      "title": "Gemini Gems viram somente leitura e dão lugar às Skills",
+      "date": "2026-11-17",
+      "category": "ferramentas",
+      "tags": [
+        "Gemini",
+        "Skills",
+        "Google"
+      ],
+      "summary": "Desde 17/11 os Gems do Gemini não podem mais ser usados nem editados e somem das contas pessoais em 17/12. Eles devem virar Skills automaticamente; as Skills ganharam anexos e compartilhamento para a transição.",
+      "source_name": "theverge.com",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1035202/gemini-gems-are-retiring-today",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n143",
+      "title": "Gemini chega ao Google Cloud Dedicated, a nuvem soberana operada por parceiros na Europa",
+      "date": "2026-11-17",
+      "category": "ferramentas",
+      "tags": [
+        "Google Cloud",
+        "Soberania",
+        "Gemini"
+      ],
+      "summary": "No Sovereign AI Summit, em Bruxelas, o Google anunciou modelos Gemini na nuvem operada por parceiros locais (como S3NS e Thales), gerenciamento confidencial de chaves externas (cEKM, preview) e frameworks de auditoria, com um para a Suíça já disponível e outro para o DORA a caminho.",
+      "source_name": "cloud.google.com",
+      "url": "https://cloud.google.com/blog/products/identity-security/sovereign-ai-on-your-terms-made-with-europe",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n144",
+      "title": "Falha na Optimizely injeta skimmer de cartão em sites de 178 organizações, como BBC, CNN e Zoom",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Supply chain",
+        "Cartões",
+        "JavaScript"
+      ],
+      "summary": "Um invasor explorou uma falha no Optimizely Web Experimentation e plantou JavaScript malicioso nos scripts que sites de 178 organizações (BBC, CNN, Zoom, Salesforce, HSBC, IKEA) carregam do CDN da empresa. O código roubava dados de cartão digitados em formulários próprios, trocava carteiras de cripto e levava iPhones a kits de exploit; a Optimizely corrigiu a falha e limpou os scripts em 16 e 17/11.",
+      "source_name": "securityweek.com",
+      "url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "alto",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ]
+    },
+    {
+      "id": "n145",
+      "title": "Invasão à PLAID tira do ar toda a plataforma KARTE e vaza chaves de integração de clientes",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Credenciais",
+        "SaaS",
+        "Japão"
+      ],
+      "summary": "A japonesa PLAID confirmou que invasores exploraram uma falha em servidores em 13/11, roubaram credenciais e levaram 79.249 e-mails de contas, chaves e tokens que ligam o KARTE a outros sistemas e parte dos dados de clientes. Na coleta (17/11), a plataforma seguia totalmente fora do ar, sem previsão; clientes devem revogar as chaves na origem.",
+      "source_name": "rescana.com",
+      "url": "https://www.rescana.com/post/plaid-karte-unauthorized-access-shutdown-rotate-keys-prepare-now",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n146",
+      "title": "Chave de nuvem esquecida com fornecedor de IA abriu 10 contas da Barracuda em 44 horas",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Credenciais",
+        "Nuvem",
+        "Fornecedores"
+      ],
+      "summary": "Uma chave que seguia ativa no GitHub de um fornecedor de IA, invadido em outubro, deu acesso a segredos de AWS e Azure, código e clusters Kubernetes da Barracuda em 1 e 2/11. Clientes notificados do Barracuda XDR precisam recriar credenciais de integração e revisar a atividade desde 1/11.",
+      "source_name": "cybersecuritynews.com",
+      "url": "https://cybersecuritynews.com/barracuda-cloud-account-breach/",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n147",
+      "title": "Invasão ao supercomputador Fugaku expõe chaves SSH e credenciais guardadas por até 4.597 usuários",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Credenciais",
+        "SSH",
+        "Japão"
+      ],
+      "summary": "O RIKEN suspendeu o Fugaku em 14/11 após um invasor entrar pela página pública de status e levar dados do sistema de autenticação e arquivos das pastas dos usuários, incluindo chaves SSH e de acesso a outros serviços. Já houve tentativas de usar essas credenciais em outros sistemas; usuários devem revogar e gerar novas chaves.",
+      "source_name": "riken.jp",
+      "url": "https://www.riken.jp/en/news_pubs/news/2026/20261116_2/index.html",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ]
+    },
+    {
+      "id": "n148",
+      "title": "Snowflake é âncora do consórcio escolhido pelos EUA como pacote prioritário de exportação de IA",
+      "date": "2026-11-16",
+      "category": "snowflake",
+      "tags": [
+        "Setor público",
+        "AADC",
+        "Governança"
+      ],
+      "summary": "O Departamento de Comércio dos EUA designou o American AI Data Stack Consortium, com Snowflake, NVIDIA, OpenAI, Palo Alto Networks, SailPoint e outros, como pacote prioritário do American AI Exports Program, voltado a governos e setores regulados de países parceiros.",
+      "source_name": "snowflake.com",
+      "url": "https://www.snowflake.com/en/blog/trusted-american-si-partner-nations/",
+      "priority": true,
+      "added": "2026-11-17"
     }
   ]
 }
