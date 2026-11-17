@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T12:09:52-03:00",
+  "updated_at": "2026-11-17T05:09:32-03:00",
   "items": [
     {
       "id": "n001",
@@ -1807,6 +1807,365 @@
       "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
       "priority": false,
       "added": "2026-11-16"
+    },
+    {
+      "id": "n113",
+      "title": "Cortex AI Function Studio e AI Function Optimization entram em GA",
+      "date": "2026-11-16",
+      "category": "snowflake",
+      "tags": [
+        "Cortex AI",
+        "AI Functions",
+        "GA"
+      ],
+      "summary": "O AI Function Studio cria AI Functions a partir de uma descrição em linguagem natural (Cortex Code CLI ou Snowsight AI Studio) e automatiza engenharia de prompt, escolha de modelo e benchmark para texto, documentos, imagem, áudio e vídeo. O experimento AI_FUNCTION_OPTIMIZATION, também em GA, compara modelos candidatos por qualidade e custo estimado.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-16-cortex-ai-function-studio-ga",
+      "priority": true,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n114",
+      "title": "AI_COMPLETE passa a analisar vídeos com o Twelve Labs Pegasus 1.5",
+      "date": "2026-11-16",
+      "category": "snowflake",
+      "tags": [
+        "Cortex AI",
+        "Vídeo",
+        "AI_COMPLETE"
+      ],
+      "summary": "Em GA: resumos, perguntas e extração estruturada de vídeos guardados em stages, direto no SQL do AI_COMPLETE. Aceita arquivos de até 2 horas e 2 GB (MP4, MOV, AVI, MKV e WebM), sem montar pipeline de vídeo à parte.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-16-ai-complete-pegasus-1-5-preview",
+      "priority": true,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n115",
+      "title": "SCIM em nível de organização (preview privado) e SHOW GRANTS com hierarquia de roles",
+      "date": "2026-11-16",
+      "category": "snowflake",
+      "tags": [
+        "Governança",
+        "SCIM",
+        "Entra ID"
+      ],
+      "summary": "Com uma integração SCIM de escopo ORGANIZATION, Okta, Entra ID ou outro IdP provisionam usuários e grupos uma única vez para toda a organização, em vez de uma integração por conta. Em GA, SHOW GRANTS TO ... INCLUDE HIERARCHY lista os privilégios herdados por toda a hierarquia de roles.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-16-organization-scim-private-preview",
+      "priority": true,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n116",
+      "title": "Marca d'água de texto da Anthropic chega ao Opus 4.6, Opus 4.5, Sonnet 4.5 e Haiku 4.5",
+      "date": "2026-11-16",
+      "category": "claude",
+      "tags": [
+        "Claude API",
+        "Marca d'água",
+        "Modelos"
+      ],
+      "summary": "Pelas release notes da plataforma, o texto gerado por esses quatro modelos passa a carregar a marca d'água da Anthropic nas plataformas suportadas; com temperature, top_p ou top_k fora do padrão, a marca pode não aparecer. Lembrete: o Sonnet 4.5 será aposentado na API em 30/11, com migração recomendada para o Sonnet 5.5.",
+      "source_name": "platform.claude.com",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/text-watermark",
+      "priority": true,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n117",
+      "title": "Claude Code 2.1.326: Code Mode junto com agent teams e avisos de regras de ferramentas",
+      "date": "2026-11-16",
+      "category": "claude",
+      "tags": [
+        "Claude Code",
+        "Code Mode",
+        "Release"
+      ],
+      "summary": "Sessões com agent teams agora podem rodar em Code Mode; o CLI avisa quando --allowedTools/--disallowedTools tem regra incompleta e explica por que servidores MCP param ao surgir um managed-mcp.json. Traz ainda correções em regras de permissão, sandbox no Linux e configurações gerenciadas no Claude Desktop.",
+      "source_name": "github.com",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+      "priority": true,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n118",
+      "title": "Plugins chegam à nova Copilot Home e Microsoft abre catálogo público no Ignite",
+      "date": "2026-11-12",
+      "category": "microsoft",
+      "tags": [
+        "M365 Copilot",
+        "Plugins",
+        "Ignite"
+      ],
+      "summary": "Com a Copilot Home unindo Chat e Cowork, plugins (skills, ferramentas/conectores e agentes) passam a aparecer na navegação, sem mudança na gestão pelo TI. Um Plugin Catalog público estreia em 17/11 em aka.ms/plugins, e o Ignite terá sessões e labs sobre registry, conectores e skills.",
+      "source_name": "techcommunity.microsoft.com",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/plugins-at-microsoft-ignite-2026/4569951",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n119",
+      "title": "GitHub Copilot: admins podem exigir que MCP, skills e hooks venham só de plugins",
+      "date": "2026-11-16",
+      "category": "ferramentas",
+      "tags": [
+        "GitHub Copilot",
+        "MCP",
+        "Governança"
+      ],
+      "summary": "A configuração gerenciada strictPluginOnlyCustomization bloqueia customizações avulsas de usuário e projeto (skills, custom agents, hooks, servidores MCP e extensões executáveis), por categoria. Combinada com strictKnownMarketplaces, permite distribuir ferramentas MCP aprovadas por uma biblioteca de plugins. Para Copilot Business/Enterprise no GitHub Enterprise Cloud.",
+      "source_name": "github.blog",
+      "url": "https://github.blog/changelog/2026-11-16-control-where-github-copilot-customizations-come-from/",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n120",
+      "title": "GitHub Copilot tira do ar Claude Opus 4.8, Claude Opus 5 e GPT-5.6 Terra",
+      "date": "2026-11-16",
+      "category": "ferramentas",
+      "tags": [
+        "GitHub Copilot",
+        "Modelos",
+        "Depreciação"
+      ],
+      "summary": "A partir de 16/11 os três modelos saem da maioria das experiências do Copilot; as alternativas sugeridas são Claude Opus 5.5 e GPT-6.1 Sol ou GPT-6 Luna, habilitadas automaticamente em Business e Enterprise salvo política em contrário. O Opus 4.8 segue para assinantes individuais em planos anuais.",
+      "source_name": "github.blog",
+      "url": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n121",
+      "title": "Alibaba lança o Qwen4-Max, MoE de 2,4 trilhões de parâmetros com contexto de 1M",
+      "date": "2026-11-16",
+      "category": "modelos",
+      "tags": [
+        "Qwen",
+        "Alibaba",
+        "MoE"
+      ],
+      "summary": "Modelo mais capaz da família Qwen, com visão nativa e 71 bilhões de parâmetros ativos por token; ficou em 6º no Code Arena e, segundo a Alibaba, usa 35% menos tokens e custa ~60% menos por tarefa que o Qwen3.8-Max. Disponível na QwenCloud via API e Token Plan; versões open-weight menores do Qwen4 virão em breve.",
+      "source_name": "alibabacloud.com",
+      "url": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n122",
+      "title": "Tencent lança o Hy4 flash: 12 bi de parâmetros ativos e preço de US$ 0,07 por milhão de tokens",
+      "date": "2026-11-16",
+      "category": "modelos",
+      "tags": [
+        "Tencent",
+        "Hy4",
+        "Custo"
+      ],
+      "summary": "Modelo multimodal de 224 bilhões de parâmetros (12 bi ativos) e contexto de até 1M, voltado a pesquisa, slides e planilhas; no benchmark interno da Tencent custa 1/20 do Hy4 por tarefa e ficou perto do Claude Haiku 5.5 em satisfação. Pesos abertos e OpenRouter estão prometidos.",
+      "source_name": "technode.com",
+      "url": "https://technode.com/2026/11/16/tencent-launches-hy4-flash-cutting-ai-task-costs-by-95-in-internal-tests/",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n123",
+      "title": "Databricks AI Index: Opus 5.5 vai a 37,9% dos tokens e open-weight já são 30,9% do tráfego",
+      "date": "2026-11-16",
+      "category": "dados",
+      "tags": [
+        "Databricks",
+        "Custos de IA",
+        "Benchmark"
+      ],
+      "summary": "Índice público, atualizado semanalmente, com dados de 10 mil+ empresas no Unity Gateway e benchmark de coding agents. Destaques: só 28% das empresas usam um único provedor (eram 64% em julho); GPT-6 Luna e Opus 5.5 empatam em 89,1% de sucesso, mas a US$ 0,05 contra US$ 1,62 por tarefa.",
+      "source_name": "databricks.com",
+      "url": "https://www.databricks.com/blog/introducing-databricks-ai-index-state-enterprise-ai-tokenomics",
+      "priority": false,
+      "added": "2026-11-17"
+    },
+    {
+      "id": "n124",
+      "title": "CISA confirma exploração de falha no MLflow que grava arquivos sem autenticação (CVE-2026-53995)",
+      "date": "2026-11-16",
+      "category": "seguranca",
+      "tags": [
+        "MLflow",
+        "CISA KEV",
+        "MLOps"
+      ],
+      "summary": "A CISA incluiu no catálogo KEV, em 16/11, o path traversal no backend FileStore do MLflow: um trace_id com ../ enviado à API de traces grava arquivos fora da pasta. Corrigido no MLflow 3.18.0 (a 3.17.2 não tem o fix); quem não puder atualizar deve fechar o acesso ao servidor, ligar autenticação e migrar para backend em banco.",
+      "source_name": "zerodayfindings.com",
+      "url": "https://zerodayfindings.com/security-updates/known-exploited",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n125",
+      "title": "AWS Labs MCP: prompt injection pode vazar o token do InfluxDB pelo servidor do Timestream",
+      "date": "2026-11-16",
+      "category": "seguranca",
+      "tags": [
+        "MCP",
+        "AWS",
+        "Prompt injection"
+      ],
+      "summary": "No awslabs.timestream-for-influxdb-mcp-server (0.0.12 a 0.0.18), uma URL maliciosa injetada no contexto do cliente MCP faz o servidor enviar o token configurado a um endpoint do atacante. Corrigido na 0.0.19; a AWS pede para rotacionar os tokens. No mesmo dia saiu correção de escrita arbitrária de arquivos no aws-pricing-mcp-server (1.0.31).",
+      "source_name": "github.com",
+      "url": "https://github.com/awslabs/mcp/security/advisories/GHSA-2f9r-g4f3-wc2j",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n126",
+      "title": "MCPhantom: agentes de código instalam servidores MCP arquivados que nunca serão corrigidos",
+      "date": "2026-11-16",
+      "category": "seguranca",
+      "tags": [
+        "MCP",
+        "Agentes",
+        "Supply chain"
+      ],
+      "summary": "A Glow Labs viu que, em 98% das sessões em que um agente (Claude Code, Cursor, Codex CLI) instalou um servidor @modelcontextprotocol já arquivado, a escolha veio da memória do modelo. Os 12 pacotes somam 17,35 milhões de downloads, e o server-puppeteer tem uma RCE via prompt injection sem CVE e sem correção prevista. Recomendação: auditar configs MCP e trocar pelos servidores mantidos pelos donos de cada serviço.",
+      "source_name": "threatfrontier.com",
+      "url": "https://threatfrontier.com/articles/mcphantom-coding-agents-install-archived-mcp-servers",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n127",
+      "title": "Falha no Apache HTTP Server (mod_http2) passa a ser explorada para executar código remotamente",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Apache",
+        "RCE",
+        "CISA KEV"
+      ],
+      "summary": "A agência de cibersegurança de Singapura confirmou em 17/11 exploração ativa da CVE-2026-119618, com prova de conceito pública; a CISA já a havia incluído no KEV em 15/11. Afeta as versões 2.4.55 a 2.4.70 com HTTP/2 ativo e é corrigida na 2.4.71; até atualizar, remover h2/h2c da diretiva Protocols.",
+      "source_name": "csa.gov.sg",
+      "url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-164/",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n128",
+      "title": "Relatório preliminar: três falhas pequenas somadas derrubaram o Microsoft 365",
+      "date": "2026-11-16",
+      "category": "mundo",
+      "tags": [
+        "Microsoft 365",
+        "Post-mortem",
+        "Exchange Online"
+      ],
+      "summary": "Um bug latente no gateway desde julho, a migração do tráfego do Teams para o gateway do Exchange 15 h antes e 14% da capacidade fora do ar travaram mais de 80% dos servidores entre 12/11 (13h20, Brasília) e 13/11 (13h10). O isolamento regional falhou e o Exchange não pôde ser desviado; o relatório final sai em 20/11.",
+      "source_name": "arstechnica.com",
+      "url": "https://arstechnica.com/gadgets/2026/11/microsoft-details-how-three-problems-combined-for-a-global-outage/",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n129",
+      "title": "Teste de recuperação de desastre derruba o Workday: sem ponto, holerite nem benefícios",
+      "date": "2026-11-14",
+      "category": "mundo",
+      "tags": [
+        "Workday",
+        "SaaS",
+        "Recuperação de desastre"
+      ],
+      "summary": "Ao validar a janela de manutenção dos tenants de DR, serviços do site de DR se conectaram aos bancos de produção e deixaram dados inconsistentes; a Workday pôs todos os tenants de produção WD1 em manutenção na noite de 13/11. Funcionários de empresas clientes ficaram sem registrar ponto ou consultar pagamento; o serviço voltou em 14/11, segundo a empresa sem relação com ataque.",
+      "source_name": "uctoday.com",
+      "url": "https://uctoday.com/workday-outage-backup-test-payroll-timekeeping",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ]
+    },
+    {
+      "id": "n130",
+      "title": "Bug em sistemas do JPMorgan Chase atrasa transferências e pagamentos Zelle nos EUA",
+      "date": "2026-11-16",
+      "category": "mundo",
+      "tags": [
+        "Bancos",
+        "Pagamentos",
+        "Indisponibilidade"
+      ],
+      "summary": "Na segunda-feira (16/11) um bug de software em hardware on-premise fez transações de clientes do Chase demorarem, com reflexo em transferências com outros bancos, como Bank of America e U.S. Bank. O banco descartou ataque e disse que os clientes mantiveram acesso a contas e saldos.",
+      "source_name": "cnbc.com",
+      "url": "https://www.cnbc.com/2026/11/16/jpmorgan-chase-technical-issue.html",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "pessoas",
+        "empresas"
+      ]
+    },
+    {
+      "id": "n131",
+      "title": "Uber avisa 149 mil motoristas: dados de CNH vazaram via credenciais roubadas da Fireworks AI",
+      "date": "2026-11-16",
+      "category": "mundo",
+      "tags": [
+        "Fornecedor",
+        "Credenciais",
+        "Vazamento"
+      ],
+      "summary": "Hackers usaram credenciais internas roubadas da Fireworks AI, que tinha acesso a dados da Uber, para levar nome, endereço, data de nascimento e número da carteira de motorista. Como o acesso usou as credenciais do próprio fornecedor, os alertas da Uber não dispararam. É o mesmo incidente que atingiu Cursor e Notion.",
+      "source_name": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/16/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "pessoas",
+        "empresas"
+      ]
+    },
+    {
+      "id": "n132",
+      "title": "Ataque à Prefeitura de BH adultera guias de tributos; quem pagou via Pix deve conferir o destinatário",
+      "date": "2026-11-16",
+      "category": "mundo",
+      "tags": [
+        "Belo Horizonte",
+        "Pix",
+        "Setor público"
+      ],
+      "summary": "Guias emitidas entre a madrugada de 14/11 e a manhã de 16/11 não devem ser pagas e precisam ser reemitidas no portal ou no BH SIM. Quem pagou por Pix deve checar se o recebedor é o município e, se não for, pedir devolução pelo MED; pagamentos por código de barras e débito automático não foram afetados.",
+      "source_name": "ncnews.com.br",
+      "url": "https://ncnews.com.br/2026/11/16/ataques-ciberneticos-bh-prefeitura-tjmg-vazamento-dados/",
+      "priority": false,
+      "added": "2026-11-17",
+      "impact": "medio",
+      "affects": [
+        "pessoas"
+      ]
     }
   ]
 }

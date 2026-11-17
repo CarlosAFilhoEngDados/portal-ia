@@ -1,18 +1,12 @@
 {
   "highlights": [
-    "n092",
-    "n104",
-    "n073",
-    "n079",
-    "n081"
+    "n113",
+    "n116",
+    "n114",
+    "n125",
+    "n092"
   ],
   "dates": [
-    [
-      "2026-11-16",
-      "16 nov",
-      "Prazo da CISA para corrigir a falha da Check Point (CVE-2026-123039) e previsão de volta dos sistemas do Tesouro Nacional",
-      "CISA / Tesouro"
-    ],
     [
       "2026-11-17",
       "17 – 20 nov",
@@ -26,10 +20,22 @@
       "NVIDIA"
     ],
     [
+      "2026-11-17",
+      "17 nov",
+      "Estreia do Plugin Catalog público do Microsoft Copilot (aka.ms/plugins)",
+      "Microsoft"
+    ],
+    [
       "2026-11-19",
       "19 nov",
       "Claude Data ligado por padrão no plano Enterprise",
       "Anthropic"
+    ],
+    [
+      "2026-11-20",
+      "20 nov",
+      "Relatório final da Microsoft sobre o apagão do Microsoft 365/Exchange",
+      "Microsoft"
     ],
     [
       "2026-11-30",
@@ -50,6 +56,12 @@
       "Microsoft"
     ],
     [
+      "2026-11-30",
+      "30 nov",
+      "Aposentadoria do Claude Sonnet 4.5 na API (migrar para o Sonnet 5.5)",
+      "Anthropic"
+    ],
+    [
       "2026-12-01",
       "Até início dez",
       "Agentes do SharePoint e OneDrive passam a ser criados no Agent Builder",
@@ -66,6 +78,12 @@
       "9 dez",
       "Claude passa a vir ativado por padrão no M365 Copilot em tenants da UE/EFTA/Reino Unido sem escolha feita",
       "Microsoft"
+    ],
+    [
+      "2026-12-11",
+      "11 dez",
+      "Hands-on lab de Open Data Sharing via Iceberg REST Catalog",
+      "Snowflake"
     ],
     [
       "2026-12-14",
@@ -122,6 +140,11 @@
       "Claude Code: Code Mode e permissões",
       "Como o Code Mode chama ferramentas via JavaScript, como auditar o código e como a organização controla.",
       "treinamentos/claude-code-code-mode.html"
+    ],
+    [
+      "snowflake",
+      "Cortex AI Function Studio na prática",
+      "Criar, avaliar e otimizar AI Functions (texto, documentos e vídeo com Pegasus 1.5) comparando qualidade e custo."
     ],
     [
       "claude",
