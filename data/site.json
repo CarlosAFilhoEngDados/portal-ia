@@ -1,29 +1,17 @@
 {
   "highlights": [
-    "n113",
-    "n116",
-    "n135",
-    "n148",
-    "n114"
+    "n154",
+    "n149",
+    "n156",
+    "n158",
+    "n151"
   ],
   "dates": [
     [
-      "2026-11-17",
-      "17 – 20 nov",
-      "Microsoft Ignite (São Francisco e online)",
-      "Microsoft"
-    ],
-    [
-      "2026-11-17",
-      "17 nov",
-      "Resultados do 3º tri fiscal da NVIDIA, já sem Jensen Huang",
-      "NVIDIA"
-    ],
-    [
-      "2026-11-17",
-      "17 nov",
-      "Estreia do Plugin Catalog público do Microsoft Copilot (aka.ms/plugins)",
-      "Microsoft"
+      "2026-11-18",
+      "18 nov",
+      "Anthropic define o preço do IPO (faixa inicial de US$ 70–78)",
+      "Anthropic"
     ],
     [
       "2026-11-19",
@@ -38,9 +26,21 @@
       "OVH"
     ],
     [
+      "2026-11-19",
+      "19 nov",
+      "Ações da Anthropic (ANT) estreiam na Nasdaq",
+      "Anthropic"
+    ],
+    [
       "2026-11-20",
       "20 nov",
       "Relatório final da Microsoft sobre o apagão do Microsoft 365/Exchange",
+      "Microsoft"
+    ],
+    [
+      "2026-11-20",
+      "até 20 nov",
+      "Microsoft Ignite segue com sessões (São Francisco e online)",
       "Microsoft"
     ],
     [
@@ -78,6 +78,18 @@
       "Dezembro",
       "Copilot Workspaces passa a usar chat agêntico (Frontier)",
       "Microsoft"
+    ],
+    [
+      "2026-12-01",
+      "Dezembro",
+      "Agent Accounts do Copilot Studio entram em preview público",
+      "Microsoft"
+    ],
+    [
+      "2026-12-02",
+      "2 dez",
+      "Snowflake divulga resultados do 3º tri fiscal 2027",
+      "Snowflake"
     ],
     [
       "2026-12-09",
@@ -134,6 +146,12 @@
       "Microsoft"
     ],
     [
+      "2027-01-04",
+      "Janeiro 2027",
+      "Purview: proteção de grounding do Copilot e DLP para agentes locais em preview",
+      "Microsoft"
+    ],
+    [
       "2027-02-05",
       "5 fev 2027",
       "Líderes da UE voltam a discutir IA (reunião em Alden Biesen)",
@@ -164,6 +182,21 @@
       "Claude Code: Code Mode e permissões",
       "Como o Code Mode chama ferramentas via JavaScript, como auditar o código e como a organização controla.",
       "treinamentos/claude-code-code-mode.html"
+    ],
+    [
+      "snowflake",
+      "CoCo Desktop 2.0: cloud automations, artifacts e agent profiles",
+      "Agendar checagens que rodam no Snowflake, publicar relatórios por role e padronizar modelo e skills do time."
+    ],
+    [
+      "claude",
+      "Linked billing na Claude Platform",
+      "Vincular a organização a ferramentas de terceiros sem compartilhar API key, com limite de gasto por plataforma."
+    ],
+    [
+      "microsoft",
+      "Copilot Studio code-first: CLI, Copilot harness e Work IQ via MCP",
+      "Editar agentes localmente com Git, publicar pela CLI e usar Work IQ com permissões Read/Act."
     ],
     [
       "snowflake",

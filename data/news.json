@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T12:01:24-03:00",
+  "updated_at": "2026-11-18T05:07:37-03:00",
   "items": [
     {
       "id": "n001",
@@ -46,22 +46,6 @@
       "summary": "Modelo rápido e econômico para o dia a dia, forte em uso de computador e raciocínio visual. Disponível no ChatGPT Work, no Codex e na API como gpt-6.1-terra.",
       "source_name": "openai.com",
       "url": "https://openai.com/index/introducing-gpt-6-1-terra",
-      "priority": false,
-      "added": "2026-11-12"
-    },
-    {
-      "id": "n005",
-      "title": "DeepSeek atualiza o V4.1-Flash (versão 1017)",
-      "date": "2026-10-18",
-      "category": "modelos",
-      "tags": [
-        "DeepSeek",
-        "Open-weight",
-        "MIT"
-      ],
-      "summary": "Atualização open-weight com licença MIT que conclui tarefas mais rápido, mantendo o preço. A DeepSeek reporta 77% no DeepSWE v1.1.",
-      "source_name": "siliconangle.com",
-      "url": "https://siliconangle.com/2026/10/18/deepseek-releases-updated-v4-1-flash-model-it-says-completes-tasks-faster/",
       "priority": false,
       "added": "2026-11-12"
     },
@@ -2452,6 +2436,484 @@
       "url": "https://www.snowflake.com/en/blog/trusted-american-si-partner-nations/",
       "priority": true,
       "added": "2026-11-17"
+    },
+    {
+      "id": "n149",
+      "title": "Claude Platform lança linked billing: apps cobram o uso do Claude direto na sua organização, sem compartilhar API key",
+      "date": "2026-11-17",
+      "category": "claude",
+      "tags": [
+        "Claude Platform",
+        "Billing",
+        "Segurança"
+      ],
+      "summary": "Em beta, plataformas de terceiros (Asana, ClickHouse, Linear, Ramp, Warp e outras) podem faturar o uso da API do Claude na organização do próprio cliente, que aprova o vínculo, define limite mensal de gasto por plataforma e pode desvincular a qualquer momento. A requisição usa o header beta user-profiles-billing-2026-10-01 e o campo billing_policy define quem paga.",
+      "source_name": "claude.com",
+      "url": "https://claude.com/resources/articles/linked-billing-on-claude-platform",
+      "priority": true,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n150",
+      "title": "Claude Code 2.1.327: MCP via stdin para tirar tokens da linha de comando e /status que aponta configurações quebradas",
+      "date": "2026-11-17",
+      "category": "claude",
+      "tags": [
+        "Claude Code",
+        "MCP",
+        "Release"
+      ],
+      "summary": "Novo \"claude mcp add-json -\" lê o JSON do servidor pela entrada padrão; /status lista agentes, skills e hooks com erro, sandbox indisponível e permissões ignoradas; /install-github-app pede confirmação. Corrige \"claude mcp add/remove\" apagando outras chaves do .mcp.json e o Remote Control que podia apagar arquivos ignorados como .env.",
+      "source_name": "github.com",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
+      "priority": true,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n151",
+      "title": "IPO da Anthropic deve sair acima da faixa de US$ 70–78; ações (ANT) estreiam na Nasdaq em 19/11",
+      "date": "2026-11-17",
+      "category": "claude",
+      "tags": [
+        "Anthropic",
+        "IPO",
+        "Mercado"
+      ],
+      "summary": "Segundo fontes da CNBC, a demanda levou a Anthropic a mirar preço acima da faixa; o livro fechou às 16h (ET) de 17/11 e a precificação é esperada para 18/11. O prospecto mostra receita de US$ 33,24 bilhões nos nove meses até 30/9, alta de cerca de 1.200%.",
+      "source_name": "cnbc.com",
+      "url": "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html",
+      "priority": true,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n152",
+      "title": "Anthropic estende o Claude for Teachers gratuito para professores dos EUA até julho de 2028",
+      "date": "2026-11-18",
+      "category": "claude",
+      "tags": [
+        "Educação",
+        "Claude for Teachers",
+        "Privacidade"
+      ],
+      "summary": "O acesso gratuito a recursos premium vale para educadores K-12 verificados e para escolas e distritos com contas gerenciadas até 30/7/2028. A extensão vem após o acordo de segurança e privacidade com os sindicatos AFT e UFT, que proíbe usar dados de alunos e professores para treinar modelos.",
+      "source_name": "edtechinnovationhub.com",
+      "url": "https://www.edtechinnovationhub.com/news/anthropic-extends-free-claude-for-teachers-access-for-us-k-12-educators-to-july-2028",
+      "priority": true,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n153",
+      "title": "Claude Desktop ganha canais de atualização: Stable (padrão) ou Latest, com versão nova quase todo dia",
+      "date": "2026-11-17",
+      "category": "claude",
+      "tags": [
+        "Claude Desktop",
+        "Atualizações",
+        "Admin"
+      ],
+      "summary": "O usuário escolhe como o app se atualiza: Stable recebe versões com menos frequência e mais testes; Latest recebe uma versão nova cerca de uma vez por dia, com correções e recursos chegando antes.",
+      "source_name": "support.claude.com",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes",
+      "priority": true,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n154",
+      "title": "CoCo Desktop 2.0: cloud automations que rodam no Snowflake, artifacts compartilhados por role e agent profiles",
+      "date": "2026-11-17",
+      "category": "snowflake",
+      "tags": [
+        "CoCo",
+        "Automations",
+        "App Runtime"
+      ],
+      "summary": "A versão 2.0 (macOS e Windows) traz UI redesenhada, painéis divididos, navegador agêntico refeito e busca de sessões (GA). Em preview público: apps do Snowflake App Runtime, artifacts (relatórios publicados e compartilhados por role), cloud automations que rodam mesmo com o laptop desligado, agent profiles definidos pelo admin e memória guardada no próprio Snowflake.",
+      "source_name": "snowflake.com",
+      "url": "https://www.snowflake.com/en/blog/engineering/what-s-new-in-coco-desktop-from-finding-a-data-issue-to-shipping-the-fix/",
+      "priority": true,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n155",
+      "title": "Spark Monitoring UI entra em GA: jobs e sessões do Snowpark Connect for Spark monitorados no Snowsight",
+      "date": "2026-11-18",
+      "category": "snowflake",
+      "tags": [
+        "Spark",
+        "Snowpark Connect",
+        "Observabilidade"
+      ],
+      "summary": "A interface lista execuções de snowpark-submit e EXECUTE CODE BUNDLE em Batch Jobs e as sessões do Snowpark Connect em Spark Sessions, para acompanhar e depurar cargas Spark que rodam no Snowflake.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-18-spark-monitoring-ui-ga",
+      "priority": true,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n156",
+      "title": "Ignite 2026: Home (Chat + Cowork) e Office no app do Copilot em GA; Autopilot começa no Frontier e Copilot Code chega em semanas",
+      "date": "2026-11-17",
+      "category": "microsoft",
+      "tags": [
+        "Ignite",
+        "M365 Copilot",
+        "Autopilot"
+      ],
+      "summary": "A Microsoft juntou Chat e Cowork na Home, com roteamento Auto entre modelos da OpenAI e da Anthropic, e trouxe Word, Excel e PowerPoint para dentro do app. O Autopilot, agente pessoal sempre ativo com Entra Agent ID, memória e gerente nomeado, começa no Frontier; Copilot Code (apps e dashboards por linguagem natural) fica GA nas próximas semanas e o Copilot Managed Runtime, que hospeda esses apps no tenant, já está em GA.",
+      "source_name": "microsoft.com",
+      "url": "https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n157",
+      "title": "Copilot Studio no Ignite: novo Copilot harness em GA, criação de agentes pela CLI e Agent Accounts em dezembro",
+      "date": "2026-11-17",
+      "category": "microsoft",
+      "tags": [
+        "Copilot Studio",
+        "Agentes",
+        "CLI"
+      ],
+      "summary": "Agentes no novo Copilot harness tiveram qualidade de conhecimento +20 pontos, uso de várias ferramentas de 87% para 98,9% e 45% menos tokens de entrada, segundo a Microsoft. Dá para criar no Copilot Studio, pela CLI ou a partir do Cowork e do Code, com tudo rodando no tenant; a criação de apps ficou GA e as Agent Accounts entram em preview público em dezembro.",
+      "source_name": "microsoft.com",
+      "url": "https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2026/11/17/microsoft-ignite-2026-introducing-dynamics-365-in-copilot/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n158",
+      "title": "Agent 365 dá Entra Agent ID a agentes do Snowflake, Databricks, Anthropic e OpenAI e passa a descobrir o Claude Code nas máquinas",
+      "date": "2026-11-17",
+      "category": "microsoft",
+      "tags": [
+        "Agent 365",
+        "Entra Agent ID",
+        "Governança"
+      ],
+      "summary": "Plataformas conectadas (preview) recebem identidade no Entra e podem ser governadas com Conditional Access ao lado dos agentes Microsoft. Defender e Global Secure Access descobrem mais de 60 agentes locais, começando por Claude Code e GitHub Copilot CLI; o Purview DLP bloqueia dados sensíveis no Claude Code e Claude Desktop, e o Agent 365 Business Analytics (Frontier) mede gasto e valor da IA.",
+      "source_name": "techcommunity.microsoft.com",
+      "url": "https://techcommunity.microsoft.com/blog/agent-365-blog/whats-new-in-microsoft-agent-365-ignite-2026/4571753",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n159",
+      "title": "Copilot Cowork no Ignite: Auto com subagentes em paralelo, Brand Kit, plugins de Planner e Viva Engage e Cowork no Edge",
+      "date": "2026-11-17",
+      "category": "microsoft",
+      "tags": [
+        "Copilot Cowork",
+        "Plugins",
+        "Ignite"
+      ],
+      "summary": "O Auto passa a ajustar o esforço de raciocínio e a dividir tarefas entre subagentes com modelos diferentes (Frontier). Brand Kit, criação de apps, plugins de Sales, Planner e Viva Engage e Cowork no Edge for Business estão disponíveis; o Cowork em GCC começa a chegar em novembro.",
+      "source_name": "techcommunity.microsoft.com",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/whats-new-in-copilot-cowork-at-ignite-2026/4572242",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n160",
+      "title": "Work IQ fica GA no Copilot Studio e no Foundry via MCP, REST e A2A, com agentes que reagem a eventos",
+      "date": "2026-11-17",
+      "category": "microsoft",
+      "tags": [
+        "Work IQ",
+        "MCP",
+        "Agentes"
+      ],
+      "summary": "O novo recurso Listen faz agentes agirem quando chega uma mensagem ou evento de negócio, e a API ganha mais de 60 operações nativas do SharePoint. Permissões WorkIQ.Read e WorkIQ.Act separam leitura de ação, com teto definido pelo admin; o plugin do Work IQ chegou ao ChatGPT e o da Anthropic vem em breve.",
+      "source_name": "techcommunity.microsoft.com",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft_365blog/whats-new-in-work-iq-at-ignite-2026-agents-that-get-work-done/4572219",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n161",
+      "title": "Microsoft IQ reúne Work, Fabric, Foundry e Web IQ; Fabric IQ ganha conectores para ChatGPT e Claude",
+      "date": "2026-11-17",
+      "category": "dados",
+      "tags": [
+        "Fabric IQ",
+        "Semantic models",
+        "Claude"
+      ],
+      "summary": "A nova plataforma de contexto corporativo soma mais de 350 conectores e business plugins reutilizáveis por agentes via MCP. Em preview, conectores do Fabric IQ levam modelos semânticos do Power BI ao ChatGPT e ao Claude, e Fabric IQ no Excel cria tabelas dinâmicas ligadas ao Fabric; os data agents do Fabric chegam ao Microsoft Copilot.",
+      "source_name": "azure.microsoft.com",
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-the-new-microsoft-iq-putting-your-organizations-intelligence-to-work-in-every-agent/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n162",
+      "title": "Azure HorizonDB (PostgreSQL) chega a GA e ganha versão serverless no Fabric com consultas translíticas sobre o OneLake",
+      "date": "2026-11-17",
+      "category": "dados",
+      "tags": [
+        "Fabric",
+        "PostgreSQL",
+        "OneLake"
+      ],
+      "summary": "O Fabric HorizonDB provisiona bancos em segundos, pausa após 5 minutos parado e empurra consultas analíticas para o Fabric Data Warehouse, juntando tabelas PostgreSQL com dados do OneLake; o mirroring replica as tabelas para o Fabric. Os Fabric apps, construídos com o SDK Rayfin, entraram em GA.",
+      "source_name": "techcommunity.microsoft.com",
+      "url": "https://techcommunity.microsoft.com/blog/azuresqlblog/whats-new-in-databases-at-microsoft-ignite-2026-ai-ready-data-for-apps-and-agent/4570764",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n163",
+      "title": "Microsoft lança sete modelos MAI no Ignite: Code 2 para programação, Cyber 2 Flash, Image 2.7 e Realtime 1",
+      "date": "2026-11-17",
+      "category": "modelos",
+      "tags": [
+        "MAI",
+        "Foundry",
+        "GitHub Copilot"
+      ],
+      "summary": "A Microsoft diz que o MAI Code 2 entrega 96% do desempenho do Claude Opus 5.5 por 5% do preço e já está no GitHub Copilot; o MAI Image 2.7 lidera a edição de imagens no Artificial Analysis e está no Foundry, e o Decision 1.1 (roteamento) fica GA. A empresa também oferecerá MAI Licensed Weights para rodar modelos customizados no próprio Azure.",
+      "source_name": "microsoft.ai",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n164",
+      "title": "Microsoft Perception entra em GA com agentes red, blue e green; ISOC no Defender reúne SIEM do Sentinel",
+      "date": "2026-11-17",
+      "category": "seguranca",
+      "tags": [
+        "Perception",
+        "Defender",
+        "Agentes"
+      ],
+      "summary": "Quatro agentes blue team (triagem de alertas, investigação, criação de detecções e threat intel) e o Recon Agent estão em GA; vulnerability shielding protege ativos temporariamente até o patch (preview). A descoberta de agentes locais chega a 60 tipos, incluindo Claude Code e OpenAI Codex, que recebem Entra Agent ID e Conditional Access.",
+      "source_name": "microsoft.com",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/11/17/security-for-the-agentic-era-powered-by-microsoft-perception/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n165",
+      "title": "OpenAI lança GPT-6.2 Astra e GPT-6.2 Sol; Astra fica 20% mais barato que o GPT-6 Astra na API",
+      "date": "2026-11-17",
+      "category": "modelos",
+      "tags": [
+        "OpenAI",
+        "GPT-6.2",
+        "LLM"
+      ],
+      "summary": "O Astra mira trabalho profissional complexo (slides, planilhas, código e ciência) e custa US$ 8 por milhão de tokens de entrada e US$ 40 de saída; o Sol mantém o preço do 6.1 Sol. Ambos estão no ChatGPT Work, no Codex e na API, e já chegaram ao GitHub Copilot e ao Copilot Cowork.",
+      "source_name": "openai.com",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n166",
+      "title": "Gemini 4 Hydrogen controla braços robóticos e ganha plugin de robótica no Google Antigravity",
+      "date": "2026-11-17",
+      "category": "modelos",
+      "tags": [
+        "Google",
+        "Gemini 4 Hydrogen",
+        "Robótica"
+      ],
+      "summary": "O modelo rápido da Google incorpora o raciocínio espacial do Gemini Robotics ER 2 e marca 58 no benchmark Robotics 0.1, semelhante ao Argon com custo menor. O plugin no Antigravity instala drivers, calibra o braço, simula no MuJoCo e gera o controlador.",
+      "source_name": "developers.googleblog.com",
+      "url": "https://developers.googleblog.com/gemini-hydrogen-for-robotics/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n167",
+      "title": "Gemini Tasks chega de graça a mais países: o app liga para empresas, agenda serviços e compra via Google Pay",
+      "date": "2026-11-17",
+      "category": "ferramentas",
+      "tags": [
+        "Gemini",
+        "Agentes",
+        "Consumidor"
+      ],
+      "summary": "Com o Gemini 4 Hydrogen, o modo Tasks sai do plano Ultra e chega gratuitamente a usuários de vários países; ele faz ligações para marcar horários, completa compras com aprovação e pode receber comandos por SMS ou ligação.",
+      "source_name": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n168",
+      "title": "GitHub Copilot app passa a trabalhar com repositórios do Azure DevOps e a usar o navegador do usuário",
+      "date": "2026-11-17",
+      "category": "ferramentas",
+      "tags": [
+        "GitHub Copilot",
+        "Azure DevOps",
+        "Browser use"
+      ],
+      "summary": "Em preview, o agente clona repositórios do Azure DevOps, abre PRs e pode corrigir falhas de CI até o merge; o browser use preenche formulários e testa apps em abas isoladas do Chrome ou Edge (desligado por padrão). O suporte ao GitHub Enterprise Server ficou GA.",
+      "source_name": "github.blog",
+      "url": "https://github.blog/changelog/2026-11-17-github-copilot-app-microsoft-ignite-releases/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n169",
+      "title": "Code review do Copilot ganha esforço adaptativo e passa a apontar segredos expostos nos PRs",
+      "date": "2026-11-17",
+      "category": "ferramentas",
+      "tags": [
+        "GitHub Copilot",
+        "Code review",
+        "Segredos"
+      ],
+      "summary": "Em preview, o modo Adaptive escolhe Lite, Balanced ou Max conforme o risco do PR, e a detecção de segredos combina mais de 500 padrões conhecidos com detecção por LLM. O code review do Copilot para Azure Repos ficou GA, cobrado em créditos na assinatura Azure.",
+      "source_name": "github.blog",
+      "url": "https://github.blog/changelog/2026-11-17-copilot-code-review-adaptive-effort-secret-detection-and-more/",
+      "priority": false,
+      "added": "2026-11-18"
+    },
+    {
+      "id": "n170",
+      "title": "Atualização interna derruba iCloud, Apple Pay e App Store por horas; Apple restabelece tudo no fim da tarde de 17/11",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Apple",
+        "Indisponibilidade",
+        "iCloud"
+      ],
+      "summary": "Milhares de usuários relataram falhas no login do iCloud, Apple Pay, Apple Support e App Store a partir do fim da manhã (ET); Apple Business e Apple School Manager também foram afetados. A Apple atribuiu a queda a uma atualização interna, descartou ataque e informou status normalizado por volta de 17h46 (ET), 19h46 em Brasília.",
+      "source_name": "cbsnews.com",
+      "url": "https://www.cbsnews.com/news/apple-outage-icloud-apple-pay-services/",
+      "priority": false,
+      "added": "2026-11-18",
+      "impact": "alto",
+      "affects": [
+        "pessoas",
+        "empresas"
+      ]
+    },
+    {
+      "id": "n171",
+      "title": "CISA confirma exploração de falha crítica no Puppet Enterprise que dá execução de código no servidor (CVE-2026-115731)",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "CISA KEV",
+        "Puppet",
+        "RCE"
+      ],
+      "summary": "A desserialização insegura no processamento de relatórios deixa quem tem certificado de agente executar código no Puppet Server (CVSS 9.9) e comprometer a autoridade certificadora e todos os sistemas gerenciados; com autosign permissivo, até atacantes sem autenticação obtêm o certificado. Atualizar e desligar ou restringir o autosign.",
+      "source_name": "cisa.gov",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "priority": false,
+      "added": "2026-11-18",
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n172",
+      "title": "Java4Shell: falha no OpenJDK permite RCE sem autenticação em Keycloak, Jira, Confluence, Jenkins e PingFederate",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Java",
+        "OpenJDK",
+        "RCE"
+      ],
+      "summary": "A CVE-2026-114938 corrompe memória no decodificador Base64 acelerado por AVX-512 (OpenJDK 17.0.6+ e distribuições Oracle, Corretto, Temurin, Microsoft e Azul); foi achada com o Codex em cerca de uma hora. A Oracle corrigiu em 17/11; até a coleta não havia exploração confirmada, e a mitigação temporária é -XX:-UseBASE64Intrinsics.",
+      "source_name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/",
+      "priority": false,
+      "added": "2026-11-18",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n173",
+      "title": "Chrome corrige seu oitavo zero-day explorado de 2026, no parser de XML (CVE-2026-125350)",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Chrome",
+        "Zero-day",
+        "Navegador"
+      ],
+      "summary": "O use-after-free no componente XML já é explorado; as versões corrigidas são 157.0.8103.50/.51 (Windows e macOS) e 157.0.8103.50 (Linux). Navegadores e softwares derivados do Chromium podem compartilhar a falha.",
+      "source_name": "ciomonitor.com",
+      "url": "https://ciomonitor.com/articles/google-patches-eighth-actively-exploited-chrome-zero-day",
+      "priority": false,
+      "added": "2026-11-18",
+      "impact": "medio",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ]
+    },
+    {
+      "id": "n174",
+      "title": "Equinor detecta ciberataque em andamento contra sistemas de TI; produção de óleo e gás segue normal",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Energia",
+        "Ciberataque",
+        "Noruega"
+      ],
+      "summary": "A maior fornecedora de gás da Europa diz não haver sinal de roubo de dados; segundo a Reuters, o e-mail interno ficou fora do ar. A autoridade de segurança da Noruega, que elevou o risco de ataques à infraestrutura crítica para 4 de 5, está prestando apoio.",
+      "source_name": "channelnewsasia.com",
+      "url": "https://www.channelnewsasia.com/business/norways-equinor-detects-ongoing-cyberattack-oil-and-gas-output-unaffected-6560121",
+      "priority": false,
+      "added": "2026-11-18",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
+    },
+    {
+      "id": "n175",
+      "title": "Banco Carrefour investiga suposto vazamento de 70 GB com CPFs, RGs e endereços oferecido na dark web",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Brasil",
+        "Vazamento",
+        "Bancos"
+      ],
+      "summary": "Um anúncio em fórum atribui ao banco cerca de 70 GB e mais de 11 milhões de linhas com IDs de conta, nomes, CPFs, RGs e endereços. O Banco Carrefour diz que apura a possível exposição e adotou medidas preventivas; a origem ainda não foi confirmada.",
+      "source_name": "tiinside.com.br",
+      "url": "https://tiinside.com.br/17/11/2026/banco-carrefour-investiga-possivel-vazamento-de-dados/",
+      "priority": false,
+      "added": "2026-11-18",
+      "impact": "medio",
+      "affects": [
+        "pessoas"
+      ]
+    },
+    {
+      "id": "n176",
+      "title": "NVIDIA fatura US$ 115,8 bilhões no 3º trimestre fiscal, alta de 103%, no primeiro balanço sem Jensen Huang",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "NVIDIA",
+        "Resultados",
+        "Data center"
+      ],
+      "summary": "A receita de data center foi de US$ 107,6 bilhões (+110%) e a empresa prevê US$ 130 bilhões no próximo trimestre, sem contar vendas de computação à China. A CEO interina Colette Kress disse que o Vera Rubin começou \"explosivo\".",
+      "source_name": "investor.nvidia.com",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx",
+      "priority": false,
+      "added": "2026-11-18",
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ]
     }
   ]
 }
