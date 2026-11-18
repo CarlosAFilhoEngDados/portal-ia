@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T05:07:37-03:00",
+  "updated_at": "2026-11-18T11:59:41-03:00",
   "items": [
     {
       "id": "n001",
@@ -2914,6 +2914,132 @@
       "affects": [
         "empresas"
       ]
+    },
+    {
+      "title": "Varejo deve comprar US$ 250 milhões em ações da Anthropic no 1º dia; IPO pode levantar até US$ 64,4 bilhões",
+      "date": "2026-11-18",
+      "category": "claude",
+      "tags": [
+        "Anthropic",
+        "IPO",
+        "Mercado"
+      ],
+      "summary": "A Vanda Research estima cerca de US$ 250 milhões em compra líquida de pessoas físicas na estreia de quinta (19/11), o dobro da SpaceX. A Anthropic vende 825 milhões de ações (faixa de US$ 70–78, com preço esperado acima) e pode chegar a valuation de US$ 1,405 trilhão; a precificação sai na noite de 18/11.",
+      "source_name": "cnbc.com",
+      "url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-retail-investors.html",
+      "priority": true,
+      "id": "n177",
+      "added": "2026-11-18"
+    },
+    {
+      "title": "Snowflake amplia cotas de IA por usuário: papéis, limites semanais, exceções e cobertura do Cortex AI Gateway",
+      "date": "2026-11-17",
+      "category": "snowflake",
+      "tags": [
+        "FinOps",
+        "Cortex",
+        "Governança"
+      ],
+      "summary": "As per-user quotas limitam o gasto de cada pessoa em AI Functions, Cortex Agents, CoCo, CoWork e no Cortex AI Gateway (inclusive chamadas compatíveis com OpenAI e Anthropic), com bloqueio ao atingir o limite. Novas views USER_AI_USAGE_HISTORY e MY_BUDGET_SUMMARY mostram o consumo por usuário.",
+      "source_name": "snowflake.com",
+      "url": "https://www.snowflake.com/en/blog/engineering/per-user-quotas-for-ai--govern-every-user-s-ai-spend-in-snowflak/",
+      "priority": true,
+      "id": "n178",
+      "added": "2026-11-18"
+    },
+    {
+      "title": "Windows Server 2028 é anunciado com Server Core endurecido por padrão, TLS pós-quântico e gestão pelo Intune",
+      "date": "2026-11-18",
+      "category": "microsoft",
+      "tags": [
+        "Windows Server",
+        "Segurança",
+        "Ignite"
+      ],
+      "summary": "A nova versão sai com Kerberos no lugar de NTLM, LSASS protegido, SMB assinado e criptografado e troca de chaves híbrida ML-KEM desde o primeiro boot, além de NVMe nativo e suporte a inferência local (Foundry Local, vLLM, Llama.cpp). Testes pelo Windows Insider para Server ou pelo programa TAP.",
+      "source_name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-windows-server-2028-with-hardened-security/",
+      "priority": false,
+      "id": "n179",
+      "added": "2026-11-18"
+    },
+    {
+      "title": "ChatGPT for Sales: plugin de vendas e mais de 30 integrações com Salesforce, HubSpot, Gong, Outreach e Docusign",
+      "date": "2026-11-17",
+      "category": "ferramentas",
+      "tags": [
+        "OpenAI",
+        "Plugins",
+        "CRM"
+      ],
+      "summary": "O ChatGPT monta listas de contas a partir do CRM, prepara reuniões, redige outreach e follow-ups com notas de Gong, Otter.ai ou Granola e gera propostas via Docusign, Ironclad ou PandaDoc. Em Business e Enterprise, o admin aprova cada plugin e ação no Admin Console.",
+      "source_name": "startuphub.ai",
+      "url": "https://www.startuphub.ai/ai-news/artificial-intelligence/2026/openai-puts-the-whole-sales-stack-in-chat",
+      "priority": false,
+      "id": "n180",
+      "added": "2026-11-18"
+    },
+    {
+      "title": "Google passa a guardar chats do Gemini por cerca de 2 meses, mesmo com histórico desligado (antes eram 72 horas)",
+      "date": "2026-11-17",
+      "category": "mundo",
+      "tags": [
+        "Google",
+        "Privacidade",
+        "Gemini"
+      ],
+      "summary": "A mudança chega ao app do Gemini nas próximas semanas, junto com controles separados para histórico e treino de IA; chats temporários não são usados para treinar modelos. Vale revisar políticas de uso do Gemini pessoal com dados de trabalho.",
+      "source_name": "techcrunch.com",
+      "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "pessoas",
+        "empresas"
+      ],
+      "id": "n181",
+      "added": "2026-11-18"
+    },
+    {
+      "title": "Apache Roller tem falha de RCE sem autenticação explorada em ataques; atualizar para 6.1.6",
+      "date": "2026-11-18",
+      "category": "mundo",
+      "tags": [
+        "Apache",
+        "RCE",
+        "Patch"
+      ],
+      "summary": "A CVE-2026-129448 desserializa requisições XML-RPC antes de autenticar (versões 4.0.0 a 6.1.4) e a Apache confirma exploração ativa. Desligar o XML-RPC só pela interface não basta: é preciso atualizar ou remover o mapeamento /roller-services/xmlrpc.",
+      "source_name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas"
+      ],
+      "id": "n182",
+      "added": "2026-11-18"
+    },
+    {
+      "title": "Líder do Scattered Spider pega 6 anos de prisão nos EUA por phishing via SMS e SIM swap que roubou US$ 11,6 milhões",
+      "date": "2026-11-18",
+      "category": "mundo",
+      "tags": [
+        "Scattered Spider",
+        "Phishing",
+        "Identidade"
+      ],
+      "summary": "O britânico Tyler Buchanan, 24 anos, enviava SMS se passando por TI ou fornecedores para capturar credenciais de funcionários de telecom, tecnologia e BPOs. O grupo é conhecido por engenharia social, MFA bombing e SIM swap contra empresas como Twilio, MailChimp e Caesars.",
+      "source_name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/security/british-scattered-spider-hacker-sentenced-to-6-years-in-prison/",
+      "priority": false,
+      "impact": "medio",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ],
+      "id": "n183",
+      "added": "2026-11-18"
     }
   ]
 }
