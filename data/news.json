@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T11:59:41-03:00",
+  "updated_at": "2026-11-19T05:07:47-03:00",
   "items": [
     {
       "id": "n001",
@@ -3040,6 +3040,311 @@
       ],
       "id": "n183",
       "added": "2026-11-18"
+    },
+    {
+      "title": "Anthropic precifica IPO a US$ 83 por ação, acima da faixa, e levanta US$ 81,3 bilhões; ANT estreia hoje na Nasdaq",
+      "date": "2026-11-18",
+      "category": "claude",
+      "tags": [
+        "Anthropic",
+        "IPO",
+        "Nasdaq"
+      ],
+      "summary": "A oferta tem 980 milhões de ações Classe A (cerca de 956 milhões vendidas pela própria Anthropic), com início das negociações na Nasdaq Global Select em 19/11 sob o ticker ANT e liquidação prevista para 20/11. É o maior IPO já registrado, à frente da SpaceX, com valor de mercado totalmente diluído de cerca de US$ 1,5 trilhão.",
+      "source_name": "anthropic.com",
+      "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+      "priority": true,
+      "added": "2026-11-19",
+      "id": "n184"
+    },
+    {
+      "title": "Claude Code 2.1.328: auto mode no Bedrock, Agent Platform e Foundry, e hooks de MCP que bloqueiam a ação quando falham",
+      "date": "2026-11-18",
+      "category": "claude",
+      "tags": [
+        "Claude Code",
+        "MCP",
+        "Hooks"
+      ],
+      "summary": "Sessões interativas sem modo de permissão passam a começar no auto mode com Opus 4.6 e Sonnet 4.6 nos provedores de nuvem e no Claude apps gateway. Hooks mcp_tool ganham \"onFailure\": \"block\", e o self-hosted runner recebe novas opções e métricas; a versão também corrige tarefas agendadas apagadas e compactação usando prompt de sistema antigo.",
+      "source_name": "github.com",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+      "priority": true,
+      "added": "2026-11-19",
+      "id": "n185"
+    },
+    {
+      "title": "Cortex passa a entender vídeo: modelos da TwelveLabs viram AI Functions para buscar e analisar vídeo em SQL",
+      "date": "2026-11-18",
+      "category": "snowflake",
+      "tags": [
+        "Cortex AI",
+        "Vídeo",
+        "TwelveLabs"
+      ],
+      "summary": "O Marengo gera embeddings multimodais (imagem, áudio e fala) com AI_MULTI_EMBED direto de stages internos ou externos, e o Pegasus produz resumos, metadados e respostas sobre o vídeo. Os sinais extraídos ficam nas mesmas tabelas dos dados estruturados, com row access policies, RBAC e auditoria do Snowflake.",
+      "source_name": "snowflake.com",
+      "url": "https://www.snowflake.com/en/blog/cortex-watch-hear-understand-video-twelvelabs/",
+      "priority": true,
+      "added": "2026-11-19",
+      "id": "n186"
+    },
+    {
+      "title": "Prompt caching chega ao AI_COMPLETE em GA: prefixos repetidos saem até 97,5% mais baratos, sem mudar o SQL",
+      "date": "2026-11-18",
+      "category": "snowflake",
+      "tags": [
+        "Cortex AI",
+        "Custo",
+        "AI_COMPLETE"
+      ],
+      "summary": "Prompts de sistema longos, regras de classificação ou exemplos few-shot que se repetem a cada linha passam a ser processados uma vez e cobrados com tarifa de entrada em cache. O recurso é automático, sem inscrição, e também reduz a latência de prompts longos.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-18-cortex-prompt-caching",
+      "priority": true,
+      "added": "2026-11-19",
+      "id": "n187"
+    },
+    {
+      "title": "Retrieve Cortex Search entra em GA: CORTEX_SEARCH_RETRIEVE consulta o Cortex Search direto do SQL, linha a linha",
+      "date": "2026-11-18",
+      "category": "snowflake",
+      "tags": [
+        "Cortex Search",
+        "SQL",
+        "RAG"
+      ],
+      "summary": "A nova table function faz buscas de baixa latência no Cortex Search em uma consulta avulsa ou uma busca por linha de entrada com LATERAL join, o que facilita RAG e enriquecimento em lote sem sair do SQL.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-18-cortex-search-retrieve-ga",
+      "priority": true,
+      "added": "2026-11-19",
+      "id": "n188"
+    },
+    {
+      "title": "AI_EXTRACT ganha citações em preview: cada valor extraído aponta página e área do documento de origem",
+      "date": "2026-11-18",
+      "category": "snowflake",
+      "tags": [
+        "AI_EXTRACT",
+        "Documentos",
+        "Citações"
+      ],
+      "summary": "Com citation => TRUE, o AI_EXTRACT devolve número de página e bounding box (em documentos) ou offsets (em texto) junto dos campos extraídos, e pode combinar com scores de extração para priorizar revisão humana.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-18-ai-extract-citations",
+      "priority": true,
+      "added": "2026-11-19",
+      "id": "n189"
+    },
+    {
+      "title": "INFER_SCHEMA e schema evolution passam a criar colunas OBJECT, ARRAY e MAP tipadas a partir de Parquet, JSON, Avro e ORC (GA)",
+      "date": "2026-11-18",
+      "category": "snowflake",
+      "tags": [
+        "Ingestão",
+        "Iceberg",
+        "Schema evolution"
+      ],
+      "summary": "Com INFER_NESTED_TYPES = TRUE no INFER_SCHEMA, no COPY INTO ou no Snowpipe, o Snowflake infere colunas estruturadas e adiciona novos campos aninhados à medida que os arquivos mudam, inclusive em tabelas Apache Iceberg gerenciadas pelo Snowflake. O padrão continua FALSE, então cargas atuais não mudam.",
+      "source_name": "docs.snowflake.com",
+      "url": "https://docs.snowflake.com/en/release-notes/2026/other/2026-11-18-structured-type-inference",
+      "priority": true,
+      "added": "2026-11-19",
+      "id": "n190"
+    },
+    {
+      "title": "Copilot Studio: MCP e CLI do Copilot Studio em preview, edição colaborativa de agentes em GA e harness de atendimento ao cliente em GA",
+      "date": "2026-11-18",
+      "category": "microsoft",
+      "tags": [
+        "Copilot Studio",
+        "MCP",
+        "Ignite"
+      ],
+      "summary": "No 2º dia do Ignite, a Microsoft abriu em preview as ferramentas de linha de comando e o Copilot Studio MCP, que dão a desenvolvedores e assistentes de IA acesso ao Copilot harness, ferramentas e modelos. Vários makers já podem editar o mesmo agente (GA), o customer conversation harness para voz e chat com passagem a atendente humano ficou GA, e o nó classify dos workflows passou a usar um modelo de pontuação por padrão.",
+      "source_name": "microsoft.com",
+      "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/build-and-manage-business-processes-with-microsoft-copilot-studio/",
+      "priority": false,
+      "added": "2026-11-19",
+      "id": "n191"
+    },
+    {
+      "title": "Foundry Agent Service: Copilot harness em preview público, agentes de voz e computer use em GA e agentes com conta própria no M365",
+      "date": "2026-11-18",
+      "category": "microsoft",
+      "tags": [
+        "Foundry",
+        "Agentes",
+        "Ignite"
+      ],
+      "summary": "Agentes hospedados ganham controle de egress e recuperação de jobs longos (GA), snapshots de memória e CA privada (preview) e, a partir do início de dezembro, deploy em AKS do cliente. Toolboxes expõem ferramentas por endpoint MCP gerenciado, Web IQ fica GA para prompt agents e agentes publicados no Microsoft 365 recebem Entra Agent ID, caixa de e-mail e presença no Teams.",
+      "source_name": "devblogs.microsoft.com",
+      "url": "https://devblogs.microsoft.com/foundry/whats-new-in-foundry-agent-service-at-ignite-2026/",
+      "priority": false,
+      "added": "2026-11-19",
+      "id": "n192"
+    },
+    {
+      "title": "Frontier Tuning amplia preview privado com plugin para GitHub Copilot, CLI/APIs e publicação de skills ajustadas no Cowork",
+      "date": "2026-11-18",
+      "category": "microsoft",
+      "tags": [
+        "Frontier Tuning",
+        "Cowork",
+        "Work IQ"
+      ],
+      "summary": "Makers e especialistas montam um Tuning Environment (tarefa, rubricas, amostras e ferramentas) usando contexto do Work IQ e ajustam skills ou modelos (GPT 6 Luna e MAI Code 2 Flash) em rodadas avaliadas. A EY é o caso citado; o preview é gratuito e o recurso deve chegar ao Copilot Studio em breve.",
+      "source_name": "devblogs.microsoft.com",
+      "url": "https://devblogs.microsoft.com/microsoft365dev/frontier-tuning-opens-to-more-customers-with-new-tools-for-your-teams/",
+      "priority": false,
+      "added": "2026-11-19",
+      "id": "n193"
+    },
+    {
+      "title": "GitHub Copilot ganha 8 conectores MCP verificados: Supabase, Box, Buildkite, Calendly, ClickUp, Mixpanel, Webflow e Wix",
+      "date": "2026-11-18",
+      "category": "ferramentas",
+      "tags": [
+        "GitHub Copilot",
+        "MCP",
+        "Conectores"
+      ],
+      "summary": "Os novos conectores, em preview público para todos os planos, somam-se a mais de 25 serviços como Slack, Figma e Sentry, e funcionam no app do Copilot, na CLI (/mcp), no VS Code e no github.com. No Business e no Enterprise, o admin precisa habilitar a política Editor preview features e incluir os conectores na allowlist de MCP.",
+      "source_name": "github.blog",
+      "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/",
+      "priority": false,
+      "added": "2026-11-19",
+      "id": "n194"
+    },
+    {
+      "title": "Google lança o Gemini 4 Neon: nível de fronteira mais rápido, US$ 3/US$ 15 por milhão de tokens e contexto de 1M",
+      "date": "2026-11-18",
+      "category": "modelos",
+      "tags": [
+        "Gemini 4",
+        "Google",
+        "Modelos"
+      ],
+      "summary": "O Neon fica entre o Carbon e o Hydrogen, aparece em 3º no Artificial Analysis Intelligence Index (61) e em 1º no Coding Agent Index, com custo por tarefa 32% menor que o Carbon. Já está no Gemini API, Gemini for business, Antigravity e app Gemini (Pro e Ultra), e no GitHub Copilot; uma versão para ciberdefesa chega ao programa Fairwind nos próximos dias.",
+      "source_name": "blog.google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "priority": false,
+      "added": "2026-11-19",
+      "id": "n195"
+    },
+    {
+      "title": "Genie da Databricks chega em GA ao Microsoft Teams e vira plugin no Copilot Cowork e no Copilot Chat",
+      "date": "2026-11-18",
+      "category": "dados",
+      "tags": [
+        "Databricks",
+        "Genie",
+        "Microsoft 365"
+      ],
+      "summary": "O app Databricks Genie responde em DMs e canais do Teams com dados governados pelo Unity Catalog, agenda análises e devolve gráficos e PDFs; o plugin Azure Databricks Genie conecta o Cowork ao Genie One sem registro de app OAuth. O add-in de Excel traz pivots ao vivo sobre metric views, e a conexão com o Work IQ via MCP está prometida para breve.",
+      "source_name": "databricks.com",
+      "url": "https://www.databricks.com/blog/whats-new-genie-microsoft-copilot-cowork-and-chat-microsoft-teams-and-excel",
+      "priority": false,
+      "added": "2026-11-19",
+      "id": "n196"
+    },
+    {
+      "title": "CISA confirma exploração de falha no LiteLLM que escapa do sandbox de guardrails e roda código como root (CVE-2026-40217)",
+      "date": "2026-11-18",
+      "category": "seguranca",
+      "tags": [
+        "LiteLLM",
+        "CISA KEV",
+        "Gateway de IA"
+      ],
+      "summary": "O endpoint /guardrails/test_custom_code executa Python enviado pelo usuário; o bypass da lista de palavras proibidas dá RCE e permite despejar variáveis de ambiente com chaves de provedores e de nuvem. Atacantes combinam o exploit com master keys padrão como sk-1234: atualize para 1.83.10 ou superior, troque a master key e tire o painel da internet.",
+      "source_name": "cisa.gov",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+      "priority": false,
+      "added": "2026-11-19",
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ],
+      "id": "n197"
+    },
+    {
+      "title": "Pacote oficial do Microsoft Agent Framework no PyPI é comprometido e publica versões que roubam credenciais de nuvem",
+      "date": "2026-11-18",
+      "category": "seguranca",
+      "tags": [
+        "Supply chain",
+        "PyPI",
+        "Credenciais"
+      ],
+      "summary": "As versões 1.26.1 e 1.26.2, publicadas em 17/11, rodavam um stealer na inicialização do Python mesmo sem importar o pacote e coletavam segredos de Azure, AWS, GitHub, Hugging Face e OpenAI, além de tokens de managed identity e OIDC do Azure DevOps e do GitHub Actions. O PyPI pôs ambas em quarentena em minutos; quem instalou deve reconstruir o ambiente a partir da 1.26.0 e rotacionar credenciais.",
+      "source_name": "bleepingcomputer.com",
+      "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
+      "priority": false,
+      "added": "2026-11-19",
+      "impact": "alto",
+      "affects": [
+        "empresas"
+      ],
+      "id": "n198"
+    },
+    {
+      "title": "Campanha usa AGENTS.md, CLAUDE.md e hooks de sessão em repositórios do GitHub para fazer agentes de código rodarem malware",
+      "date": "2026-11-17",
+      "category": "seguranca",
+      "tags": [
+        "Agentes de código",
+        "Prompt injection",
+        "GitHub"
+      ],
+      "summary": "A Bitdefender achou 22 links maliciosos com instruções que mandam o assistente executar scripts/setup.js \"sem pedir confirmação\" e com .claude/settings.json que rodam o comando ao abrir o projeto. O malware rouba credenciais de nuvem, CI/CD e registries e infecta outras configurações de agentes e repositórios para se espalhar.",
+      "source_name": "bitdefender.com",
+      "url": "https://www.bitdefender.com/en-us/blog/labs/how-ai-agents-become-new-targets-in-github-malware-campaign",
+      "priority": false,
+      "added": "2026-11-19",
+      "id": "n199"
+    },
+    {
+      "title": "Banco do Brasil avisa clientes de vazamento de nome, CPF, e-mail e agência por uso indevido de credencial válida",
+      "date": "2026-11-18",
+      "category": "mundo",
+      "tags": [
+        "Banco do Brasil",
+        "Vazamento",
+        "Credenciais"
+      ],
+      "summary": "O acesso não autorizado foi detectado em 12/11; em alguns casos o número da conta também ficou exposto. O banco diz que não houve invasão de sistemas, senhas nem transações, que a credencial já foi revogada e alerta para golpes de phishing usando esses dados.",
+      "source_name": "g1.globo.com",
+      "url": "https://g1.globo.com/tecnologia/noticia/2026/11/18/banco-do-brasil-dados.ghtml",
+      "priority": false,
+      "added": "2026-11-19",
+      "impact": "medio",
+      "affects": [
+        "pessoas"
+      ],
+      "id": "n200"
+    },
+    {
+      "title": "Investigação da parada nacional de voos nos EUA reproduz em laboratório a sobrecarga causada por roteador novo no Arkansas",
+      "date": "2026-11-18",
+      "category": "mundo",
+      "tags": [
+        "FAA",
+        "Rede",
+        "Resiliência"
+      ],
+      "summary": "Oito minutos após a L3Harris instalar o roteador em El Dorado, ele passou a gerar cerca de 1.000 tentativas de conexão a cada 4–5 segundos, desestabilizando comunicações e radares. A causa raiz ainda não foi fechada, não há sinal de ciberataque, e o secretário Sean Duffy agora pede US$ 50 bilhões ao Congresso para modernizar o sistema.",
+      "source_name": "cnbc.com",
+      "url": "https://www.cnbc.com/2026/11/18/faa-ground-stop-router-investigation.html",
+      "priority": false,
+      "added": "2026-11-19",
+      "impact": "medio",
+      "affects": [
+        "empresas",
+        "pessoas"
+      ],
+      "id": "n201"
     }
   ]
 }

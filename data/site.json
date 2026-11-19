@@ -1,24 +1,12 @@
 {
   "highlights": [
-    "n154",
-    "n149",
-    "n156",
-    "n158",
-    "n151"
+    "n184",
+    "n186",
+    "n197",
+    "n187",
+    "n198"
   ],
   "dates": [
-    [
-      "2026-11-18",
-      "18 nov",
-      "Anthropic define o preço do IPO (faixa inicial de US$ 70–78)",
-      "Anthropic"
-    ],
-    [
-      "2026-11-19",
-      "19 nov",
-      "Claude Data ligado por padrão no plano Enterprise",
-      "Anthropic"
-    ],
     [
       "2026-11-19",
       "19 nov",
@@ -34,6 +22,12 @@
     [
       "2026-11-20",
       "20 nov",
+      "Claude Data ligado por padrão no plano Enterprise (adiado de 19/11)",
+      "Anthropic"
+    ],
+    [
+      "2026-11-20",
+      "20 nov",
       "Relatório final da Microsoft sobre o apagão do Microsoft 365/Exchange",
       "Microsoft"
     ],
@@ -42,6 +36,12 @@
       "até 20 nov",
       "Microsoft Ignite segue com sessões (São Francisco e online)",
       "Microsoft"
+    ],
+    [
+      "2026-11-20",
+      "20 nov",
+      "Liquidação do IPO da Anthropic (ANT)",
+      "Anthropic"
     ],
     [
       "2026-11-30",
@@ -83,6 +83,12 @@
       "2026-12-01",
       "Dezembro",
       "Agent Accounts do Copilot Studio entram em preview público",
+      "Microsoft"
+    ],
+    [
+      "2026-12-01",
+      "Início dez",
+      "Foundry: preview do deploy de hosted agents no AKS do cliente",
       "Microsoft"
     ],
     [
@@ -182,6 +188,11 @@
       "Claude Code: Code Mode e permissões",
       "Como o Code Mode chama ferramentas via JavaScript, como auditar o código e como a organização controla.",
       "treinamentos/claude-code-code-mode.html"
+    ],
+    [
+      "snowflake",
+      "Vídeo no Cortex com TwelveLabs e prompt caching",
+      "Buscar e analisar vídeo em SQL com AI_MULTI_EMBED (Marengo) e Pegasus, e cortar custo do AI_COMPLETE com cache de prefixo."
     ],
     [
       "snowflake",
